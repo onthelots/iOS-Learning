@@ -26,6 +26,8 @@
 19. Function_3
 20. Function_4
 21. Function_5
+22. Closure_1
+23. Clousre_2
 
 --- 
 continue ...
