@@ -19,6 +19,6 @@
 12. Enumeration
 13. Function
 14. Closure
-
+15. Class
 --- 
 continue ...
