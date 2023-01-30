@@ -65,34 +65,34 @@ import UIKit
 // 만약, 해당 인스턴스가 아닌, 새로운 인스턴스를 선언할 시, 계좌번호와 잔액을 초기화 할 필요가 있음
 // 이는, 기존 BankAccount 클래스 내부에 init() 메서드를 활용해서 작성함
 
-class BankAccount {
-    var accountBalace: Float = 0
-    var accountNumber: Int = 0
-    
-    // 새로운 인스턴스를 생성할 때마다, 직접 계좌번호와 잔액을 초기화 할 수 있도록
-    // init 메서드를 작성 -> 프로퍼티를 활용해, 일종의 매개변수를 만들어 준다고 생각하면 편함
-    init(number: Int, balance: Float ) {
-        accountNumber = number
-        accountBalace = balance
-    }
-    
-    deinit {
-        print("deinit Person class instance")
-    }
-    
-    func displayBalance() {
-        print("계좌번호 : \(accountNumber)")
-        print("잔액 : \(accountBalace)")
-    }
-    
-    // 현재 클래스에 저장할 수 있는 최대 금액을 파악할 수 있는 타입 메서드
-    class func getMaxBalance() -> Float {
-        return 100000.00
-    }
-}
+//class BankAccount {
+//    var accountBalace: Float = 0
+//    var accountNumber: Int = 0
+//    
+//    // 새로운 인스턴스를 생성할 때마다, 직접 계좌번호와 잔액을 초기화 할 수 있도록
+//    // init 메서드를 작성 -> 프로퍼티를 활용해, 일종의 매개변수를 만들어 준다고 생각하면 편함
+//    init(number: Int, balance: Float ) {
+//        accountNumber = number
+//        accountBalace = balance
+//    }
+//    
+//    deinit {
+//        print("deinit Person class instance")
+//    }
+//    
+//    func displayBalance() {
+//        print("계좌번호 : \(accountNumber)")
+//        print("잔액 : \(accountBalace)")
+//    }
+//    
+//    // 현재 클래스에 저장할 수 있는 최대 금액을 파악할 수 있는 타입 메서드
+//    class func getMaxBalance() -> Float {
+//        return 100000.00
+//    }
+//}
 
 // 그렇게 되면, 새로운 인스턴스를 생성할 때, 계좌번호와 잔액을 초기화(사용자 임의 값 대입)할 수 있음
-var account1: BankAccount = BankAccount(number: 123456, balance: 78.9)
+//var account1: BankAccount = BankAccount(number: 123456, balance: 78.9)
 
 //account1.accountNumber // 123456
 //account1.accountBalace // 78.9
