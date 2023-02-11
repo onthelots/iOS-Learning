@@ -44,7 +44,7 @@ import UIKit
 //
 //    func displayBalance() {
 //        print("계좌번호 : \(accountNumber)")
-//        print("잔액 : \(accountBalace))")
+//        print("잔액 : \(accountBalace)")
 //    }
 //
 //    // 현재 클래스에 저장할 수 있는 최대 금액을 파악할 수 있는 타입 메서드
@@ -52,6 +52,7 @@ import UIKit
 //        return 100000.00
 //    }
 //}
+
 
 
 // MARK: - 4. 클래스의 인스턴스 선언하고 초기화하기
@@ -66,30 +67,33 @@ import UIKit
 // 이는, 기존 BankAccount 클래스 내부에 init() 메서드를 활용해서 작성함
 
 //class BankAccount {
-//    var accountBalace: Float = 0
-//    var accountNumber: Int = 0
-//    
+//    var accountBalace: Float = 12
+//    var accountNumber: Int = 12
+//
 //    // 새로운 인스턴스를 생성할 때마다, 직접 계좌번호와 잔액을 초기화 할 수 있도록
 //    // init 메서드를 작성 -> 프로퍼티를 활용해, 일종의 매개변수를 만들어 준다고 생각하면 편함
 //    init(number: Int, balance: Float ) {
 //        accountNumber = number
 //        accountBalace = balance
 //    }
-//    
+//
 //    deinit {
 //        print("deinit Person class instance")
 //    }
-//    
+//
 //    func displayBalance() {
 //        print("계좌번호 : \(accountNumber)")
 //        print("잔액 : \(accountBalace)")
 //    }
-//    
+//
 //    // 현재 클래스에 저장할 수 있는 최대 금액을 파악할 수 있는 타입 메서드
 //    class func getMaxBalance() -> Float {
 //        return 100000.00
 //    }
 //}
+
+
+
 
 // 그렇게 되면, 새로운 인스턴스를 생성할 때, 계좌번호와 잔액을 초기화(사용자 임의 값 대입)할 수 있음
 //var account1: BankAccount = BankAccount(number: 123456, balance: 78.9)
@@ -117,19 +121,19 @@ import UIKit
  */
 
 // 프로퍼티 값 접근
-account1.accountNumber // 123456
+//account1.accountNumber // 123456
 
 // 프로퍼티 값 변경(설정)
-account1.accountNumber = 78910
-account1.accountNumber // 78910
+//account1.accountNumber = 78910
+//account1.accountNumber // 78910
 
 // 클래스 인스턴스 호출
-account1.displayBalance()
+//account1.displayBalance()
 /*
  계좌번호 : 78910
  잔액 : 78.9
  */
 
 // 타입 메서드는, 인스턴스가 아닌 클래스 자체에서 호출되어야 함!
-BankAccount.getMaxBalance() // 100000
+//BankAccount.getMaxBalance() // 100000
 
