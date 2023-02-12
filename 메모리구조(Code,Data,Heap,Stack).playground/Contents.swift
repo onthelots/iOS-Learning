@@ -25,3 +25,35 @@ struct fruits {
 }
 
 fruits.apple // "사과"
+
+
+
+// MARK: - Heap
+// 사용자(개발자)에 의하여 메모리를 관리(할당/해제)하는 영역
+// '동적 할당영역(Dynamic Allocation)'이라고 하며, 런타임 시 결정됨
+// C언어의 경우, malloc, Calloc 함수를 통해 할당/해제하지만,
+// Swift의 경우 ARC(Auto Reference Counting) 기능을 통해 자동으로 관리됨
+
+class Profile {
+    var jason: String?
+    var lime: String?
+    
+    func nickname() {}
+}
+
+
+
+// MARK: - Stack
+// 프로그램이 자동적으로 관리(할당/해제)하는 영역
+// 함수를 호출할 경우, 지역변수나 매개변수, 리턴값 등이 저장되는 동적할당영역입니다.
+// Stack 영역의 경우, 함수가 종료되면 저장된 메모리도 자동적으로 해제됩니다.
+// 일종의 '임시 메모리 영역'으로 볼 수 있습니다.
+
+func multiply(_ a: Int, _ b: Int) -> Int { // 매개변수 a,b -> Stack 할당
+    let result = a * b // 지역변수 result -> Stack 할당
+    
+    return result // 리턴값 result -> Stack 할당
+}
+
+
+
