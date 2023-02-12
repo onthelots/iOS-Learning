@@ -136,4 +136,3 @@ import UIKit
 
 // 타입 메서드는, 인스턴스가 아닌 클래스 자체에서 호출되어야 함!
 //BankAccount.getMaxBalance() // 100000
-
