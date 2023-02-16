@@ -48,4 +48,3 @@ class Dog: Animals {
          print("왈왈!")
     }
 }
-
