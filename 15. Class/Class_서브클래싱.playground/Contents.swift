@@ -38,13 +38,3 @@ myCat.name // Miu
 myCat.nickname // Pig
 
 
-// MARK: - 상위 클래스의 특징을 재 정의?
-// 상위 클래스의 프로퍼티와 메서드를 하위클래스에서 다시 정의해서 사용할 수 없나?
-
-// 1. 메서드 오버라이딩
-class Dog: Animals {
-    
-    override func sound() {
-         print("왈왈!")
-    }
-}
