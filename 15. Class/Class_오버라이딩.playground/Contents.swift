@@ -33,12 +33,12 @@ class Cow: Animals {
     override func sound(name: String) -> String {
         
         super.sound(name: name)
-        return ("\(name)은 음메 하고 소리를 냅니다.")
+        return ("\(name)는 음메 하고 소리를 냅니다.")
     }
 }
 
 var myCow: Cow = .init()
 
 myCow.sound(name: "워낭이")
-
+// "워낭이는 음메 하고 소리를 냅니다."
 
