@@ -20,5 +20,7 @@
 13. Function
 14. Closure
 15. Class
+16. Property
+17. Struct
 --- 
 continue ...
