@@ -69,7 +69,33 @@ jason.wakeUp() // 침대에서 몸을 일으키다
 // MARK: - 실제 코드를 통해 살펴보자면?
 
 // 1. 구조체 Animals를 생성한다
-struct Animals {
+//struct Animals {
+//    var name: String
+//
+//    init(name: String) {
+//        self.name = name
+//    }
+//
+//    func sound() {
+//        print("캉캉캉")
+//    }
+//}
+//
+//let myDog: Animals = Animals(name: "Van")
+//print(myDog.name) // "Van"
+//
+//// dog 인스턴스의 복사본을 만들어 보자!
+//
+//var yourDog = myDog
+//yourDog.name = "Coco"
+//print(myDog.name) // "Van"
+//print(yourDog.name) // "Coco"
+
+// 위와 같이, yourDog는 myDog의 복사본이므로, 자신만의 데이터 값을 변경할 수 있음
+
+
+// 2. 클래스 Animals를 생성해 비교해보자면..
+class Animals {
     var name: String
     
     init(name: String) {
@@ -77,20 +103,31 @@ struct Animals {
     }
     
     func sound() {
-        print("캉캉캉")
+        print("얌얌얌")
     }
 }
 
 let myDog: Animals = Animals(name: "Van")
 print(myDog.name) // "Van"
 
-// dog 인스턴스의 복사본을 만들어 보자!
-
 var yourDog = myDog
 yourDog.name = "Coco"
+
+print(myDog.name) // "Coco" -> name 프로퍼티의 값을 변경했더니, 원본 클래스 인스턴스의 프로퍼티 값도 변경!
 print(yourDog.name) // "Coco"
 
-// 위와 같이, yourDog는 myDog의 복사본이므로, 자신만의 데이터 값을 변경할 수 있음
 
+// MARK: - 구조체를 활용하는 이유는?
 
-// 2. 클래스 m
+// 메모리 구조 4개 영역(Code, Data, Heap, Stack) 중
+// 우선, 구조체는 Stack(스택) 영역에 저장됨
+// 스택의 경우, 각각의 스레드를 독립적으로 사용하므로 'Thread-Safe'하다는 특징이 있음
+
+// 반면에, Class와는 달리 상속(inheritance)은 불가능 하나,
+// Swift에서는 Protocol을 활용한 상속을 권장하고 있음
+
+// MARK: - 그렇다면, 클래스는 언제 사용해야 하는데?
+
+// 클래스는 참조(Reference)타입이며, 기존 원본의 값을 -> 특정 참조체에서 변경 할 경우 그 변경값이 원본에도 적용이 됨
+// 이는 즉, 한 영역에서 수정을 하면 다른 영역에도 적용이 된다는 특징이 있음
+// 그래서, 고유한 값이나, 파일관리, 네트워크 등과 같은 부분에서 활용됨
