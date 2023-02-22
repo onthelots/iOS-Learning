@@ -6,6 +6,8 @@ import UIKit
 
 // MARK: - 동일한 구조의 클래스와 구조체
 // name이란 이름의 프로퍼티와 인스턴스 메서드(wakeUp)가 존재합니다.
+
+
 class Human1 {
     var name: String
     
@@ -29,9 +31,9 @@ lime.wakeUp() // 침대에서 몸을 일으키다
 struct Human2 {
     var name: String
     
-    init(name: String) {
-        self.name = name
-    }
+//    init(name: String) {
+//        self.name = name
+//    }
     
     func wakeUp() {
         print("침대에서 몸을 일으키다")
@@ -95,26 +97,26 @@ jason.wakeUp() // 침대에서 몸을 일으키다
 
 
 // 2. 클래스 Animals를 생성해 비교해보자면..
-class Animals {
-    var name: String
-    
-    init(name: String) {
-        self.name = name
-    }
-    
-    func sound() {
-        print("얌얌얌")
-    }
-}
-
-let myDog: Animals = Animals(name: "Van")
-print(myDog.name) // "Van"
-
-var yourDog = myDog
-yourDog.name = "Coco"
-
-print(myDog.name) // "Coco" -> name 프로퍼티의 값을 변경했더니, 원본 클래스 인스턴스의 프로퍼티 값도 변경!
-print(yourDog.name) // "Coco"
+//class Animals {
+//    var name: String
+//
+//    init(name: String) {
+//        self.name = name
+//    }
+//
+//    func sound() {
+//        print("얌얌얌")
+//    }
+//}
+//
+//let myDog: Animals = Animals(name: "Van")
+//print(myDog.name) // "Van"
+//
+//var yourDog = myDog
+//yourDog.name = "Coco"
+//
+//print(myDog.name) // "Coco" -> name 프로퍼티의 값을 변경했더니, 원본 클래스 인스턴스의 프로퍼티 값도 변경!
+//print(yourDog.name) // "Coco"
 
 
 // MARK: - 구조체를 활용하는 이유는?
