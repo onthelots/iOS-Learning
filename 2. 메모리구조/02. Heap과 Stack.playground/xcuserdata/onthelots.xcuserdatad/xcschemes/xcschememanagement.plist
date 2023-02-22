@@ -4,14 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Paradigm (Playground).xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-			<key>orderHint</key>
-			<integer>0</integer>
-		</dict>
-		<key>명령형 및 선언형 프로그래밍 (Playground).xcscheme</key>
+		<key>Heap과Stack (Playground).xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
