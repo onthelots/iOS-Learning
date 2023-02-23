@@ -10,7 +10,32 @@ import UIKit
 // struct가 그 대표적인 타입
 
 // 예시코드
-//struct Human {
+struct Human {
+    var age: Int
+    var number: Int
+
+    init(age: Int, number: Int) {
+        self.age = age
+        self.number = number
+        print("당첨된 사람은 \(age)세 \(number)번입니다.")
+    }
+}
+
+var man: Human = Human(age: 23, number: 7848)
+var woman = man
+woman.age = 35
+
+// 여기서, Stack에는 어떻게 저장이 될까?
+// man의 변수(age, number) -> 2칸
+// woman은 man을 그대로 복사하며, 기존 man인스턴스와는 완전히 구분되어 Stack에 저장됨 -> 2칸
+
+
+// MARK: - Reference Sementics 타입 - Heap
+// 해당 타입의 자료는 Stack에 참조체인 '주소값'을 할당하며, '실질적인 데이터'는 Heap 영역에 할당함
+// class와 함수가 대표적인 reference sementics 타입임
+
+
+//class Human {
 //    var age: Int
 //    var number: Int
 //
@@ -24,31 +49,6 @@ import UIKit
 //var man: Human = Human(age: 23, number: 7848)
 //var woman = man
 //woman.age = 35
-
-// 여기서, Stack에는 어떻게 저장이 될까?
-// man의 변수(age, number) -> 2칸
-// woman은 man을 그대로 복사하며, 기존 man인스턴스와는 완전히 구분되어 Stack에 저장됨 -> 2칸
-
-
-// MARK: - Reference Sementics 타입 - Heap
-// 해당 타입의 자료는 Stack에 참조체인 '주소값'을 할당하며, '실질적인 데이터'는 Heap 영역에 할당함
-// class와 함수가 대표적인 reference sementics 타입임
-
-
-class Human {
-    var age: Int
-    var number: Int
-    
-    init(age: Int, number: Int) {
-        self.age = age
-        self.number = number
-        print("당첨된 사람은 \(age)세 \(number)번입니다.")
-    }
-}
-
-var man: Human = Human(age: 23, number: 7848)
-var woman = man
-woman.age = 35
 
 // 여기서, class는 어떻게 저장이 될까?
 // man의 참조체는 Stack에 저장이 되며,
