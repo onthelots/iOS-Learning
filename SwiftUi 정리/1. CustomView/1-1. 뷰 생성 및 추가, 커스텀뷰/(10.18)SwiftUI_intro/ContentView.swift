@@ -56,12 +56,12 @@ struct ContentView: View {
         }
         
         // 레이아웃 내 뷰가 나타나거나, 사라질 때 초기화 작업과 해제작업을 수행하기 위한 액션메서드를 선언할 수 있다!
-//        .onAppear(perform: {
-//            print("나타났어요")
-//        })
-//        .onDisappear(perform: {
-//            print("사라졌어요")
-//        })
+        .onAppear(perform: {
+            print("나타났어요")
+        })
+        .onDisappear(perform: {
+            print("사라졌어요")
+        })
     }
 }
 
