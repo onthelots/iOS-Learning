@@ -22,5 +22,6 @@
 15. Class
 16. Property
 17. Struct
+18. Protocol
 --- 
 continue ...
