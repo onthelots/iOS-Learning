@@ -28,6 +28,7 @@ struct ContentView: View {
             
             
             
+            
             // 일반 클로저
 //            Button("Hello", action : {
 //                sayHello()
@@ -66,7 +67,13 @@ struct ContentView: View {
 }
 
 
-
+struct Abc: View {
+    var body: some View {
+        VStack {
+            Text("hello")
+        }
+    }
+}
 
 
 
