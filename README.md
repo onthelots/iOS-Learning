@@ -23,5 +23,6 @@
 16. Property
 17. Struct
 18. Protocol
+19. Generic
 --- 
 continue ...
