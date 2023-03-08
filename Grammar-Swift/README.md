@@ -1,10 +1,6 @@
 # Swift_Grammar
 
-## Swift 기초문법 다지기
-
---- 
 ### 목차 
-
 1. Hello, Swift!
 2. 변수와 상수(Variable, Constant)
 3. Type Annotations
