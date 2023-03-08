@@ -38,14 +38,14 @@ func genericSwap<T> (_ a : inout T, _ b: inout T) {
 var number1 = 5
 var number2 = 10
 
-genericSwap(&number1, &number2)
+genericSwap(&number1, &number2) // 아, 제네릭(범용)타입 T는 Int타입으로 설정되었구나!
 
 
 
 var string1 = "Lime"
 var string2 = "Jason"
 
-genericSwap(&string1, &string2)
+genericSwap(&string1, &string2) // 아, 제네릭(범용)타입 T는 String타입으로 설정되었구나!
 
 string1 // Jason
 string2 // Lime
@@ -64,7 +64,7 @@ struct Stack<T> {
     }
     
     func pop() -> T {
-        print("FIFO에 의하여 삭제 ")
+        print("FIFO에 의하여 삭제 ") as! T
     }
 }
 
