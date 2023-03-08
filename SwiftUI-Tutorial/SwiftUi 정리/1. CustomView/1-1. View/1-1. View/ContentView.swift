@@ -2,18 +2,15 @@
 //  ContentView.swift
 //  1-1. View
 //
-//  Created by Jae hyuk Yim on 2023/02/12.
 //
 
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
+    var body: VStack<TupleView<(Text,Text)>> {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Text("쉽고 재미있는")
+            Text("알쏭달쏭 SwiftUI")
         }
     }
 }
