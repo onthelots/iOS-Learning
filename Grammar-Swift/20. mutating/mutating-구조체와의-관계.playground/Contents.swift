@@ -50,3 +50,6 @@ var yourDog = myDog
 yourDog.age = 10
 yourDog.defaultAge()
 print(yourDog.age) // 5
+
+// 기존 인스턴스의 값을 할당받는 새로운 인스턴스 또한 mutating 키워드를 활용한 defaultAge() 인스턴스 메서드를 사용하여
+// 구조체 내부 데이터(프로퍼티)의 값을 변경시킬 수 있음
