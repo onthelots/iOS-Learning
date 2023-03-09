@@ -16,19 +16,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mgj-MO-fbe">
-                                <rect key="frame" x="318" y="392" width="75" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mgj-MO-fbe">
+                                <rect key="frame" x="298" y="421" width="75" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="ZcZ-4j-Y4P"/>
+                                    <constraint firstAttribute="width" constant="75" id="ysi-tz-MZX"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Button"/>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sun.haze.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="nIT-F1-4A9">
-                                <rect key="frame" x="240" y="690" width="153" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sun.haze.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="nIT-F1-4A9">
+                                <rect key="frame" x="220" y="690.66666666666674" width="153" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="153" id="XAe-PB-BOt"/>
+                                    <constraint firstAttribute="height" constant="126.67" id="kTu-92-BfB"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hello, world" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AIi-tS-uWa">
-                                <rect key="frame" x="303" y="59" width="90" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, world" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AIi-tS-uWa">
+                                <rect key="frame" x="283" y="59" width="90" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="bgz-hr-Dc9"/>
+                                    <constraint firstAttribute="height" constant="21" id="u1e-vL-F52"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -36,6 +45,14 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nIT-F1-4A9" secondAttribute="trailing" constant="20" id="4vL-AH-4P1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nIT-F1-4A9" secondAttribute="bottom" id="Ado-Zb-BJt"/>
+                            <constraint firstItem="mgj-MO-fbe" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="jt5-fT-Tjn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AIi-tS-uWa" secondAttribute="trailing" constant="20" id="lUt-lf-Y9B"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mgj-MO-fbe" secondAttribute="trailing" constant="20" id="rlj-AS-moy"/>
+                            <constraint firstItem="AIi-tS-uWa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="yri-Jr-keE"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
