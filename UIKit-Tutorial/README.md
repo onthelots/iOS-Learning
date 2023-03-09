@@ -9,9 +9,7 @@
 
 
 2. UIKit을 활용한 Basic App 만들기
-- Model과 View의 관계
-- UI Components
-
+- Xcode에서 Storyboard 생성하기
 
 
 continue...
