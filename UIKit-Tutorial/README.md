@@ -9,7 +9,8 @@
 
 
 2. UIKit을 활용한 Basic App 만들기
-- Xcode에서 Storyboard 생성하기
+- Storyboard 생성하기
+- AutoLayout 살펴보기 
 
 
 continue...
