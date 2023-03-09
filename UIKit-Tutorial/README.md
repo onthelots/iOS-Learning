@@ -10,7 +10,9 @@
 
 2. UIKit을 활용한 Basic App 만들기
 - Storyboard 생성하기
-- AutoLayout 살펴보기 
+- AutoLayout 살펴보기
+- [프로젝트1] SymbolRoller
+- [프로젝트2] SimpleWeather
 
 
 continue...
