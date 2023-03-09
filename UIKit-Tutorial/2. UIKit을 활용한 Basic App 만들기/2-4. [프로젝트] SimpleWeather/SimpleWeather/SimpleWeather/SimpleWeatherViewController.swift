@@ -34,7 +34,7 @@ class SimpleWeatherViewController: UIViewController {
         super.viewDidLoad()
     }
 
-    
+    // MARK: - 도시, 날씨, 온도 바꾸는 Button
     @IBAction func changeButton(_ sender: Any) {
         
         cityLabel.text = cities.randomElement()
