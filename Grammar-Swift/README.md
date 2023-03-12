@@ -20,5 +20,6 @@
 17. Struct
 18. Protocol
 19. Generic
+20. mutating
 --- 
 continue ...
