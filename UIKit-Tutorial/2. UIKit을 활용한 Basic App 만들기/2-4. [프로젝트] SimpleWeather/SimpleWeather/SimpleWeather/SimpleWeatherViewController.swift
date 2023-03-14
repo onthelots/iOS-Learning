@@ -42,7 +42,7 @@ class SimpleWeatherViewController: UIViewController {
         let imageName = weathers.randomElement()!
         // 여기서, inspector에서는 multycolor이지만, 여기선 단순히
         // 시스템 이미지값으로 넘겼기 때문에, 당연히 TintColor로 먹히게 됨
-        // 따라서, 'withRenderingMode 수정자를 넘겨줘야 함
+        // 따라서, 'withRenderingMode' 수정자를 넘겨줘야 함
         // 내부 값으로는 .alwaysOriginal은 본래 이미지의 색상
         weatherUIImage.image = UIImage(systemName: imageName)?.withRenderingMode(.alwaysOriginal)
         
