@@ -46,3 +46,20 @@ address(of: &myDog) // 0x1009bc890
 var yourDog = myDog
 address(of: &yourDog) // 0x100a0c8a8
 
+
+// 그런데, Heap 영역의 경우 release, free 등의 방법을 통해 원래 메모리를 해제해줘야 함!
+// 하지만, 현재까지 인스턴스를 메모리에서 별도로 해제하지 않고 사용함
+// 이는 사실, Swift의 ARC라는 기능이 자동적으로 Heap에 할당된 메모리를 해제하고 있던 중!
+// 즉, 메모리 leak을 자동적으로 해소해주는 내장된 기능이 바로 'ARC'임
+
+
+// MARK: - GC(Garbage Collection)과 RC(Reference Counting)의 비교
+// Heap이란 메모리 영역은 언어를 초월한 개념임
+// MARK: - GC란?
+// 예를 들면, JAVA는 GC(Garbage Collection)을 활용하여 Heap의 leak 메모리를 추적하여 인스턴스를 해제해 줌
+// 하지만, 이는 Runtime(프로그램 실행) 단계에서 실행되므로, 계속적으로 추적하는 추가적인 리소스로 인한 성능저하가 발생한다는 단점이 존재함
+
+// MARK: - RC란?
+// 반면에, 우리의 Swift에서 활용되는 RC는 Compile 단계에서 언제 참조되고 해제되는지 결정됨
+// 따라서, 개발자가 참조 해제시점을 파악할 수 있으며 Runtime 시점까지 추적하지 않으므로 추가 리소스가 발생하지 않는다는 장점이 있음
+// 다만! '순환 참조'가 발생할 경우, 앱을 삭제하기 전까지 메모리가 해제되지 않을 수 있음!
