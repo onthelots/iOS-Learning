@@ -19,12 +19,5 @@ class Aniamls {
 }
 
 // 아래와 같이 인스턴스 2개를 생성함
-var myDog: Aniamls?
-var yourDog: Aniamls?
+var myDog: Aniamls = 
 
-// 먼저, 첫번째 myDog 인스턴스에 초기값을 할당함
-myDog = Aniamls(name: "Van") // "Van"이 init 되었습니다. (rc 1)
-yourDog = myDog // (rc 2)
-
-myDog = nil // (rc 1)
-yourDog = nil // (rc 2) "Van이 deinit 되었습니다." -> 메모리 해제!
