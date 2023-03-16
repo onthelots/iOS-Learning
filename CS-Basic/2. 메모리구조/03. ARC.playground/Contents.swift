@@ -29,22 +29,11 @@ var myDog: Animals = Animals(name: "Coco") // 인스턴스의 값을 생성하�
 // 그렇게 되면, Animals 클래스의의 주소값은 Stack에 저장이 되며, name: Coco는 Heap에 참조값이 할당이 됨!
 
 
-// MARK: - Heap에 저장되는 주소값을 알아보기 위한 함수 만들기
-
-func address(of object: UnsafeRawPointer) -> String {
-    let address = Int(bitPattern: object)
-    return String(format: "%p", address)
-}
-
-address(of: &myDog) // 0x1009bc890
-
-
 // MARK: - 새로운 인스턴스의 생성과 Stack과 Heap의 할당과정
 // 앞서 생성한 myDog를 할당받는 새로운 'yourDog' 인스턴스를 생성
 // 참조타입이다 보니, 초기화 값이 없는 yourDog가 생성될 때 Heap에는 아무런 변화가 없으며,
 // 대신 Stack에는 새로운 yourDog 주소값(Address)이 할당이 됨
 var yourDog = myDog // (+ RC 1)
-address(of: &yourDog) // 0x100a0c8a8
 
 
 // 그런데, Heap 영역의 경우 release, free 등의 방법을 통해 원래 메모리를 해제해줘야 함!
