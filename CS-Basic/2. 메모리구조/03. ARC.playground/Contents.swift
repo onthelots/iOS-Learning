@@ -90,13 +90,13 @@ var wildDoggy = cuteDoggy // cuteDoggy인 'Van'이 사나운(wild) 강아지로 
 // 1. 특정 인스턴스를 가리키는 변수가 메모리에서 해제될 경우
 // 새로운 Animals 인스턴스를 생성해보도록 함
 
-func makeCat(_ origin: Animals) {
-    let yourCat = origin // cat이란 지역변수에 매개변수 값이 할당됨
+func makePet(_ origin: Animals) {
+    let cat = origin // cat이란 지역변수에 매개변수 값이 할당됨
 }
 
 var myCat:Animals = Animals(name: "Bebe") // myCat이란 새로운 인스턴스를 생성함 (RC + 1)
 
-makeCat(myCat) // makeCat 함수를 실행할 경우 -> makeCat 내부 cat 변수는 myCat을 참조하게 됨 (RC + 1)
+makePet(myCat) // makeCat 함수를 실행할 경우 -> makeCat 내부 cat 변수는 myCat을 참조하게 됨 (RC + 1)
 
 // 그런데, 함수(메서드)가 종료되게 되면 Stack에 올라갔던 지역변수는 어떻게 된다? -> Stack에서 해제된다!
 // 그렇게 되면, 참조하고 있었던 지역변수가 사라지므로, RC는 자동적으로 감소한다 (RC -1)
