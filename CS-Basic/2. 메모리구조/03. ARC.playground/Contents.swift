@@ -135,4 +135,32 @@ DoyoungDaughter = JaejunDaughter // HaYesoul이 deinit 되었습니다. (DoyungD
 
 
 // 4. 참조로서 연결된 관계에서 Stack의 주소값이 사라질 경우
+// 이해를 위해 아래 새로운 Human이란 클래스를 생성하고자 함
+
+class Human {
+    var age: Int
+    var nickname: Animals = Animals(name: "Kate")
+    
+    init(age: Int) {
+        self.age = age
+    }
+    
+    deinit {
+        print("Human이 Deinit 되었습니다.")
+    }
+}
+
+var profile: Human? = Human(age: 25) // "kate가 init 되었습니다!"
+// Human 인스턴스인 profile을 생성하게 될 경우 -> Heap 영역에 age와 nickname의 주소값이 포함되게 된다! (RC +1)
+// 여기서 중요, Human 클래스 내부에 클래스 인스턴스가 일종의 '프로퍼티'로 존재하고 있음
+// 따라서, profile 생성 시 Animals 인스턴스 또한 참조하게 됨 (RC +1)
+
+// 만약, profile 인스턴스를 메모리에서 해제하기위해 nil 값을 할당하게 된다면
+profile = nil
+
+// 아래와 같이 순서대로 메모리가 해제됨 (동시에 해제되는 것이 아닌, 단계에 따라 RC가 감소하게 되면서 자연스럽게 해제됨)
+// 첫 번째 -> Human이 Deinit 되었습니다. (RC -1)
+// 두 번째 -> Kate이 deinit 되었습니다. (RC -1)
+
+
 
