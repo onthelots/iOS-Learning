@@ -122,3 +122,17 @@ var neighborCow = cow // 기존 인스턴스를 할당받는 neighborCow란 새�
 // 둘다 Optional 타입이므로, nil 값으로 초기값을 해제할 수 있음!
 cow = nil // (RC -1)
 neighborCow = nil // (RC -1) (Animals 클래스 내부에 선언해놓은 deinit 메서드에 따라 메세지가 함께 찍히게 됨)
+
+
+// 3. 기존 인스턴스(변수)에 다른 변수의 값을 대입한 경우
+// A란 인스턴스가 존재할 때, RC는 증가하지만
+// B라는 인스턴스의 값을 A에 할당할 경우, A의 값이 '변경'되므로, 아무것도 참조하질 않아 RC는 감소, 해제됨
+
+var DoyoungDaughter: Animals? = Animals(name: "HaYesoul")
+var JaejunDaughter: Animals? = Animals(name: "JeonYesoul")
+
+DoyoungDaughter = JaejunDaughter // HaYesoul이 deinit 되었습니다. (DoyungDaughter의 RC는 0이므로, 자동으로 해제됨)
+
+
+// 4. 참조로서 연결된 관계에서 Stack의 주소값이 사라질 경우
+
