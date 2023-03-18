@@ -33,8 +33,21 @@ class StockRankCollectionViewCell: UICollectionViewCell {
         rankLabel.text = "\(stock.rank)" // 문자열 보간
         companyIcon.image = UIImage(named: stock.imageName)
         companyNameLabel.text = stock.name
-        companyPriceLabel.text = "\(stock.price)원" // 문자열 보간
+        companyPriceLabel.text = "\(convertToCurrencyFormat(price: stock.price))" // 문자열 보간 + 단위당 Comma(,)를 찍어주기 위해 convertToCurrencyFormat 함수를 실행한 후, 매개변수로 stock.price를 넘겨줌 (반환값인 result가 해당 companyPriceLabel.text(string값)으로 표현됨
         companyPriceRate.text = "\(stock.diff)%" // 문자열 보간
+    }
+    
+    // MARK: - 숫자를 comma로 끊어서 표현하기 위한 메서드
+    func convertToCurrencyFormat(price: Int) -> String {
+        // 정수를 Formatting하는 메서드가 존재함 -> NumberFormatter()
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal // numberStyle 수정자를 통해 decimal 값을 할당함
+        numberFormatter.maximumFractionDigits = 0
+        
+        let result = numberFormatter.string(from: NSNumber(value: price)) ?? ""
+        // 여기서 result는 옵셔널 타입이므로 강제 언래핑을 하거나, 옵셔널 바인딩을 실시해야 함 (옵셔널 바인딩을 선호하며, 빈 문자열로 넘겨줌)
+        
+        return result
     }
     
 }
