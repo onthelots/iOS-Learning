@@ -15,15 +15,9 @@ class StockRankViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     
-    // MARK: - UICollectionView를 구현하기 위해선?
-    // MARK: - 1. Data : 어떤 데이터를 사용할까?
+    // MARK: - 어떤 데이터를 사용할까?
     let stocklist: [StockModel] = StockModel.list
     
-    
-    // MARK: - 2. Presentations : 셀을 어떻게 꾸미고 표현할까?
-    
-    
-    // MARK: - 3. Layout : 셀을 어떻게 배치할까?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,21 +34,20 @@ class StockRankViewController: UIViewController {
 
 }
 
-
 // MARK: - dataSource, 즉 Data와 Presentation을 표현하기 위한 확장
 extension StockRankViewController: UICollectionViewDataSource {
     
+    // MARK: - UICollectionView를 구현하기 위해선?
     // 1. CollctionView에 몇개의 데이터가 들어오는가?
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // 반환값으로, 데이터가 몇개가 들어오는지 알려줌 (위에서 선언한 'stocklist'의 배열 count 값을 선언)
         return stocklist.count
     }
     
-
+    // MARK: - 2. Presentations : 셀을 어떻게 꾸미고 표현할까?
     // 2. CollectionView의 Presentation은 어떻게 표현되는가?
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        // 반환값으로, 우선 UICollectionViewCell() 클래스를 선언해줌
-        // 해당 클래스는 background, highlight 등의 프레젠테이션 속성이 담겨져 있음
+        
         
         // 'cell' 이란 지역 변수를 생성
         // 재 사용 가능한 셀, 즉 StockRankColletionViewCell을 구분자(Identifier)로 불러오며,
@@ -80,6 +73,7 @@ extension StockRankViewController: UICollectionViewDataSource {
     
 }
 
+// MARK: - 3. Layout : 셀을 어떻게 배치할까?
 // MARK: - delegate, 즉 Layout을 표현하기 위한 확장
 // 채택하고 있는 UICollectionViewDelegateFlowLayout은 프로토콜이며,
 // 셀의 속성(Layout)을 담당함

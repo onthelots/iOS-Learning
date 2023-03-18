@@ -34,6 +34,18 @@ class StockRankCollectionViewCell: UICollectionViewCell {
         companyIcon.image = UIImage(named: stock.imageName)
         companyNameLabel.text = stock.name
         companyPriceLabel.text = "\(convertToCurrencyFormat(price: stock.price))" // 문자열 보간 + 단위당 Comma(,)를 찍어주기 위해 convertToCurrencyFormat 함수를 실행한 후, 매개변수로 stock.price를 넘겨줌 (반환값인 result가 해당 companyPriceLabel.text(string값)으로 표현됨
+        
+        // PriceRate의 값에 따른 색상 변경
+        companyPriceRate.textColor = stock.diff > 0 ? UIColor.systemBlue : UIColor.systemRed
+
+//        let color: UIColor?
+//        if stock.diff > 0 {
+//            color = UIColor.systemRed
+//        } else {
+//            color = UIColor.systemBlue
+//        }
+//        companyPriceRate.textColor = color
+        
         companyPriceRate.text = "\(stock.diff)%" // 문자열 보간
     }
     
@@ -49,5 +61,4 @@ class StockRankCollectionViewCell: UICollectionViewCell {
         
         return result
     }
-    
 }
