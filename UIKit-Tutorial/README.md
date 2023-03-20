@@ -15,7 +15,7 @@
     2-2. List와 Grid
       - 리스트와 그리드 구현하기
       - [프로젝트3] StockRank (UICollectionView를 활용한 주식 리스트 구현)
-      - [프로젝트4] Chatlist (진행중)
+      - [프로젝트4] Chatlist(UICollcectionView, awakeFromNib(), DateFormatter(), MVC 구조를 활용한 채팅 리스트 구현)
 
 
 continue...
