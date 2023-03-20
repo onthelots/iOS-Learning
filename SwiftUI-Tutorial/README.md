@@ -1,7 +1,7 @@
-# SwiftUI-Tutorial
+# 📱SwiftUI-Tutorial
 
 
-## 학습 리스트 (안)
+### 학습 리스트
 1. CustomView
 2. Stack, Frame
 3. State Property
@@ -22,3 +22,5 @@
 18. ShareLink
 19. Charts
 20. Async, Await
+
+continue...
