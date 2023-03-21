@@ -16,6 +16,9 @@
       - 리스트와 그리드 구현하기
       - [프로젝트3] StockRank (UICollectionView를 활용한 주식 리스트 구현)
       - [프로젝트4] Chatlist(UICollcectionView, awakeFromNib(), DateFormatter(), MVC 구조를 활용한 채팅 리스트 구현)
-
+      - [프로젝트5] AppleFramework(UICollectionView의 UICollectionViewLayout 사용자 지정을 통한 Grid 형식의 View 구현)
+      
+    2-3. TabBar
+      - TabBar(TabBarController) 개요
 
 continue...
