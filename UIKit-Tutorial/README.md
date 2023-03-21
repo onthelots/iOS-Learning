@@ -20,5 +20,6 @@
       
     2-3. TabBar
       - TabBar(TabBarController) 개요
+      - [프로젝트6] InstagramSearchView(UITabbarController를 활용한 View연결, UINavigationController > NavigationBarItem 생성, UISearchController 등)
 
 continue...
