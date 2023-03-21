@@ -67,7 +67,7 @@ class SymbolRollerViewController: UIViewController {
     }
     
     // MARK: - 중복되는 코드를 없애기 위한 메서드 생성
-    //  근데, ViewDidLoad()와 buttonTapped() 메서드에서 중복되는 코드가 있음! -> 이러한 문제를, 개발자 사이에선 'DRY'라고함
+    // 근데, ViewDidLoad()와 buttonTapped() 메서드에서 중복되는 코드가 있음! -> 이러한 문제를, 개발자 사이에선 'DRY'라고함
     // 그래서, 아래와 같이 중복되는 코드를 reload()란 메서드로 만들어 줌
     func reload() {
         let symbol = symbols.randomElement()!
