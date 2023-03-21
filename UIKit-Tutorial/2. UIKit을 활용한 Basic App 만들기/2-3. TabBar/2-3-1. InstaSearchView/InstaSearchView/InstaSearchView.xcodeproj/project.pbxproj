@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F4395F329C9E9BE003338FD /* HomeViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4395F229C9E9BE003338FD /* HomeViewViewController.swift */; };
+		3F4395F529C9E9E0003338FD /* HomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4395F429C9E9E0003338FD /* HomeViewCell.swift */; };
 		3FB3782929C9D5EC009A85BB /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB3782829C9D5EC009A85BB /* SearchViewController.swift */; };
 		3FB3782B29C9D6FC009A85BB /* ResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB3782A29C9D6FC009A85BB /* ResultCell.swift */; };
 		948CD22D2812F01B003DC0C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948CD22C2812F01B003DC0C4 /* AppDelegate.swift */; };
@@ -37,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F4395F229C9E9BE003338FD /* HomeViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewViewController.swift; sourceTree = "<group>"; };
+		3F4395F429C9E9E0003338FD /* HomeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewCell.swift; sourceTree = "<group>"; };
 		3FB3782829C9D5EC009A85BB /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		3FB3782A29C9D6FC009A85BB /* ResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCell.swift; sourceTree = "<group>"; };
 		948CD2292812F01B003DC0C4 /* InstaSearchView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaSearchView.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,6 +82,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F4395F029C9E992003338FD /* HomeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3F4395F229C9E9BE003338FD /* HomeViewViewController.swift */,
+				3F4395F429C9E9E0003338FD /* HomeViewCell.swift */,
+			);
+			path = HomeViewController;
+			sourceTree = "<group>";
+		};
+		3F4395F129C9E99B003338FD /* SearchViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3FB3782829C9D5EC009A85BB /* SearchViewController.swift */,
+				3FB3782A29C9D6FC009A85BB /* ResultCell.swift */,
+			);
+			path = SearchViewController;
+			sourceTree = "<group>";
+		};
 		3FB3782529C9D5B8009A85BB /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -96,8 +118,8 @@
 		3FB3782729C9D5C7009A85BB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				3FB3782829C9D5EC009A85BB /* SearchViewController.swift */,
-				3FB3782A29C9D6FC009A85BB /* ResultCell.swift */,
+				3F4395F129C9E99B003338FD /* SearchViewController */,
+				3F4395F029C9E992003338FD /* HomeViewController */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -288,7 +310,9 @@
 				3FB3782929C9D5EC009A85BB /* SearchViewController.swift in Sources */,
 				948CD22D2812F01B003DC0C4 /* AppDelegate.swift in Sources */,
 				3FB3782B29C9D6FC009A85BB /* ResultCell.swift in Sources */,
+				3F4395F329C9E9BE003338FD /* HomeViewViewController.swift in Sources */,
 				948CD22F2812F01B003DC0C4 /* SceneDelegate.swift in Sources */,
+				3F4395F529C9E9E0003338FD /* HomeViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
