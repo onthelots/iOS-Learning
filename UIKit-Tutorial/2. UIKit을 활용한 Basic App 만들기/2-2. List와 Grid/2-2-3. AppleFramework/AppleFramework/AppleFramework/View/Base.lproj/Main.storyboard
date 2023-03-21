@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Fgc-v5-kU6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="N3I-6m-rmb">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Framework View Controller-->
+        <!--📲 Apple Frameworks-->
         <scene sceneID="f9s-lS-9yF">
             <objects>
                 <viewController id="Fgc-v5-kU6" customClass="FrameworkViewController" customModule="AppleFramework" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,9 +19,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="QbJ-7t-F7l">
-                                <rect key="frame" x="0.0" y="48" width="414" height="814"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="yxB-gh-QRV">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="yxB-gh-QRV">
                                     <size key="itemSize" width="128" height="182"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -70,14 +70,36 @@
                         <viewLayoutGuide key="safeArea" id="NWo-qP-Ecv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="NWo-qP-Ecv" firstAttribute="bottom" secondItem="QbJ-7t-F7l" secondAttribute="bottom" id="QkW-5v-kLx"/>
+                            <constraint firstAttribute="bottom" secondItem="QbJ-7t-F7l" secondAttribute="bottom" id="QkW-5v-kLx"/>
                             <constraint firstItem="NWo-qP-Ecv" firstAttribute="trailing" secondItem="QbJ-7t-F7l" secondAttribute="trailing" id="RTJ-MA-Ty4"/>
                             <constraint firstItem="QbJ-7t-F7l" firstAttribute="leading" secondItem="NWo-qP-Ecv" secondAttribute="leading" id="Tdi-FN-SQL"/>
-                            <constraint firstItem="QbJ-7t-F7l" firstAttribute="top" secondItem="NWo-qP-Ecv" secondAttribute="top" id="fcQ-Om-hRz"/>
+                            <constraint firstItem="QbJ-7t-F7l" firstAttribute="top" secondItem="Qki-rH-27A" secondAttribute="top" id="fcQ-Om-hRz"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="📲 Apple Frameworks" id="37u-G0-TYC"/>
+                    <connections>
+                        <outlet property="collectionView" destination="QbJ-7t-F7l" id="Ix7-TL-C4b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6oB-vW-uO8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1273.913043478261" y="88.392857142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wQV-Wf-YHX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="N3I-6m-rmb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="X3x-oy-6bM">
+                        <rect key="frame" x="0.0" y="48" width="414" height="104.5"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Fgc-v5-kU6" kind="relationship" relationship="rootViewController" id="R6F-sq-qTq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3sJ-vY-fo2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="363.768115942029" y="88.392857142857139"/>
         </scene>
