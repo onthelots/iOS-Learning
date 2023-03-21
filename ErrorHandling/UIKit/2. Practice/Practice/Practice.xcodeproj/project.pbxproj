@@ -7,15 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F25E52529C9A18B006B81AF /* StockRankCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F25E52429C9A18B006B81AF /* StockRankCollectionViewCell.swift */; };
+		3F25E52829C9A3E0006B81AF /* StockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F25E52729C9A3E0006B81AF /* StockModel.swift */; };
+		3F25E52C29C9AB13006B81AF /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F25E52B29C9AB13006B81AF /* ChatModel.swift */; };
+		3F25E52E29C9AC0E006B81AF /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F25E52D29C9AC0E006B81AF /* ChatListViewController.swift */; };
+		3F25E53029C9AC38006B81AF /* ChatListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F25E52F29C9AC38006B81AF /* ChatListCollectionViewCell.swift */; };
+		3FA7856C29C99AA000A915DF /* StockRankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA7856B29C99AA000A915DF /* StockRankViewController.swift */; };
 		3FEFC6D429C980A7009CD490 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEFC6D329C980A7009CD490 /* AppDelegate.swift */; };
 		3FEFC6D629C980A7009CD490 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEFC6D529C980A7009CD490 /* SceneDelegate.swift */; };
-		3FEFC6D829C980A7009CD490 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEFC6D729C980A7009CD490 /* ViewController.swift */; };
 		3FEFC6DB29C980A7009CD490 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FEFC6D929C980A7009CD490 /* Main.storyboard */; };
 		3FEFC6DD29C980A8009CD490 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FEFC6DC29C980A8009CD490 /* Assets.xcassets */; };
 		3FEFC6E029C980A8009CD490 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FEFC6DE29C980A8009CD490 /* LaunchScreen.storyboard */; };
 		3FEFC6EB29C980A8009CD490 /* PracticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEFC6EA29C980A8009CD490 /* PracticeTests.swift */; };
 		3FEFC6F529C980A8009CD490 /* PracticeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEFC6F429C980A8009CD490 /* PracticeUITests.swift */; };
 		3FEFC6F729C980A8009CD490 /* PracticeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEFC6F629C980A8009CD490 /* PracticeUITestsLaunchTests.swift */; };
+		3FEFC70929C98653009CD490 /* SimpleWeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEFC70829C98653009CD490 /* SimpleWeatherViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,10 +42,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F25E52429C9A18B006B81AF /* StockRankCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockRankCollectionViewCell.swift; sourceTree = "<group>"; };
+		3F25E52729C9A3E0006B81AF /* StockModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockModel.swift; sourceTree = "<group>"; };
+		3F25E52B29C9AB13006B81AF /* ChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
+		3F25E52D29C9AC0E006B81AF /* ChatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
+		3F25E52F29C9AC38006B81AF /* ChatListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListCollectionViewCell.swift; sourceTree = "<group>"; };
+		3FA7856B29C99AA000A915DF /* StockRankViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockRankViewController.swift; sourceTree = "<group>"; };
 		3FEFC6D029C980A7009CD490 /* Practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Practice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FEFC6D329C980A7009CD490 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FEFC6D529C980A7009CD490 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3FEFC6D729C980A7009CD490 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3FEFC6DA29C980A7009CD490 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3FEFC6DC29C980A8009CD490 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3FEFC6DF29C980A8009CD490 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +60,7 @@
 		3FEFC6F029C980A8009CD490 /* PracticeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PracticeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FEFC6F429C980A8009CD490 /* PracticeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeUITests.swift; sourceTree = "<group>"; };
 		3FEFC6F629C980A8009CD490 /* PracticeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3FEFC70829C98653009CD490 /* SimpleWeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleWeatherViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +88,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F25E52629C9A3D5006B81AF /* StockModel */ = {
+			isa = PBXGroup;
+			children = (
+				3F25E52729C9A3E0006B81AF /* StockModel.swift */,
+			);
+			path = StockModel;
+			sourceTree = "<group>";
+		};
+		3F25E52929C9AAF1006B81AF /* ChatListController */ = {
+			isa = PBXGroup;
+			children = (
+				3F25E52D29C9AC0E006B81AF /* ChatListViewController.swift */,
+				3F25E52F29C9AC38006B81AF /* ChatListCollectionViewCell.swift */,
+			);
+			path = ChatListController;
+			sourceTree = "<group>";
+		};
+		3F25E52A29C9AAFC006B81AF /* ChatListModel */ = {
+			isa = PBXGroup;
+			children = (
+				3F25E52B29C9AB13006B81AF /* ChatModel.swift */,
+			);
+			path = ChatListModel;
+			sourceTree = "<group>";
+		};
+		3FA7856D29C99AE700A915DF /* SimpleWeatherController */ = {
+			isa = PBXGroup;
+			children = (
+				3FEFC70829C98653009CD490 /* SimpleWeatherViewController.swift */,
+			);
+			path = SimpleWeatherController;
+			sourceTree = "<group>";
+		};
+		3FA7856E29C99AF500A915DF /* StockRankController */ = {
+			isa = PBXGroup;
+			children = (
+				3FA7856B29C99AA000A915DF /* StockRankViewController.swift */,
+				3F25E52429C9A18B006B81AF /* StockRankCollectionViewCell.swift */,
+			);
+			path = StockRankController;
+			sourceTree = "<group>";
+		};
 		3FEFC6C729C980A7009CD490 = {
 			isa = PBXGroup;
 			children = (
@@ -101,8 +155,9 @@
 			children = (
 				3FEFC6D329C980A7009CD490 /* AppDelegate.swift */,
 				3FEFC6D529C980A7009CD490 /* SceneDelegate.swift */,
-				3FEFC6D729C980A7009CD490 /* ViewController.swift */,
-				3FEFC6D929C980A7009CD490 /* Main.storyboard */,
+				3FEFC70329C980AE009CD490 /* Model */,
+				3FEFC70429C980BD009CD490 /* View */,
+				3FEFC70529C980C7009CD490 /* Controller */,
 				3FEFC6DC29C980A8009CD490 /* Assets.xcassets */,
 				3FEFC6DE29C980A8009CD490 /* LaunchScreen.storyboard */,
 				3FEFC6E129C980A8009CD490 /* Info.plist */,
@@ -125,6 +180,33 @@
 				3FEFC6F629C980A8009CD490 /* PracticeUITestsLaunchTests.swift */,
 			);
 			path = PracticeUITests;
+			sourceTree = "<group>";
+		};
+		3FEFC70329C980AE009CD490 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3F25E52A29C9AAFC006B81AF /* ChatListModel */,
+				3F25E52629C9A3D5006B81AF /* StockModel */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3FEFC70429C980BD009CD490 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3FEFC6D929C980A7009CD490 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3FEFC70529C980C7009CD490 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3F25E52929C9AAF1006B81AF /* ChatListController */,
+				3FA7856E29C99AF500A915DF /* StockRankController */,
+				3FA7856D29C99AE700A915DF /* SimpleWeatherController */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,9 +340,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FEFC6D829C980A7009CD490 /* ViewController.swift in Sources */,
 				3FEFC6D429C980A7009CD490 /* AppDelegate.swift in Sources */,
+				3FEFC70929C98653009CD490 /* SimpleWeatherViewController.swift in Sources */,
+				3F25E52E29C9AC0E006B81AF /* ChatListViewController.swift in Sources */,
+				3F25E52829C9A3E0006B81AF /* StockModel.swift in Sources */,
+				3F25E52C29C9AB13006B81AF /* ChatModel.swift in Sources */,
+				3F25E53029C9AC38006B81AF /* ChatListCollectionViewCell.swift in Sources */,
+				3F25E52529C9A18B006B81AF /* StockRankCollectionViewCell.swift in Sources */,
 				3FEFC6D629C980A7009CD490 /* SceneDelegate.swift in Sources */,
+				3FA7856C29C99AA000A915DF /* StockRankViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
