@@ -21,6 +21,8 @@ class FrameworkViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
         
+        navigationController?.navigationBar.topItem?.title = "😍 Apple Frameworks" // NavigationBar의 topItem, text(title)을 수정할 수도 있음
+  
         // MARK: - estimate size의 옵션(none, Automatic 등) 조정 (CollectionView의 Inspector에서도 조정할 수 있음)
         if let flowLayout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             flowLayout.estimatedItemSize = .zero
@@ -56,6 +58,7 @@ extension FrameworkViewController: UICollectionViewDataSource {
 extension FrameworkViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
+        // MARK: - 3개의 열 일때 계산
         // 내부 Spacing
         let interItemSpacing: CGFloat = 10
         
@@ -68,6 +71,23 @@ extension FrameworkViewController: UICollectionViewDelegateFlowLayout {
         let width = (collectionView.bounds.width - interItemSpacing * 2 - padding * 2) / 3
         let height = width * 1.5
         return CGSize(width: width, height: height)
+        
+        
+        // MARK: - 2개의 열 일때 계산방법
+//        let interItemSpacing: CGFloat = 10 // 내부 Spacing
+//        let padding: CGFloat = 16 // Inset(위, 아래, 양, 옆)
+//
+//        let width = (collectionView.bounds.width - interItemSpacing * 1 - padding * 2) / 2
+//        let height = width * 1.5
+//        return CGSize(width: width, height: height)
+        
+        // MARK: - 4개의 열 일때 계산방법
+//        let interItemSpacing: CGFloat = 10 // 내부 Spacing
+//        let padding: CGFloat = 16 // Inset(위, 아래, 양, 옆)
+//
+//        let width = (collectionView.bounds.width - interItemSpacing * 3 - padding * 2) / 4
+//        let height = width * 1.5
+//        return CGSize(width: width, height: height)
     }
     
     // MARK: - InteritemSpacing (양옆 셀간의 간격 padding)
@@ -77,5 +97,15 @@ extension FrameworkViewController: UICollectionViewDelegateFlowLayout {
     // MARK: - Line Spacing (위 아래 셀간의 간격 padding) (minimumLineSpacingForSectionAt)
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 10
+    }
+}
+
+
+// MARK: - 3. 각 Cell의 Item이 선택(Click)되었는지 여부 확인
+// didSelectItemAt -> Item을 선택했을 때, 메서드가 실행
+extension FrameworkViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let framework = appleFrameworks[indexPath.item]
+        print(">>> Selected: \(framework.name)")
     }
 }
