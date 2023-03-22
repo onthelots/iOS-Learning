@@ -60,14 +60,17 @@ extension SearchViewController: UICollectionViewDataSource {
 
 extension SearchViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
         // Item간 Spacing
         let interItemSpacing: CGFloat = 1
         
         // 너비 구하기
         let width = (collectionView.bounds.width - interItemSpacing * 2) / 3
         
+        // 1:1 비율이므로, 동일하게 계산
         let height = width
         
+        // Cell 및 ContentView의 크기를 설정(CGSize)
         return CGSize(width: width, height: height)
     }
     

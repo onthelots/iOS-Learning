@@ -2,23 +2,23 @@
 //  HomeViewCell.swift
 //  InstaSearchView
 //
-//  Created by Jae hyuk Yim on 2023/03/21.
+//  Created by Jae hyuk Yim on 2023/03/22.
 //
 
 import UIKit
 
 class HomeViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var animalUIImage: UIImageView!
-    
-    override func prepareForReuse() {
-        super.prepareForReuse()
-        
-        animalUIImage.image = nil
-    }
+    @IBOutlet weak var thumbnailImage: UIImageView!
     
     
+//    override func prepareForReuse() {
+//        super.prepareForReuse()
+//        
+//        thumbnailImage.image = nil
+//    }
+    // MARK: - Data 할당 메서드
     func configure(_ imageName: String) {
-        animalUIImage.image = UIImage(named: imageName)
+        thumbnailImage.image = UIImage(named: imageName)
     }
 }

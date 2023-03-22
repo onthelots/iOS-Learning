@@ -88,70 +88,82 @@
                     </view>
                     <navigationItem key="navigationItem" id="3sx-Mh-en1"/>
                     <connections>
-                        <outlet property="collectionView" destination="67h-9O-1nc" id="MuR-2x-0RA"/>
+                        <outlet property="collectionView" destination="67h-9O-1nc" id="Fho-qy-pKY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mjw-5P-uqB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1554" y="2117"/>
         </scene>
-        <!--Home View View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="4tg-Rh-Xg3">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wiI-fi-PwS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewController storyboardIdentifier="HomeViewViewController" id="rtZ-Ce-H26" customClass="HomeViewViewController" customModule="InstaSearchView" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="rtZ-Ce-H26" customClass="HomeViewController" customModule="InstaSearchView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QBH-62-lsu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="WNb-6J-3us">
-                                <rect key="frame" x="0.0" y="92" width="414" height="741"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Vwg-eE-jfm">
+                                <rect key="frame" x="0.0" y="92" width="414" height="721"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="WGP-hO-j2S">
-                                    <size key="itemSize" width="414" height="277"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="PLL-vH-Gio">
+                                    <size key="itemSize" width="414" height="282"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeViewCell" id="fsg-xt-kJQ" customClass="HomeViewCell" customModule="InstaSearchView" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="277"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeViewCell" id="hQs-ma-gfH" customClass="HomeViewCell" customModule="InstaSearchView" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="282"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="3tw-ub-h3g">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="277"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Ytg-KT-ypu">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="282"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Bw2-F5-Ure">
-                                                    <rect key="frame" x="10" y="48.5" width="394" height="180"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hand.thumbsup.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="I8Y-x8-0b8">
+                                                    <rect key="frame" x="10" y="22.5" width="20" height="19"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="National Geographic" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQG-1Z-ewr">
+                                                    <rect key="frame" x="40" y="22" width="156" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bHm-ii-dLt">
+                                                    <rect key="frame" x="10" y="50" width="394" height="221.5"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="394" id="LMq-sJ-zv5"/>
-                                                        <constraint firstAttribute="height" constant="180" id="rv2-eJ-9Fk"/>
+                                                        <constraint firstAttribute="width" secondItem="bHm-ii-dLt" secondAttribute="height" multiplier="16:9" id="4yu-QV-I7W"/>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Bw2-F5-Ure" firstAttribute="centerY" secondItem="3tw-ub-h3g" secondAttribute="centerY" id="NWP-3O-Ega"/>
-                                                <constraint firstItem="Bw2-F5-Ure" firstAttribute="centerX" secondItem="3tw-ub-h3g" secondAttribute="centerX" id="Tj3-l3-LaV"/>
-                                                <constraint firstItem="Bw2-F5-Ure" firstAttribute="leading" secondItem="3tw-ub-h3g" secondAttribute="leading" constant="10" id="x8H-VN-PIl"/>
+                                                <constraint firstItem="I8Y-x8-0b8" firstAttribute="top" secondItem="Ytg-KT-ypu" secondAttribute="top" constant="22" id="2nZ-Ed-wcH"/>
+                                                <constraint firstItem="sQG-1Z-ewr" firstAttribute="firstBaseline" secondItem="I8Y-x8-0b8" secondAttribute="firstBaseline" id="2yV-sY-Hyg"/>
+                                                <constraint firstItem="bHm-ii-dLt" firstAttribute="leading" secondItem="I8Y-x8-0b8" secondAttribute="leading" id="8p7-dL-Jo0"/>
+                                                <constraint firstItem="I8Y-x8-0b8" firstAttribute="leading" secondItem="Ytg-KT-ypu" secondAttribute="leading" constant="10" id="9jS-Gc-5p6"/>
+                                                <constraint firstItem="bHm-ii-dLt" firstAttribute="top" secondItem="I8Y-x8-0b8" secondAttribute="bottom" constant="8" symbolic="YES" id="DrI-2i-kM1"/>
+                                                <constraint firstItem="sQG-1Z-ewr" firstAttribute="leading" secondItem="I8Y-x8-0b8" secondAttribute="trailing" constant="10" id="T8i-ry-ixA"/>
+                                                <constraint firstItem="bHm-ii-dLt" firstAttribute="centerX" secondItem="Ytg-KT-ypu" secondAttribute="centerX" id="fBy-ba-IwH"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="414" height="277"/>
+                                        <size key="customSize" width="414" height="282"/>
                                         <connections>
-                                            <outlet property="animalUIImage" destination="Bw2-F5-Ure" id="9pi-gp-Q0w"/>
+                                            <outlet property="thumbnailImage" destination="bHm-ii-dLt" id="Fmw-7C-uN7"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="hWZ-ql-0Qm"/>
+                        <viewLayoutGuide key="safeArea" id="59F-lm-Vwj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="JfJ-xt-ye2"/>
                     <connections>
-                        <outlet property="collectionView" destination="WNb-6J-3us" id="G6Q-Du-Gpw"/>
+                        <outlet property="collectionView" destination="Vwg-eE-jfm" id="ZLh-tl-kK0"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wiI-fi-PwS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2457.971014492754" y="2116.7410714285716"/>
         </scene>
@@ -280,6 +292,7 @@
     </scenes>
     <resources>
         <image name="gift" catalog="system" width="128" height="125"/>
+        <image name="hand.thumbsup.circle.fill" catalog="system" width="128" height="123"/>
         <image name="house" catalog="system" width="128" height="104"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <image name="person" catalog="system" width="128" height="121"/>
