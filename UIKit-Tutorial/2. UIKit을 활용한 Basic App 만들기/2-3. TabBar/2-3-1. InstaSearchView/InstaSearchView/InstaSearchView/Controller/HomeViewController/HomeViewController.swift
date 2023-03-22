@@ -42,12 +42,13 @@ extension HomeViewController: UICollectionViewDataSource {
         return cell
     }
 }
+
 // MARK: - !주의사항! 'Cell' 크기 자체를 변환시키는 extension임
 // 따라서, 아래 CGSize로 변환 시, height 또한 collcectionView의 크기로 설정하거나, 별도의 layout 설정을 해야 함
 extension HomeViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        return CGSize(width: collectionView.bounds.width, height: 282)
+        return CGSize(width: collectionView.bounds.width, height: 282) // !! 이 부분은, 어찌되었던지 간에 계산을 통해 구해야 하는 부분임
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
