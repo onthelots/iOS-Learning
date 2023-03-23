@@ -24,7 +24,7 @@
       
           
     2-4. PageView
-      - [프로젝트7] NikeOnboarding (진행중)
+      - [프로젝트7] NikeOnboarding (UICollcetionView와 UIPageControl 컴포넌트의 연결, Vertical ScrollView 구현)
       
       
       
