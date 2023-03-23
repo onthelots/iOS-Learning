@@ -12,6 +12,9 @@ class OnboardingViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    // MARK: - Page Control 선언
+    @IBOutlet weak var pageControl: UIPageControl!
+    
     let messages: [OnboardingMessage] = OnboardingMessage.messages
     
     override func viewDidLoad() {
@@ -25,6 +28,10 @@ class OnboardingViewController: UIViewController {
         if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             layout.estimatedItemSize = .zero
         }
+        
+        // MARK: - Page Control 수정
+        pageControl.numberOfPages = messages.count // pages의 갯수
+        pageControl.currentPage = 0 // Index 값에 따라 점(.)의 현재값
     }
 }
 
@@ -49,6 +56,33 @@ extension OnboardingViewController: UICollectionViewDataSource {
 
 extension OnboardingViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        CGSize(width: collectionView.bounds.width, height: 649 )
+        return collectionView.bounds.size
+    }
+    
+    // MARK: - 각각의 Cell간의 간격 조정
+    // LineSpacing
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return .zero
+    }
+    
+    // InteritemSpacing
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return .zero
+    }
+}
+
+// MARK: - Paging View의 상황을 파악하기 위해 Delegate 선언
+extension OnboardingViewController: UIScrollViewDelegate {
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        print("멈춤")
+        
+        // MARK: - scroll의 위치값을 index 지역변수로 저장
+        let index = Int(scrollView.contentOffset.x / self.collectionView.bounds.width)
+        
+        // MARK: - pageControl 프로퍼티의 값을 업데이트
+        // 디폴트 값으로 0을 설정해 놨으니, index값이 바뀔때 (1,2) 자동으로
+        // 업데이트를 시켜줌
+        pageControl.currentPage = index
     }
 }
