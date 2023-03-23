@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3FC0CCA429CAF2D400E0775D /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC0CCA329CAF2D400E0775D /* OnboardingViewController.swift */; };
+		3FC0CCA629CC51B800E0775D /* OnboardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC0CCA529CC51B800E0775D /* OnboardingCell.swift */; };
 		94B353C72813A6B300B6C232 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B353C62813A6B300B6C232 /* AppDelegate.swift */; };
 		94B353C92813A6B300B6C232 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B353C82813A6B300B6C232 /* SceneDelegate.swift */; };
 		94B353CE2813A6B300B6C232 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94B353CC2813A6B300B6C232 /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		3FC0CCA329CAF2D400E0775D /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		3FC0CCA529CC51B800E0775D /* OnboardingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCell.swift; sourceTree = "<group>"; };
 		94B353C32813A6B300B6C232 /* NRCOnboarding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NRCOnboarding.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94B353C62813A6B300B6C232 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94B353C82813A6B300B6C232 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				3FC0CCA329CAF2D400E0775D /* OnboardingViewController.swift */,
+				3FC0CCA529CC51B800E0775D /* OnboardingCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				94B353C72813A6B300B6C232 /* AppDelegate.swift in Sources */,
+				3FC0CCA629CC51B800E0775D /* OnboardingCell.swift in Sources */,
 				94B353C92813A6B300B6C232 /* SceneDelegate.swift in Sources */,
 				94B353FB2813B1B700B6C232 /* OnboardingMessage.swift in Sources */,
 				3FC0CCA429CAF2D400E0775D /* OnboardingViewController.swift in Sources */,

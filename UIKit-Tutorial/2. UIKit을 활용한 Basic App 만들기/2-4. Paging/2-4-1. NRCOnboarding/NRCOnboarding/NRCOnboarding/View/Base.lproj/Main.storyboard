@@ -21,45 +21,17 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_onboarding_bg" translatesAutoresizingMaskIntoConstraints="NO" id="D6Z-th-Ogc">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="fTe-Gf-eMN">
-                                <rect key="frame" x="0.0" y="802" width="414" height="60"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K7P-Ci-ldv">
-                                        <rect key="frame" x="0.0" y="0.0" width="206.5" height="60"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="JOIN NOW">
-                                            <color key="baseForegroundColor" systemColor="labelColor"/>
-                                        </buttonConfiguration>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ARr-fs-k24">
-                                        <rect key="frame" x="207.5" y="0.0" width="206.5" height="60"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="LOGIN">
-                                            <color key="baseForegroundColor" systemColor="labelColor"/>
-                                        </buttonConfiguration>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="DEw-YW-6QW"/>
-                                    <constraint firstAttribute="width" constant="414" id="ERp-J7-RBz"/>
-                                </constraints>
-                            </stackView>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="x2s-oP-L3h">
-                                <rect key="frame" x="149" y="736" width="116.5" height="26"/>
-                            </pageControl>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bUj-ee-UN6">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bUj-ee-UN6">
                                 <rect key="frame" x="0.0" y="48" width="414" height="648"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="pEa-xO-wKL">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="pEa-xO-wKL">
                                     <size key="itemSize" width="414" height="649"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="tkQ-RW-acN">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="649"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="OnboardingCell" id="tkQ-RW-acN" customClass="OnboardingCell" customModule="NRCOnboarding" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="-0.5" width="414" height="649"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Tsv-aZ-qdE">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="649"/>
@@ -72,29 +44,83 @@
                                                         <constraint firstAttribute="height" constant="250" id="GtL-YH-9pi"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xhc-Ep-UCc">
-                                                    <rect key="frame" x="8" y="562" width="398" height="66"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="krQ-ca-5t2">
+                                                    <rect key="frame" x="50" y="477.5" width="314" height="21.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="314" id="Eqx-kE-fJK"/>
+                                                        <constraint firstAttribute="height" constant="21.5" id="ub6-Cr-MR9"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xhc-Ep-UCc">
+                                                    <rect key="frame" x="50" y="519" width="314" height="111"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="314" id="XDx-6L-Q2d"/>
+                                                        <constraint firstAttribute="height" constant="111" id="ybL-oE-r8X"/>
+                                                    </constraints>
+                                                    <string key="text">New to the club? Join now and get started. Alread running with nike? Log in or join now and we'll show every run you've done with us</string>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="krQ-ca-5t2" secondAttribute="bottom" constant="150" id="2pI-FT-6zi"/>
                                                 <constraint firstItem="1nt-8u-elA" firstAttribute="centerX" secondItem="Tsv-aZ-qdE" secondAttribute="centerX" id="7Bs-3h-gXJ"/>
+                                                <constraint firstItem="xhc-Ep-UCc" firstAttribute="top" secondItem="krQ-ca-5t2" secondAttribute="bottom" constant="20" id="A7g-0A-wQP"/>
+                                                <constraint firstItem="xhc-Ep-UCc" firstAttribute="centerX" secondItem="Tsv-aZ-qdE" secondAttribute="centerX" id="DtP-Az-Hdw"/>
                                                 <constraint firstAttribute="trailing" secondItem="1nt-8u-elA" secondAttribute="trailing" constant="87" id="ETf-4S-I9I"/>
+                                                <constraint firstItem="xhc-Ep-UCc" firstAttribute="leading" secondItem="Tsv-aZ-qdE" secondAttribute="leading" constant="50" id="F6n-wU-Ruz"/>
                                                 <constraint firstAttribute="bottom" secondItem="1nt-8u-elA" secondAttribute="bottom" constant="200" id="fPs-JZ-ynI"/>
                                                 <constraint firstItem="1nt-8u-elA" firstAttribute="leading" secondItem="Tsv-aZ-qdE" secondAttribute="leading" constant="87" id="igX-Eq-K7D"/>
+                                                <constraint firstItem="krQ-ca-5t2" firstAttribute="centerX" secondItem="Tsv-aZ-qdE" secondAttribute="centerX" id="nk9-hR-k6w"/>
+                                                <constraint firstItem="krQ-ca-5t2" firstAttribute="leading" secondItem="Tsv-aZ-qdE" secondAttribute="leading" constant="50" id="tJ1-QS-A08"/>
                                                 <constraint firstItem="1nt-8u-elA" firstAttribute="top" secondItem="Tsv-aZ-qdE" secondAttribute="top" constant="200" id="wNR-w8-pd8"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="414" height="649"/>
+                                        <connections>
+                                            <outlet property="descriptionLabel" destination="xhc-Ep-UCc" id="M9B-Tw-87F"/>
+                                            <outlet property="thumbnailsImageView" destination="1nt-8u-elA" id="Gsp-0O-zWE"/>
+                                            <outlet property="titleLabel" destination="krQ-ca-5t2" id="Dwm-yp-k3N"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="x2s-oP-L3h">
+                                <rect key="frame" x="149" y="736" width="116.5" height="26"/>
+                            </pageControl>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="fTe-Gf-eMN">
+                                <rect key="frame" x="0.0" y="802" width="414" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K7P-Ci-ldv">
+                                        <rect key="frame" x="0.0" y="0.0" width="206.5" height="60"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="JOIN NOW">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
+                                            <color key="baseForegroundColor" systemColor="labelColor"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ARr-fs-k24">
+                                        <rect key="frame" x="207.5" y="0.0" width="206.5" height="60"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="LOGIN">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
+                                            <color key="baseForegroundColor" systemColor="labelColor"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="DEw-YW-6QW"/>
+                                    <constraint firstAttribute="width" constant="414" id="ERp-J7-RBz"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="RwT-VX-nS8"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="top" secondItem="D6Z-th-Ogc" secondAttribute="top" id="3Id-F7-vUn"/>
                             <constraint firstItem="bUj-ee-UN6" firstAttribute="leading" secondItem="RwT-VX-nS8" secondAttribute="leading" id="7VS-VY-tv5"/>
@@ -111,6 +137,9 @@
                             <constraint firstItem="x2s-oP-L3h" firstAttribute="centerX" secondItem="RwT-VX-nS8" secondAttribute="centerX" id="y7F-BY-24f"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="bUj-ee-UN6" id="X0W-Ld-IZD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JDh-4s-Hys" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -121,9 +150,6 @@
         <image name="img_onboarding_bg" width="450" height="1050"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>
