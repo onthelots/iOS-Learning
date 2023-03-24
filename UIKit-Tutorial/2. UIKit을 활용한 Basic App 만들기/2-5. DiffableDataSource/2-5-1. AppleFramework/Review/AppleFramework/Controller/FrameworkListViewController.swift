@@ -11,74 +11,68 @@ class FrameworkListViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    let list: [AppleFramework] = AppleFramework.list
+    // MARK: - Model 데이터 지역변수 선언
+    let dataList: [AppleFramework] = AppleFramework.list
     
-    // MARK: - DataSource가 무슨 타입일까?
-    // Section은 Presentation과 연결되어 있으며
-    // Item은 Data와 연결됨
-    typealias Item = AppleFramework
+    // MARK: - DataSource에 들어갈 Item 타입 typealias를 통해 미리 선언
+    typealias Items = AppleFramework
+    
     enum Section {
         case main
     }
     
-    // 따라서, 활용하는 dataSource는 DiffableDataSource 타입이며, 제네릭 타입으로 위에서 선언한 Section과 Item을 받아옴
-    // 해당 Section과 Item은 nil값일 수 있으므로, 강제 바인딩을 실행시켜 줌
-    var dataSource: UICollectionViewDiffableDataSource<Section, Item>!
-    
+    var dataSource: UICollectionViewDiffableDataSource<Section, Items>! // dataSource는 Diffable타입이며, Section, Item 배열 형태일거야
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        collectionView.delegate = self
         navigationController?.navigationBar.topItem?.title = "☀️ Apple Frameworks"
         
         // MARK: - 새로운 방식으로 작성하는 Data, Presentation, Layout
         // 각각 누가 담당하나?
         
         // MARK: - Presentation -> diffable DataSource (데이터를 어디서, 어떻게 보여줄껀데? -> Item이 무엇인데)
-        dataSource = UICollectionViewDiffableDataSource<Section, Item>(collectionView: collectionView, cellProvider: { collectionView, indexPath, item in
+        dataSource = UICollectionViewDiffableDataSource(collectionView: collectionView, cellProvider: { collectionView, indexPath, item in
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FrameworkCell", for: indexPath) as? FrameworkCell else {
                 return nil
             }
-            cell.configure(item)
+            
+//            let data = dataList[indexPath.item] // 이런식으로 데이터의 index값을 가져오지 않아도 됨! (Index로 접근하는 것이 아닌, Data 자체의 Hash Value를 활용하기 때문)
+            
+            cell.configure(item) // for문에 속해있으므로, item을 가져와서 configure 메서드에 넣어주면 됨
             return cell
         })
         
         // MARK: - Data -> Snapshot
-        // snapshot은 NSDiffableDataSourceSnapshot 타입이며, Section과 Item으로 구성되어 있음
-        var snapshot = NSDiffableDataSourceSnapshot<Section, Item>()
+        var snapshot = NSDiffableDataSourceSnapshot<Section, Items>() // 이제 Data의 현재 snapshot(상태)을 찍는건데, 빈 배열로 찍어오고
+        snapshot.appendSections([.main]) // Section은 위에서 선언했던 main
+        snapshot.appendItems(dataList) // 실질적인 데이터는 전역변수에서 가져온 dataList를 가져오는거지
         
-        snapshot.appendSections([.main]) // 1. 'main'이란 이름의 section을 활용할 것이다(snap!)
-        snapshot.appendItems(list, toSection: .main) // 2. 무슨 데이터? list 데이터를 -> main section에 넣을 것이다!
-        dataSource.apply(snapshot) // 3. 결과적으로, dataSource는 apply()하는데, 위에서 snapshot해둔 'snapshot)을 가져올거야!
+        // 기존 같았으면, cell의 갯수 (dataList.count)에 직접 접근하여 가져왔을 텐데, 이제는 snapshot을 통해 변경사항을 지켜보는 방식으로 채택한거지
         
-        
+        dataSource.apply(snapshot) // 마무리로, dataSource에 위에서 선언, 데이터 값을 snapshot 했으므로 apply() 시켜줌으로서 데이터 연결은 마무리 됨
+
         // MARK: - Layout -> Compositional Layout
-        collectionView.collectionViewLayout = layout() // collectionView의 ViewLayout은 layout() 메서드를 할당받는다!
-        
+        collectionView.collectionViewLayout = layout() // layout() 메서드를 만들어 주는데..
     }
-    
-    // Compositional Layout을 설정해 주기 위한 Layout 메서드 -> UICollectionViewCompositioanLayout을 반환함
-    private func layout() -> UICollectionViewCompositionalLayout {
+    // 반환 타입으로는 UICollectionView'Compositional'Layout!
+    func layout() -> UICollectionViewCompositionalLayout {
         
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.33), heightDimension: .fractionalHeight(1))
-        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        // layout, section, group, item 순의 내림차순으로 만들어 주자
+        // 사이즈를 결정하는 클래스는 NSCollcetionLayoutSize로 동일하며, 내부에서 Width와 Height를 결정할 수 있음)
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.25), heightDimension: .fractionalWidth(1))
         
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalWidth(0.33))
-        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 3)
+        let item = NSCollectionLayoutItem(layoutSize: itemSize) // item 사이즈 결정완료
+        
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalWidth(1))
+        
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 2) // group의 형태, 사이즈, 내부에 포함될 데이터(item), 갯수 작성이 필요함
         
         let section = NSCollectionLayoutSection(group: group)
         
-        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 16) // section의 Padding값을 설정함
+        section.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0)
         
         let layout = UICollectionViewCompositionalLayout(section: section)
         
         return layout
-    }
-}
-
-extension FrameworkListViewController: UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let framework = list[indexPath.item]
-        print(">>> selected: \(framework.name)")
     }
 }

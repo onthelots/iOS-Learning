@@ -21,7 +21,7 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dAk-VZ-rP1">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0PR-Q6-N8o">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0PR-Q6-N8o">
                                     <size key="itemSize" width="162" height="224"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -59,8 +59,8 @@
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="162" height="224"/>
                                         <connections>
-                                            <outlet property="nameLabel" destination="rIu-jB-qxr" id="0G3-uM-hyo"/>
-                                            <outlet property="thumbnailImageView" destination="SLq-N0-yuV" id="MCk-11-hWa"/>
+                                            <outlet property="nameLabel" destination="rIu-jB-qxr" id="PIA-PT-p5w"/>
+                                            <outlet property="thumbNailUIImage" destination="SLq-N0-yuV" id="ztJ-Kr-qu4"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -77,7 +77,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="🤔 Apple Frameworks" id="Tdd-uS-zc5"/>
                     <connections>
-                        <outlet property="collectionView" destination="dAk-VZ-rP1" id="mwq-Bo-LSz"/>
+                        <outlet property="collectionView" destination="dAk-VZ-rP1" id="dGr-ys-w5b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6oB-vW-uO8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -90,7 +90,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7vf-2a-Fhe" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Dy8-vd-iDS">
-                        <rect key="frame" x="0.0" y="48" width="414" height="104.5"/>
+                        <rect key="frame" x="0.0" y="48" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
