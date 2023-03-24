@@ -25,7 +25,10 @@
           
     2-4. PageView
       - [프로젝트7] NikeOnboarding (UICollcetionView와 UIPageControl 컴포넌트의 연결, Vertical ScrollView 구현)
-      
+    
+              
+    2-5. DiffableDataSource
+      - [프로젝트8] AppleFramework
       
       
 
