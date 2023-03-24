@@ -78,18 +78,35 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FRa-xu-p0X">
+                                <rect key="frame" x="40" y="787" width="334" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="334" id="O7b-UF-U3u"/>
+                                    <constraint firstAttribute="height" constant="55" id="UWe-Hn-cch"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="See All"/>
+                                <connections>
+                                    <action selector="refreshButtonTapped:" destination="07K-eu-e7f" eventType="touchUpInside" id="MNd-as-PuN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xIF-vf-ToX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="gCu-8A-sdL" firstAttribute="top" secondItem="xIF-vf-ToX" secondAttribute="top" id="8V3-0T-aME"/>
                             <constraint firstItem="gCu-8A-sdL" firstAttribute="leading" secondItem="xIF-vf-ToX" secondAttribute="leading" id="9Sd-DS-Z5x"/>
+                            <constraint firstItem="FRa-xu-p0X" firstAttribute="height" secondItem="Ndd-tE-Rzx" secondAttribute="height" multiplier="0.0390625" constant="20" id="EDT-Yt-iW6"/>
                             <constraint firstItem="gCu-8A-sdL" firstAttribute="bottom" secondItem="Ndd-tE-Rzx" secondAttribute="bottom" id="b16-vO-yDs"/>
+                            <constraint firstItem="xIF-vf-ToX" firstAttribute="bottom" secondItem="FRa-xu-p0X" secondAttribute="bottom" constant="20" id="ctM-FO-uvg"/>
+                            <constraint firstItem="FRa-xu-p0X" firstAttribute="centerX" secondItem="xIF-vf-ToX" secondAttribute="centerX" id="nWe-sO-pgN"/>
                             <constraint firstItem="xIF-vf-ToX" firstAttribute="trailing" secondItem="gCu-8A-sdL" secondAttribute="trailing" id="oJg-TG-bAt"/>
+                            <constraint firstItem="FRa-xu-p0X" firstAttribute="leading" secondItem="xIF-vf-ToX" secondAttribute="leading" constant="40" id="qfL-03-6sh"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="gCu-8A-sdL" id="vP8-1I-fUG"/>
+                        <outlet property="refreshButton" destination="FRa-xu-p0X" id="QwY-WC-LJs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aqZ-hT-Jgd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
