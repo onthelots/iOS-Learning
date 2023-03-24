@@ -49,8 +49,6 @@ class ForcusViewController: UIViewController {
         
         // MARK: - Layout (CompositionalLayout)
         collectionView.collectionViewLayout = layout()
-        
-        refreshButton.layer.shadowOffset = .init(width: 1, height: 1)
         updateButtonTitle()
     }
     
