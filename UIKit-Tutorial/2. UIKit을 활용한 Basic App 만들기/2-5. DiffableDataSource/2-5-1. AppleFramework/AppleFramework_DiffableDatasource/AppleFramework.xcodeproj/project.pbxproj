@@ -80,6 +80,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3FC22BE029CD66A800690025 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				948CD21A2812ADBA003DC0C4 /* FramewokData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3FC22BE129CD66AF00690025 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				948CD1F02812AD5E003DC0C4 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3FC22BE229CD66B500690025 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9487E77E2815676900A635EF /* FrameworkListViewController.swift */,
+				9487E7802815698C00A635EF /* FrameworkCell.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		948CD1DE2812AD5E003DC0C4 = {
 			isa = PBXGroup;
 			children = (
@@ -105,10 +130,9 @@
 			children = (
 				948CD1EA2812AD5E003DC0C4 /* AppDelegate.swift */,
 				948CD1EC2812AD5E003DC0C4 /* SceneDelegate.swift */,
-				948CD21A2812ADBA003DC0C4 /* FramewokData.swift */,
-				9487E77E2815676900A635EF /* FrameworkListViewController.swift */,
-				9487E7802815698C00A635EF /* FrameworkCell.swift */,
-				948CD1F02812AD5E003DC0C4 /* Main.storyboard */,
+				3FC22BE029CD66A800690025 /* Model */,
+				3FC22BE129CD66AF00690025 /* View */,
+				3FC22BE229CD66B500690025 /* Controller */,
 				948CD1F32812AD5F003DC0C4 /* Assets.xcassets */,
 				948CD1F52812AD5F003DC0C4 /* LaunchScreen.storyboard */,
 				948CD1F82812AD5F003DC0C4 /* Info.plist */,
