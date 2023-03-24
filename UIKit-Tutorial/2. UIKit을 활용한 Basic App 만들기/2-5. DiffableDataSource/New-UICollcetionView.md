@@ -23,8 +23,6 @@
     - IndexPath를 사용하지 않고, 해당 아이템(데이터)의 유니크한 Unique ID를 활용함
 
 <br>
----
-<br>
 
 ## Layout Issue
 - UICollectionView를 예로 들자면, Layout을 결정할 때 UICollectionViewFlowLayout을 활용해 옴
