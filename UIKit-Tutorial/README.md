@@ -29,7 +29,7 @@
               
     2-5. DiffableDataSource
       - [프로젝트8] AppleFramework(DiffDataSource와 CompositionalLayout을 활용한 기존 프로젝트 개선하기)
-      - [프로젝트9] HeadSpaceFocus
+      - [프로젝트9] HeadSpaceFocus(estimated 수정자를 활용한 동적 LayoutSize 조정 외 Layout 구성전반 학습, IBAction을 활용한 Data(snapshot) 업데이트)
       - [프로젝트10] SpotifyPaywall
       
       
