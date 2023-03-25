@@ -80,6 +80,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3FAA43B229CF156E00CABA3C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9436353D281CB4DD00CFBCA7 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3FAA43B329CF157500CABA3C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				94B477D0281CB8EA005F7671 /* BannerInfo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3FAA43B429CF157C00CABA3C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				94B477D2281CC1F8005F7671 /* BannerCell.swift */,
+				94B477CE281CB7D0005F7671 /* PaywallViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		9436352B281CB4DD00CFBCA7 = {
 			isa = PBXGroup;
 			children = (
@@ -105,10 +130,9 @@
 			children = (
 				94363537281CB4DD00CFBCA7 /* AppDelegate.swift */,
 				94363539281CB4DD00CFBCA7 /* SceneDelegate.swift */,
-				94B477CE281CB7D0005F7671 /* PaywallViewController.swift */,
-				94B477D0281CB8EA005F7671 /* BannerInfo.swift */,
-				94B477D2281CC1F8005F7671 /* BannerCell.swift */,
-				9436353D281CB4DD00CFBCA7 /* Main.storyboard */,
+				3FAA43B329CF157500CABA3C /* Model */,
+				3FAA43B229CF156E00CABA3C /* View */,
+				3FAA43B429CF157C00CABA3C /* Controller */,
 				94363540281CB4DD00CFBCA7 /* Assets.xcassets */,
 				94363542281CB4DD00CFBCA7 /* LaunchScreen.storyboard */,
 				94363545281CB4DD00CFBCA7 /* Info.plist */,
