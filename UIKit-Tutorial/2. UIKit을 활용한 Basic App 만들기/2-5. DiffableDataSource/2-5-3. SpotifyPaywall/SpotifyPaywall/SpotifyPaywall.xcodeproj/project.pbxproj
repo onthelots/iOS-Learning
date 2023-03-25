@@ -99,8 +99,8 @@
 		3FAA43B429CF157C00CABA3C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				94B477D2281CC1F8005F7671 /* BannerCell.swift */,
 				94B477CE281CB7D0005F7671 /* PaywallViewController.swift */,
+				94B477D2281CC1F8005F7671 /* BannerCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
