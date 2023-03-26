@@ -58,6 +58,8 @@ extension FrameworkViewController: UICollectionViewDataSource {
 extension FrameworkViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
+//
+//        collectionView.contentInset = UIEdgeInsets(top: 20, left: 16, bottom: 0, right: 16)
         // MARK: - 3개의 열 일때 계산
         // 내부 Spacing
         let interItemSpacing: CGFloat = 10
