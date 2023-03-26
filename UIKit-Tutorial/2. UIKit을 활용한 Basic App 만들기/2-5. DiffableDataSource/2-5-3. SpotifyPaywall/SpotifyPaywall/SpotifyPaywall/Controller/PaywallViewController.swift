@@ -9,6 +9,7 @@ import UIKit
 
 class PaywallViewController: UIViewController {
 
+    @IBOutlet weak var getTappedButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
     }
