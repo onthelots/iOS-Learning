@@ -12,7 +12,12 @@
 		3F25E52C29C9AB13006B81AF /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F25E52B29C9AB13006B81AF /* ChatModel.swift */; };
 		3F25E52E29C9AC0E006B81AF /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F25E52D29C9AC0E006B81AF /* ChatListViewController.swift */; };
 		3F25E53029C9AC38006B81AF /* ChatListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F25E52F29C9AC38006B81AF /* ChatListCollectionViewCell.swift */; };
+		3F4D3B1E29D0310200C0F963 /* InstagramSearchView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F4D3B1D29D0310200C0F963 /* InstagramSearchView.storyboard */; };
+		3F4D3B2129D0313F00C0F963 /* InstagramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4D3B2029D0313F00C0F963 /* InstagramViewController.swift */; };
+		3F4D3B2329D0315100C0F963 /* InstagramCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4D3B2229D0315100C0F963 /* InstagramCell.swift */; };
 		3FA7856C29C99AA000A915DF /* StockRankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA7856B29C99AA000A915DF /* StockRankViewController.swift */; };
+		3FC32F3F29D03CFE0077AC4A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC32F3E29D03CFE0077AC4A /* HomeViewController.swift */; };
+		3FC32F4229D041F90077AC4A /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC32F4129D041F90077AC4A /* HomeCell.swift */; };
 		3FEFC6D429C980A7009CD490 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEFC6D329C980A7009CD490 /* AppDelegate.swift */; };
 		3FEFC6D629C980A7009CD490 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEFC6D529C980A7009CD490 /* SceneDelegate.swift */; };
 		3FEFC6DB29C980A7009CD490 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FEFC6D929C980A7009CD490 /* Main.storyboard */; };
@@ -47,7 +52,12 @@
 		3F25E52B29C9AB13006B81AF /* ChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
 		3F25E52D29C9AC0E006B81AF /* ChatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
 		3F25E52F29C9AC38006B81AF /* ChatListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListCollectionViewCell.swift; sourceTree = "<group>"; };
+		3F4D3B1D29D0310200C0F963 /* InstagramSearchView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InstagramSearchView.storyboard; sourceTree = "<group>"; };
+		3F4D3B2029D0313F00C0F963 /* InstagramViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramViewController.swift; sourceTree = "<group>"; };
+		3F4D3B2229D0315100C0F963 /* InstagramCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramCell.swift; sourceTree = "<group>"; };
 		3FA7856B29C99AA000A915DF /* StockRankViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockRankViewController.swift; sourceTree = "<group>"; };
+		3FC32F3E29D03CFE0077AC4A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		3FC32F4129D041F90077AC4A /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		3FEFC6D029C980A7009CD490 /* Practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Practice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FEFC6D329C980A7009CD490 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FEFC6D529C980A7009CD490 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +123,16 @@
 			path = ChatListModel;
 			sourceTree = "<group>";
 		};
+		3F4D3B1F29D0312200C0F963 /* InstagramController */ = {
+			isa = PBXGroup;
+			children = (
+				3FC32F3D29D03CD40077AC4A /* InnerController */,
+				3F4D3B2029D0313F00C0F963 /* InstagramViewController.swift */,
+				3F4D3B2229D0315100C0F963 /* InstagramCell.swift */,
+			);
+			path = InstagramController;
+			sourceTree = "<group>";
+		};
 		3FA7856D29C99AE700A915DF /* SimpleWeatherController */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +148,15 @@
 				3F25E52429C9A18B006B81AF /* StockRankCollectionViewCell.swift */,
 			);
 			path = StockRankController;
+			sourceTree = "<group>";
+		};
+		3FC32F3D29D03CD40077AC4A /* InnerController */ = {
+			isa = PBXGroup;
+			children = (
+				3FC32F3E29D03CFE0077AC4A /* HomeViewController.swift */,
+				3FC32F4129D041F90077AC4A /* HomeCell.swift */,
+			);
+			path = InnerController;
 			sourceTree = "<group>";
 		};
 		3FEFC6C729C980A7009CD490 = {
@@ -195,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				3FEFC6D929C980A7009CD490 /* Main.storyboard */,
+				3F4D3B1D29D0310200C0F963 /* InstagramSearchView.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -202,6 +232,7 @@
 		3FEFC70529C980C7009CD490 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				3F4D3B1F29D0312200C0F963 /* InstagramController */,
 				3F25E52929C9AAF1006B81AF /* ChatListController */,
 				3FA7856E29C99AF500A915DF /* StockRankController */,
 				3FA7856D29C99AE700A915DF /* SimpleWeatherController */,
@@ -313,6 +344,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F4D3B1E29D0310200C0F963 /* InstagramSearchView.storyboard in Resources */,
 				3FEFC6E029C980A8009CD490 /* LaunchScreen.storyboard in Resources */,
 				3FEFC6DD29C980A8009CD490 /* Assets.xcassets in Resources */,
 				3FEFC6DB29C980A7009CD490 /* Main.storyboard in Resources */,
@@ -346,9 +378,13 @@
 				3F25E52829C9A3E0006B81AF /* StockModel.swift in Sources */,
 				3F25E52C29C9AB13006B81AF /* ChatModel.swift in Sources */,
 				3F25E53029C9AC38006B81AF /* ChatListCollectionViewCell.swift in Sources */,
+				3FC32F4229D041F90077AC4A /* HomeCell.swift in Sources */,
+				3F4D3B2329D0315100C0F963 /* InstagramCell.swift in Sources */,
 				3F25E52529C9A18B006B81AF /* StockRankCollectionViewCell.swift in Sources */,
 				3FEFC6D629C980A7009CD490 /* SceneDelegate.swift in Sources */,
 				3FA7856C29C99AA000A915DF /* StockRankViewController.swift in Sources */,
+				3F4D3B2129D0313F00C0F963 /* InstagramViewController.swift in Sources */,
+				3FC32F3F29D03CFE0077AC4A /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
