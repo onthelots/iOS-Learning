@@ -21,17 +21,19 @@
     2-3. TabBar
       - TabBar(TabBarController) 개요
       - [프로젝트6] InstagramSearchView(UITabbarController를 활용한 View연결, UINavigationController > NavigationBarItem 생성, UISearchController 등)
-      
           
     2-4. PageView
       - [프로젝트7] NikeOnboarding (UICollcetionView와 UIPageControl 컴포넌트의 연결, Vertical ScrollView 구현)
-    
-              
+             
     2-5. DiffableDataSource
       - [프로젝트8] AppleFramework(DiffDataSource와 CompositionalLayout을 활용한 기존 프로젝트 개선하기)
       - [프로젝트9] HeadSpaceFocus(estimated 수정자를 활용한 동적 LayoutSize 조정 외 Layout 구성전반 학습, IBAction을 활용한 Data(snapshot) 업데이트)
-      - [프로젝트10] SpotifyPaywall
-      
+      - [프로젝트10] SpotifyPaywall(DiffDataSoruce 및 CompositionalLayout 심화기능 학습, UIPageControl 연결, visibleItemsInvalidationHandler 인덱싱)
+     
+    2-6. Navigation & Modal
+      - Navigation & Modal 개요
+      - [프로젝트11] AppleFramework Modal
+      - [프로젝트12] HeadSpaceFocus Navigation
       
 
 continue...
