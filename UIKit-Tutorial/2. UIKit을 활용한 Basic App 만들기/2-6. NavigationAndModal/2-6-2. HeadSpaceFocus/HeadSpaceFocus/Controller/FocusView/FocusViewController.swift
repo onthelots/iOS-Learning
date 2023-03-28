@@ -70,6 +70,7 @@ class FocusViewController: UIViewController {
         refreshButton.setTitle(title, for: .normal)
     }
     
+    // MARK: - 버튼이 눌릴 때 마다, View의 Item을 업데이트 함 (snapshot)
     @IBAction func refreshButtonTapped(_ sender: Any) {
         curated.toggle()
         

@@ -52,7 +52,7 @@ class QuickFocusViewController: UIViewController {
             return cell
         })
         
-        // MARK: - QuickFocusHeaderView(Collection Reusable View) 내부에 선언된 sectionheader의 데이터를 연걸해 주기 위한 메서드(클로저)
+        // MARK: - Presentataion - QuickFocusHeaderView(Collection Reusable View) 내부에 선언된 sectionheader의 데이터를 연걸해 주기 위한 메서드(클로저)
         // supplementaryViewProvider
         DataSource.supplementaryViewProvider = { (collectionView, kind, indexPath) in
             
