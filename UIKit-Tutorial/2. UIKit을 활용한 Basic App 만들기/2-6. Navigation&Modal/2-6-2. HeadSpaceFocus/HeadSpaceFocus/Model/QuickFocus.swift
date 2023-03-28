@@ -15,6 +15,7 @@ struct QuickFocus: Hashable {
 }
 
 extension QuickFocus {
+    // MARK: - Section 1
     static let breathing: [QuickFocus] = [
         QuickFocus(title: "Breathe with the Cat", description: "Take five deep breaths", imageName: "img_breathe_with_cat"),
         QuickFocus(title: "Breathe with the Clouds", description: "Take five deep breaths", imageName: "img_breathe_with_the_clouds"),
@@ -22,7 +23,7 @@ extension QuickFocus {
         QuickFocus(title: "Breathe with the Balloon", description: "Take five deep breaths", imageName: "img_breathe_with_the_balloon"),
         QuickFocus(title: "Breathe with the Sun", description: "Take five deep breaths", imageName: "img_breathe_with_the_sun"),
     ]
-    
+    // MARK: - Section 2
     static let walking: [QuickFocus] = [
         QuickFocus(title: "Walking in the city", description: "Stay connected to the world during a walk in the city", imageName: "img_walking_in_the_city"),
         QuickFocus(title: "Walking in Nature", description: "Genuinely experience the natural world around you.", imageName: "img_walking_in_nature"),
