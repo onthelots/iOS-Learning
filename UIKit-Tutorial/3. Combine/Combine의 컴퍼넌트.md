@@ -109,4 +109,3 @@ weather.temperature = 25
 - 2가지 메서드를 가지고 있음
     - subscribe(on:) : publisher가 어느 스레드에서 수행할지 결정함(작업의 정도에 따라 스레드를 설정)
     - receive(on:) : operator, subscriber가 어디서 데이터를 받아올 수 있는지, 또한 작업을 수행할 수 있을지 결정함(UI업데이트르 해야 하는데, 어느 스레드에서 받아오나?)
-
