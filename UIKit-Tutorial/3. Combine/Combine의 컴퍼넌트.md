@@ -14,7 +14,9 @@
 - Publisher는 2개의 타입을 정의해야 함 (배출할 경우-Ouput와 실패하는 경우-Failure)
 - Subscriber가 요청할 시, 데이터를 제공
 - iOS에서는 Publisher를 자동으로 제공하는 경우도 있음 (NotificationCenter, Timer, URLSession.dataTask 등)
-- BuiltIn Subscriber : Just, Future
+- Built-In Subscriber 
+    - Just : 값을 다루는 Publisher
+    - Future : 메서드를 다루는 Publisher
 
 ```swift
 protocol Publisher {
@@ -31,7 +33,9 @@ protocol Publisher {
 - Publisher에게 데이터를 요청할 수 있음
 - Input과 Failure, 두 타입을 정의해야 함
 - Publisher에게 '구독'을 한 이후, 갯수를 요청할 수 있음
-- BuiltIn Subscriber : assign, sink
+- Built-In Subscriber
+   - assign : Publisher가 제공한 데이터를 -> 특정 객체의 키패스에 할당함
+   - sink : Publisher가 제공한 데이터를 받을 수 있도록 클로저를 제공함
 
 
 ```swift
