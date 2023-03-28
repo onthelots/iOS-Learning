@@ -32,8 +32,17 @@
      
     2-6. Navigation & Modal
       - Navigation & Modal 개요
-      - [프로젝트11] AppleFramework Modal
-      - [프로젝트12] HeadSpaceFocus Navigation
+      - [프로젝트11] AppleFramework Modal (Modality 구현을 위한 새로운 Storyboard 생성, 기존 ViewController 내 Delegate 선언과 Present 수정자를 통한 modal 띄우기)
+      - [프로젝트12] HeadSpaceFocus Navigation(2개 이상의 Section 생성 및 활용, NavigationController, pushViewController메서드를 통한 Navigation 기능구현)
+      
+
+###  3. Combine
+    3-1. Combine 기초
+      - Combine의 개념
+      
+    3-2. Combine 실습
+      - 진행중
+      
       
 
 continue...
