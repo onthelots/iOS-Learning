@@ -93,14 +93,14 @@ class PaywallViewController: UIViewController {
 }
 
 // MARK: - pageControl Setting
-extension PaywallViewController: UIScrollViewDelegate {
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        print("STOP")
-        
-        let index = Int(scrollView.contentOffset.x / collectionView.bounds.width)
-        
-        print("index : \(index)")
-        
-        pageControl.currentPage = index
-    }
-}
+//extension PaywallViewController: UIScrollViewDelegate {
+//    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+//        print("STOP")
+//        
+//        let index = Int(scrollView.contentOffset.x / collectionView.bounds.width)
+//        
+//        print("index : \(index)")
+//        
+//        pageControl.currentPage = index
+//    }
+//}
