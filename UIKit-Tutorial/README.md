@@ -38,11 +38,19 @@
 
 ###  3. Combine
     3-1. Combine 기초
-      - Combine의 개념
+      - Combine이란? (Combine 및 동기/비동기 개념)
+      - Combine의 컴퍼넌트 (Publisher, Subscriber, Operator)
+      - Hello, Combine (Publisher 및 Subscriber 선언 / Subject / Subscription / @Published / Foundation&Combine / Scheduler / Operation 활용)
       
     3-2. Combine 실습
-      - 진행중
+      - [프로젝트13] AppleFramwork_Combine (Combine을 활용한 코드 리팩토링)
       
+      
+###  4. Network
+    4-1. 네트워크 이해하기 (Concurrency / Thread / Async&Sync Task / HTTP)
+    4-2. URLSession, URLSession+Combine
+    4-3. [프로젝트14] GithubUserProfile
+    4-4. [프로젝트15] GithubUserSearch
       
 
 continue...
