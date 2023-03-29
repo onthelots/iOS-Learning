@@ -1,0 +1,631 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3FC434E129D4496C007A8A83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC434E029D4496C007A8A83 /* AppDelegate.swift */; };
+		3FC434E329D4496C007A8A83 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC434E229D4496C007A8A83 /* SceneDelegate.swift */; };
+		3FC434E829D4496C007A8A83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FC434E629D4496C007A8A83 /* Main.storyboard */; };
+		3FC434EA29D4496D007A8A83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FC434E929D4496D007A8A83 /* Assets.xcassets */; };
+		3FC434ED29D4496D007A8A83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FC434EB29D4496D007A8A83 /* LaunchScreen.storyboard */; };
+		3FC434F829D4496D007A8A83 /* HeadSpaceFocusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC434F729D4496D007A8A83 /* HeadSpaceFocusTests.swift */; };
+		3FC4350229D4496D007A8A83 /* HeadSpaceFocusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC4350129D4496D007A8A83 /* HeadSpaceFocusUITests.swift */; };
+		3FC4350429D4496D007A8A83 /* HeadSpaceFocusUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC4350329D4496D007A8A83 /* HeadSpaceFocusUITestsLaunchTests.swift */; };
+		3FC4351229D449AC007A8A83 /* Focus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC4351129D449AC007A8A83 /* Focus.swift */; };
+		3FC4351529D449E5007A8A83 /* FocusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC4351429D449E5007A8A83 /* FocusViewController.swift */; };
+		3FC4351729D44C41007A8A83 /* FocusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC4351629D44C41007A8A83 /* FocusCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3FC434F429D4496D007A8A83 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3FC434D529D4496C007A8A83 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3FC434DC29D4496C007A8A83;
+			remoteInfo = HeadSpaceFocus;
+		};
+		3FC434FE29D4496D007A8A83 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3FC434D529D4496C007A8A83 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3FC434DC29D4496C007A8A83;
+			remoteInfo = HeadSpaceFocus;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3FC434DD29D4496C007A8A83 /* HeadSpaceFocus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeadSpaceFocus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FC434E029D4496C007A8A83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3FC434E229D4496C007A8A83 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		3FC434E729D4496C007A8A83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3FC434E929D4496D007A8A83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3FC434EC29D4496D007A8A83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3FC434EE29D4496D007A8A83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FC434F329D4496D007A8A83 /* HeadSpaceFocusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeadSpaceFocusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FC434F729D4496D007A8A83 /* HeadSpaceFocusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadSpaceFocusTests.swift; sourceTree = "<group>"; };
+		3FC434FD29D4496D007A8A83 /* HeadSpaceFocusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeadSpaceFocusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FC4350129D4496D007A8A83 /* HeadSpaceFocusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadSpaceFocusUITests.swift; sourceTree = "<group>"; };
+		3FC4350329D4496D007A8A83 /* HeadSpaceFocusUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadSpaceFocusUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3FC4351129D449AC007A8A83 /* Focus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Focus.swift; sourceTree = "<group>"; };
+		3FC4351429D449E5007A8A83 /* FocusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusViewController.swift; sourceTree = "<group>"; };
+		3FC4351629D44C41007A8A83 /* FocusCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3FC434DA29D4496C007A8A83 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FC434F029D4496D007A8A83 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FC434FA29D4496D007A8A83 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3FC434D429D4496C007A8A83 = {
+			isa = PBXGroup;
+			children = (
+				3FC434DF29D4496C007A8A83 /* HeadSpaceFocus */,
+				3FC434F629D4496D007A8A83 /* HeadSpaceFocusTests */,
+				3FC4350029D4496D007A8A83 /* HeadSpaceFocusUITests */,
+				3FC434DE29D4496C007A8A83 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3FC434DE29D4496C007A8A83 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3FC434DD29D4496C007A8A83 /* HeadSpaceFocus.app */,
+				3FC434F329D4496D007A8A83 /* HeadSpaceFocusTests.xctest */,
+				3FC434FD29D4496D007A8A83 /* HeadSpaceFocusUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3FC434DF29D4496C007A8A83 /* HeadSpaceFocus */ = {
+			isa = PBXGroup;
+			children = (
+				3FC434E029D4496C007A8A83 /* AppDelegate.swift */,
+				3FC434E229D4496C007A8A83 /* SceneDelegate.swift */,
+				3FC434E629D4496C007A8A83 /* Main.storyboard */,
+				3FC4351029D449A2007A8A83 /* Model */,
+				3FC4351329D449B9007A8A83 /* Controller */,
+				3FC434E929D4496D007A8A83 /* Assets.xcassets */,
+				3FC434EB29D4496D007A8A83 /* LaunchScreen.storyboard */,
+				3FC434EE29D4496D007A8A83 /* Info.plist */,
+			);
+			path = HeadSpaceFocus;
+			sourceTree = "<group>";
+		};
+		3FC434F629D4496D007A8A83 /* HeadSpaceFocusTests */ = {
+			isa = PBXGroup;
+			children = (
+				3FC434F729D4496D007A8A83 /* HeadSpaceFocusTests.swift */,
+			);
+			path = HeadSpaceFocusTests;
+			sourceTree = "<group>";
+		};
+		3FC4350029D4496D007A8A83 /* HeadSpaceFocusUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3FC4350129D4496D007A8A83 /* HeadSpaceFocusUITests.swift */,
+				3FC4350329D4496D007A8A83 /* HeadSpaceFocusUITestsLaunchTests.swift */,
+			);
+			path = HeadSpaceFocusUITests;
+			sourceTree = "<group>";
+		};
+		3FC4351029D449A2007A8A83 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3FC4351129D449AC007A8A83 /* Focus.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3FC4351329D449B9007A8A83 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3FC4351429D449E5007A8A83 /* FocusViewController.swift */,
+				3FC4351629D44C41007A8A83 /* FocusCell.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3FC434DC29D4496C007A8A83 /* HeadSpaceFocus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FC4350729D4496D007A8A83 /* Build configuration list for PBXNativeTarget "HeadSpaceFocus" */;
+			buildPhases = (
+				3FC434D929D4496C007A8A83 /* Sources */,
+				3FC434DA29D4496C007A8A83 /* Frameworks */,
+				3FC434DB29D4496C007A8A83 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HeadSpaceFocus;
+			productName = HeadSpaceFocus;
+			productReference = 3FC434DD29D4496C007A8A83 /* HeadSpaceFocus.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3FC434F229D4496D007A8A83 /* HeadSpaceFocusTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FC4350A29D4496D007A8A83 /* Build configuration list for PBXNativeTarget "HeadSpaceFocusTests" */;
+			buildPhases = (
+				3FC434EF29D4496D007A8A83 /* Sources */,
+				3FC434F029D4496D007A8A83 /* Frameworks */,
+				3FC434F129D4496D007A8A83 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3FC434F529D4496D007A8A83 /* PBXTargetDependency */,
+			);
+			name = HeadSpaceFocusTests;
+			productName = HeadSpaceFocusTests;
+			productReference = 3FC434F329D4496D007A8A83 /* HeadSpaceFocusTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3FC434FC29D4496D007A8A83 /* HeadSpaceFocusUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FC4350D29D4496D007A8A83 /* Build configuration list for PBXNativeTarget "HeadSpaceFocusUITests" */;
+			buildPhases = (
+				3FC434F929D4496D007A8A83 /* Sources */,
+				3FC434FA29D4496D007A8A83 /* Frameworks */,
+				3FC434FB29D4496D007A8A83 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3FC434FF29D4496D007A8A83 /* PBXTargetDependency */,
+			);
+			name = HeadSpaceFocusUITests;
+			productName = HeadSpaceFocusUITests;
+			productReference = 3FC434FD29D4496D007A8A83 /* HeadSpaceFocusUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3FC434D529D4496C007A8A83 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					3FC434DC29D4496C007A8A83 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					3FC434F229D4496D007A8A83 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 3FC434DC29D4496C007A8A83;
+					};
+					3FC434FC29D4496D007A8A83 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 3FC434DC29D4496C007A8A83;
+					};
+				};
+			};
+			buildConfigurationList = 3FC434D829D4496C007A8A83 /* Build configuration list for PBXProject "HeadSpaceFocus" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3FC434D429D4496C007A8A83;
+			productRefGroup = 3FC434DE29D4496C007A8A83 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3FC434DC29D4496C007A8A83 /* HeadSpaceFocus */,
+				3FC434F229D4496D007A8A83 /* HeadSpaceFocusTests */,
+				3FC434FC29D4496D007A8A83 /* HeadSpaceFocusUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3FC434DB29D4496C007A8A83 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FC434ED29D4496D007A8A83 /* LaunchScreen.storyboard in Resources */,
+				3FC434EA29D4496D007A8A83 /* Assets.xcassets in Resources */,
+				3FC434E829D4496C007A8A83 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FC434F129D4496D007A8A83 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FC434FB29D4496D007A8A83 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3FC434D929D4496C007A8A83 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FC434E129D4496C007A8A83 /* AppDelegate.swift in Sources */,
+				3FC4351229D449AC007A8A83 /* Focus.swift in Sources */,
+				3FC4351729D44C41007A8A83 /* FocusCell.swift in Sources */,
+				3FC434E329D4496C007A8A83 /* SceneDelegate.swift in Sources */,
+				3FC4351529D449E5007A8A83 /* FocusViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FC434EF29D4496D007A8A83 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FC434F829D4496D007A8A83 /* HeadSpaceFocusTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FC434F929D4496D007A8A83 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FC4350429D4496D007A8A83 /* HeadSpaceFocusUITestsLaunchTests.swift in Sources */,
+				3FC4350229D4496D007A8A83 /* HeadSpaceFocusUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3FC434F529D4496D007A8A83 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3FC434DC29D4496C007A8A83 /* HeadSpaceFocus */;
+			targetProxy = 3FC434F429D4496D007A8A83 /* PBXContainerItemProxy */;
+		};
+		3FC434FF29D4496D007A8A83 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3FC434DC29D4496C007A8A83 /* HeadSpaceFocus */;
+			targetProxy = 3FC434FE29D4496D007A8A83 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3FC434E629D4496C007A8A83 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3FC434E729D4496C007A8A83 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3FC434EB29D4496D007A8A83 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3FC434EC29D4496D007A8A83 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3FC4350529D4496D007A8A83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3FC4350629D4496D007A8A83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3FC4350829D4496D007A8A83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V7TH2GUA8U;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HeadSpaceFocus/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Lime.HeadSpaceFocus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3FC4350929D4496D007A8A83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V7TH2GUA8U;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HeadSpaceFocus/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Lime.HeadSpaceFocus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3FC4350B29D4496D007A8A83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V7TH2GUA8U;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Lime.HeadSpaceFocusTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HeadSpaceFocus.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/HeadSpaceFocus";
+			};
+			name = Debug;
+		};
+		3FC4350C29D4496D007A8A83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V7TH2GUA8U;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Lime.HeadSpaceFocusTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HeadSpaceFocus.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/HeadSpaceFocus";
+			};
+			name = Release;
+		};
+		3FC4350E29D4496D007A8A83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V7TH2GUA8U;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Lime.HeadSpaceFocusUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HeadSpaceFocus;
+			};
+			name = Debug;
+		};
+		3FC4350F29D4496D007A8A83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V7TH2GUA8U;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Lime.HeadSpaceFocusUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HeadSpaceFocus;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3FC434D829D4496C007A8A83 /* Build configuration list for PBXProject "HeadSpaceFocus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FC4350529D4496D007A8A83 /* Debug */,
+				3FC4350629D4496D007A8A83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3FC4350729D4496D007A8A83 /* Build configuration list for PBXNativeTarget "HeadSpaceFocus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FC4350829D4496D007A8A83 /* Debug */,
+				3FC4350929D4496D007A8A83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3FC4350A29D4496D007A8A83 /* Build configuration list for PBXNativeTarget "HeadSpaceFocusTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FC4350B29D4496D007A8A83 /* Debug */,
+				3FC4350C29D4496D007A8A83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3FC4350D29D4496D007A8A83 /* Build configuration list for PBXNativeTarget "HeadSpaceFocusUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FC4350E29D4496D007A8A83 /* Debug */,
+				3FC4350F29D4496D007A8A83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3FC434D529D4496C007A8A83 /* Project object */;
+}
