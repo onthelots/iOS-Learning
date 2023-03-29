@@ -19,19 +19,15 @@ class FrameworkListViewController: UIViewController {
     
     var dataSource: UICollectionViewDiffableDataSource<Section, Item>!
     
-    let list: [AppleFramework] = AppleFramework.list
-    
     // Combine
     var subscriptions = Set<AnyCancellable>() // 빈 구독박스 생성
-    let didSelected = PassthroughSubject<AppleFramework, Never>() // 배출자 생성
+    let didSelected = PassthroughSubject<AppleFramework, Never>() // 퍼블리셔 생성
+    let items = CurrentValueSubject<[AppleFramework], Never>(AppleFramework.list) // 퍼블리셔 생성(CurrentValueSubject)화
+//    @Published var list: [AppleFramework] = AppleFramework.list // Published 프로퍼티 설정 (퍼플리셔로 만들어 줌)
     
     // Data, Presentation, Layout
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // CollcetionView -> Presentation, Layout의 설정
-        // CollcetionView -> Data 가져오기
-        
         configureCollectionView()
         bind()
     }
@@ -39,21 +35,24 @@ class FrameworkListViewController: UIViewController {
     // MARK: - bind 함수
     private func bind() {
         // input: 사용자의 데이터를 받아서, 처리
-        // - 특정 Item이 선택되었을 때 처리방식
+        // - 특정 Item이 선택되었을 때 처리방식 (사용자의 Interactions)
         didSelected
             .receive(on: RunLoop.main)
-            .sink { framework in
+            .sink { [unowned self] framework in
             let sb = UIStoryboard(name: "Detail", bundle: nil)
             let vc = sb.instantiateViewController(withIdentifier: "FrameworkDetailViewController") as! FrameworkDetailViewController
-            vc.framework = framework
-            
-            present(vc, animated: true)
+                vc.framework.send(framework)
+                self.present(vc, animated: true)
         }.store(in: &subscriptions)
+        
         // output : data, state 상태 변경에 따라 UI를 업데이트
         // - 특정 Item들이 UI적으로 세팅이 되어있을 때, CollectionView를 업데이트
+        items
+            .receive(on: RunLoop.main)
+            .sink { [unowned self] list in
+                self.applySectionItems(list)
+            }.store(in: &subscriptions)
     }
-    
-    
     private func applySectionItems(_ items: [Item], to section: Section = .main) {
         // data
         var snapshot = NSDiffableDataSourceSnapshot<Section, Item>()
@@ -101,7 +100,7 @@ class FrameworkListViewController: UIViewController {
 
 extension FrameworkListViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let framework = list[indexPath.item]
+        let framework = items.value[indexPath.item] // items는 subject이므로, value 메서드를 통해 데이터를 가져올 수 있으며, 가져오는 데이터는 각각의 item임
         print(">>> selected: \(framework.name)")
         
         // Publisher의 데이터를 send -> 어떤걸로? 'framework' (list 내부의 item)
