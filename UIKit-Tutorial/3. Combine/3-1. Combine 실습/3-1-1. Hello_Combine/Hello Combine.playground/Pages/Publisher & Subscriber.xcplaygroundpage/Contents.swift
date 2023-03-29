@@ -43,7 +43,8 @@ class MyClass {
 }
 
 let object = MyClass()
-let subscription4 = arrayPublisher.assign(to: \.value, on: object) // value(프로퍼티)에 값을 할당할거고, 그 프로퍼티가 있는 클래스 인스턴스는 object이다~
+let subscription4 = arrayPublisher.assign(to: \.value, on: object)
+// value(프로퍼티)에 값을 할당할거고, 그 프로퍼티가 있는 클래스 인스턴스는 object이다~
 
 /*
  Did set property to 1

@@ -11,13 +11,10 @@ var subscriptions = Set<AnyCancellable>()
 // compactMap
 
 
-
 // ignoreOutput
 
 
-
 // prefix
-
 
 
 //: [Next](@next)
