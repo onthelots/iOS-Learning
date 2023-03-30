@@ -23,6 +23,9 @@ class FocusViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        collectionView.delegate = self
+        
         refreshButton.layer.cornerRadius = 10
         
         // Presentation: Diffable Datasource + Cell Provider
@@ -78,5 +81,23 @@ class FocusViewController: UIViewController {
         datasource.apply(snapshot)
         
         updateButtonTitle()
+    }
+}
+
+extension FocusViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let items = items[indexPath.item]
+        print(">> selected items : \(items)")
+        
+        // storyboard
+        let storyboard = UIStoryboard(name: "QuickFocus", bundle: nil)
+        // vc
+        let vc = storyboard.instantiateViewController(withIdentifier: "QuickFocusViewController") as! QuickFocusViewController
+        // update data (title만)
+        vc.title = items.title
+        // Modality
+//        present(vc, animated: true)
+        // Navigation
+        navigationController?.pushViewController(vc, animated: true)
     }
 }

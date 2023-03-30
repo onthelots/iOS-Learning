@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3FF7097229D51BB60039E806 /* QuickFocus.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FF7097129D51BB60039E806 /* QuickFocus.storyboard */; };
+		3FF7097429D51BC90039E806 /* QuickFocusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF7097329D51BC90039E806 /* QuickFocusViewController.swift */; };
+		3FF7097629D51BE40039E806 /* QuickFocusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF7097529D51BE40039E806 /* QuickFocusCell.swift */; };
+		3FF7097829D522B70039E806 /* TitleReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF7097729D522B70039E806 /* TitleReusableView.swift */; };
 		94182266281E55DB00FB38F1 /* FocusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94182265281E55DB00FB38F1 /* FocusViewController.swift */; };
 		94182268281E583C00FB38F1 /* FocusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94182267281E583C00FB38F1 /* FocusCell.swift */; };
 		943BB54328150EFA005A1B6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943BB54228150EFA005A1B6E /* AppDelegate.swift */; };
@@ -39,6 +43,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3FF7097129D51BB60039E806 /* QuickFocus.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QuickFocus.storyboard; sourceTree = "<group>"; };
+		3FF7097329D51BC90039E806 /* QuickFocusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickFocusViewController.swift; sourceTree = "<group>"; };
+		3FF7097529D51BE40039E806 /* QuickFocusCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickFocusCell.swift; sourceTree = "<group>"; };
+		3FF7097729D522B70039E806 /* TitleReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleReusableView.swift; sourceTree = "<group>"; };
 		94182265281E55DB00FB38F1 /* FocusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusViewController.swift; sourceTree = "<group>"; };
 		94182267281E583C00FB38F1 /* FocusCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusCell.swift; sourceTree = "<group>"; };
 		943BB53F28150EFA005A1B6E /* HeadSpaceFocus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeadSpaceFocus.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,6 +90,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3FF7096D29D51AD80039E806 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				943BB57628151183005A1B6E /* Focus.swift */,
+				94DA3CA7281ECE3D0054FFC7 /* QuickFocus.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3FF7096E29D51AE80039E806 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3FF7096F29D51B130039E806 /* Focus */,
+				3FF7097029D51B1B0039E806 /* QuickFocus */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3FF7096F29D51B130039E806 /* Focus */ = {
+			isa = PBXGroup;
+			children = (
+				943BB54828150EFA005A1B6E /* Main.storyboard */,
+				94182265281E55DB00FB38F1 /* FocusViewController.swift */,
+				94182267281E583C00FB38F1 /* FocusCell.swift */,
+			);
+			path = Focus;
+			sourceTree = "<group>";
+		};
+		3FF7097029D51B1B0039E806 /* QuickFocus */ = {
+			isa = PBXGroup;
+			children = (
+				3FF7097129D51BB60039E806 /* QuickFocus.storyboard */,
+				3FF7097329D51BC90039E806 /* QuickFocusViewController.swift */,
+				3FF7097529D51BE40039E806 /* QuickFocusCell.swift */,
+				3FF7097729D522B70039E806 /* TitleReusableView.swift */,
+			);
+			path = QuickFocus;
+			sourceTree = "<group>";
+		};
 		943BB53628150EFA005A1B6E = {
 			isa = PBXGroup;
 			children = (
@@ -107,11 +154,8 @@
 			children = (
 				943BB54228150EFA005A1B6E /* AppDelegate.swift */,
 				943BB54428150EFA005A1B6E /* SceneDelegate.swift */,
-				94182265281E55DB00FB38F1 /* FocusViewController.swift */,
-				943BB57628151183005A1B6E /* Focus.swift */,
-				94182267281E583C00FB38F1 /* FocusCell.swift */,
-				94DA3CA7281ECE3D0054FFC7 /* QuickFocus.swift */,
-				943BB54828150EFA005A1B6E /* Main.storyboard */,
+				3FF7096D29D51AD80039E806 /* Model */,
+				3FF7096E29D51AE80039E806 /* View */,
 				943BB54B28150EFB005A1B6E /* Assets.xcassets */,
 				943BB54D28150EFB005A1B6E /* LaunchScreen.storyboard */,
 				943BB55028150EFB005A1B6E /* Info.plist */,
@@ -241,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				943BB54F28150EFB005A1B6E /* LaunchScreen.storyboard in Resources */,
+				3FF7097229D51BB60039E806 /* QuickFocus.storyboard in Resources */,
 				943BB54C28150EFB005A1B6E /* Assets.xcassets in Resources */,
 				943BB54A28150EFA005A1B6E /* Main.storyboard in Resources */,
 			);
@@ -268,8 +313,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				94DA3CA8281ECE3D0054FFC7 /* QuickFocus.swift in Sources */,
+				3FF7097829D522B70039E806 /* TitleReusableView.swift in Sources */,
 				943BB57728151183005A1B6E /* Focus.swift in Sources */,
+				3FF7097429D51BC90039E806 /* QuickFocusViewController.swift in Sources */,
 				943BB54328150EFA005A1B6E /* AppDelegate.swift in Sources */,
+				3FF7097629D51BE40039E806 /* QuickFocusCell.swift in Sources */,
 				94182268281E583C00FB38F1 /* FocusCell.swift in Sources */,
 				943BB54528150EFA005A1B6E /* SceneDelegate.swift in Sources */,
 				94182266281E55DB00FB38F1 /* FocusViewController.swift in Sources */,
@@ -378,7 +426,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -432,7 +480,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -457,6 +505,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -485,6 +534,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
