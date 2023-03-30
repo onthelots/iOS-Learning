@@ -22,21 +22,24 @@ let arrPublisher = [1, 2, 3].publisher
 let customQueue = DispatchQueue(label: "custom") // queue는, DispatchQueue이며, custom이란 이름의 Custom queue를 선언함
 
 // 구독티켓은 -> 위에 선언한 생산자 배열 arrPublisher이 제공(sink)하며, 해당 value와 현재 thread를 나타냄
-//let subscription = arrPublisher.sink { value in
-//    print("Receive Value : \(value), thread: \(Thread.current)")
-//}
 
-// 둘 다 mainThread에서 돌아감
-//let subscription2 = arrPublisher
-//    .map({ value in
-//        print("transform: \(value), thread : \(Thread.current)")
-//        return value
-//    })
-//    .sink { value in
-//    print("Receive Value : \(value), thread: \(Thread.current)")
-//}
+let subscription = arrPublisher
+    .sink { value in
+        print("구독된 값은 : \(value), 작업중인 쓰레드는? : \(Thread.current)")
+    }
 
-// Operator 추가
+/*
+ // 메인 쓰레드에서 돌아가네?
+ 구독된 값은 : 1, 작업중인 쓰레드는? : <_NSMainThread: 0x6000006781c0>{number = 1, name = main}
+ 구독된 값은 : 2, 작업중인 쓰레드는? : <_NSMainThread: 0x6000006781c0>{number = 1, name = main}
+ 구독된 값은 : 3, 작업중인 쓰레드는? : <_NSMainThread: 0x6000006781c0>{number = 1, name = main}
+ */
+
+
+// MARK: - 어느 쓰레드에서 작업할 것인가? -> Operator
+// 앞서 살펴본 Scheduler는 쓰레드를 지정해주는데,
+// 크게 subscribe(on:)은 퍼블리셔가 작업하는 쓰레드를, receive(on:)은 오퍼레이터와 구독자가 작업하는 쓰레드를 결정해줌
+
 let subscription3 = arrPublisher
     .subscribe(on: customQueue) // Pulisher가 어느 쓰레드에서 수행할것인가?
     .map({ value in
@@ -48,5 +51,13 @@ let subscription3 = arrPublisher
     print("Receive Value : \(value), thread: \(Thread.current)")
 }
 
+/*
+ transform: 1, thread : <NSThread: 0x6000039bcd00>{number = 8, name = (null)}
+ transform: 2, thread : <NSThread: 0x6000039bcd00>{number = 8, name = (null)}
+ transform: 3, thread : <NSThread: 0x6000039bcd00>{number = 8, name = (null)}
+ Receive Value : 1, thread: <_NSMainThread: 0x6000039b01c0>{number = 1, name = main}
+ Receive Value : 2, thread: <_NSMainThread: 0x6000039b01c0>{number = 1, name = main}
+ Receive Value : 3, thread: <_NSMainThread: 0x6000039b01c0>{number = 1, name = main}
+ */
 
 //: [Next](@next)

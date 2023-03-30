@@ -7,6 +7,7 @@ import Combine
 var subscriptions = Set<AnyCancellable>()
 
 // MARK: - removeDuplicates : 중복 데이터를 제거
+// 배열 내부의 중복된 데이터를 걸러서 새로운 컨테이너로 만들어 냄
 let words = "hey hey there! Mr Mr ?"
     .components(separatedBy: " ") // ["hey", "hey", "there!", "Mr", "Mr", "?"]
     .publisher // Publisher로 만듬
@@ -28,11 +29,12 @@ words
     
 
 // MARK: - compactMap : 값을 변경했을 때, nil일 경우엔 데이터를 제거
+// 일종의 Nil값을 걸러내는 filter역할로 볼 수 있음 (filter의 경우, 특정 조건인 Boolean 타입에 의거하여 나타냄)
 
 let strings = ["a", "1.24", "3", "def"].publisher // 1.24, 3은 Int로 바꿀 수 있지 않을까?
 
 let CharacterToFloat = Float("a") // 이건 말이 안되니까, nil값을 가져오게 됨
-let IntToFloat = Float("1.24") // 1.24 -> 가능함
+//let IntToFloat = Float("1.24") // 1.24 -> 가능함
 
 strings
     .compactMap { Float($0) } // -> 이렇게 compactMap으로 변환하게 된다면, nil값이 있을 수 있음

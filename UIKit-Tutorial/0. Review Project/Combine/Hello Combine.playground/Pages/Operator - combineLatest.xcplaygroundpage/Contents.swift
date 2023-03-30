@@ -18,41 +18,39 @@ let numPublisher = PassthroughSubject<Int, Never>()
 
 
 // combineLatest 메서드를 통해 타 Publisher와 합체할 수 있음
+
 stringPublisher.combineLatest(numPublisher)
     .sink { (string, num) in
-        print("Receive : \(string), \(num)")
+        print("배출하는 값은 : \(string), \(num)")
     }
 
-//stringPublisher.send("a")
-//stringPublisher.send("b")
-//stringPublisher.send("c")
-
-// 하나의 publisher만 보냈을 땐, 아무런 반응이 없음! (다시 말해, 2개 모두 데이터가 포하되어야 함)
-
-//numPublisher.send(1)
-//numPublisher.send(2)
-//numPublisher.send(3)
-
-
-// 순서를 조금 섞어보자면..
-
 stringPublisher.send("a")
+// 이미 결합이 되었으므로, 하나의 퍼블리셔만 데이터를 전송할 경우 아무런 반응이 없음
+
 numPublisher.send(1)
+
+// 배출하는 값은 : a, 1
+
+
+// MARK: - CombineLastest의 순서는 어떻게 저장될까?
+// 전송되는 데이터의 순서에 따라 순차적인 튜플 형태로 배출됨
+
 stringPublisher.send("b")
 stringPublisher.send("c")
+numPublisher.send(2)
+stringPublisher.send("d")
 numPublisher.send(3)
 
+// 위와 같이 전송을 하게 된다면..
+// 배열의 최신값에 따라 배치되어 전송됨
 /*
- // 순서대로 a가 먼저 오고, 그 다음에 1이 오니까, 첫 번째 보내는 데이터는 a, 1
- // 이후 b가 오고, 1은 그대로 유지되니까 b, 1이 보내지고..
- // c가 오고 1은 유지되니까 c, 1
- // 마지막으로 3이 추가될 때? -> c, 3
- Receive : a, 1
- Receive : b, 1
- Receive : c, 1
- Receive : c, 3
+ 배출하는 값은 : a, 1
+ 배출하는 값은 : b, 1
+ 배출하는 값은 : c, 1
+ 배출하는 값은 : c, 2
+ 배출하는 값은 : d, 2
+ 배출하는 값은 : d, 3
  */
-
 
 
 // MARK: - Advanced CombineLatest
@@ -63,8 +61,10 @@ let passwordPublisher = PassthroughSubject<String, Never>()
 
 // 동일하게, validatedCreatialSubscription이란 구독티켓은 usernamePublisher + passwordPublisher를 결합한 combineLatest
 // map(operator)기능을 통해 변환하는데.. -> 여기서 Transform 방식이 바로 Boolean 값을 리턴하는 것
-let validatedCreatialSubscription = usernamePublisher.combineLatest(passwordPublisher)
+
+let validation = usernamePublisher.combineLatest(passwordPublisher)
     .map { (username, password) -> Bool in
+        // username이 비어있지 않고, password가 비어있지 않으며, password가 12자 이상일 경우만 리턴(Boolean)할 수 있도록(새로운 컨테이너로) 함
         return !username.isEmpty && !password.isEmpty && password.count > 12
     }
     .sink { valid in
@@ -72,14 +72,13 @@ let validatedCreatialSubscription = usernamePublisher.combineLatest(passwordPubl
     }
 
 usernamePublisher.send("Lime")
-passwordPublisher.send("1234")
-// 결과는 >> 닉네임과 비밀번호가 유효하나요? : false (비밀번호가 12자 보다 적으니..)
+passwordPublisher.send("10")
 
-passwordPublisher.send("123456789101123112")
-/*
- 닉네임과 비밀번호가 유효하나요? : false
- 닉네임과 비밀번호가 유효하나요? : true !
- */
+// 닉네임과 비밀번호가 유효하나요? : false (비밀번호가 12자리 이상이 아닐경우)
+
+passwordPublisher.send("123456789101112")
+
+// 닉네임과 비밀번호가 유효하나요? : true (return 조건에 도달)
 
 
 

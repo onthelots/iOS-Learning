@@ -4,27 +4,24 @@ import Foundation
 import Combine
 
 // MARK: - Map(변환, Transform)
-let numPublisher = PassthroughSubject<Int, Never>()
-let subscription1 = numPublisher
-    .map { $0 * 2 } // Operator -> 배열의 요소들에 x2를 해서, 출력할 수 있도록 (변환)
-    .sink { value in
-        print("Transformed Value : \(value)")
+// 고차함수 Map과 동일한 기능을 제공하는 Operator
+// 배열값을 Custom하여 새로운 컨테이너에 담아서 배출함
+
+var subscription1 = Set<AnyCancellable>()
+let numPublisher = CurrentValueSubject<Int, Never>(3)
+    .map { value in
+        value * 2
     }
+    .sink { value in
+        print("변환된 제공값은 : \(value)")
+    }.store(in: &subscription1)
 
-// Publisher에 값을 할당
-numPublisher.send(10)
-numPublisher.send(20)
-numPublisher.send(30)
-
-/*
- Transformed Value : 20
- Transformed Value : 40
- Transformed Value : 60
- */
-subscription1.cancel()
-
+// 변환된 제공값은 : 6
 
 // MARK: - Filter
+// 고차함수 filter와 동일한 기능을 제공하는 Operator
+// 해당 배열이 어떤 속성을 가지고 있는지 정의하며, 이를 새로운 컨테이너에 담아서 배출함
+
 let stringPublisher = PassthroughSubject<String, Never>()
 let subscription2 = stringPublisher
     .filter { $0.contains("a")}
