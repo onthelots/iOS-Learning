@@ -25,7 +25,7 @@ class FrameworkListViewController: UIViewController {
         super.viewDidLoad()
         
         collectionView.delegate = self
-        
+
         // presentation
         dataSource = UICollectionViewDiffableDataSource<Section, Item>(collectionView: collectionView, cellProvider: { collectionView, indexPath, item in
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FrameworkCell", for: indexPath) as? FrameworkCell else {
@@ -67,20 +67,18 @@ class FrameworkListViewController: UIViewController {
 
 extension FrameworkListViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        // framework -> list(데이터)의 item 인덱스 값
         let framework = list[indexPath.item]
         print(">>> selected: \(framework.name)")
         
-        // navigation -> Another ViewController
-        // 1. Storyboard
+        // 1. storyboard
         let storyboard = UIStoryboard(name: "Detail", bundle: nil)
-        
-        // 2. ViewController -> instantiateViewController (해당 Viewcontroller로 강제 타입캐스팅)
+        // 2. viewcontroller (instantiateViewcontroller -> identifier -> as! 강제 캐스팅)
         let vc = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
-        
-        // 3. vc의 데이터(detail >> 현재는 비어있는 초기값 상태)를 해당 ViewController에서 가져오는 list값의 IndexPath.item으로 업데이트 해줌
-        vc.detail = framework
-        
-        // 4. 모달 창 띄우기 (present)
+        // 3. data 업데이트
+        vc.items = framework
+        // 4. 모달창 present
         present(vc, animated: true)
+        
     }
 }

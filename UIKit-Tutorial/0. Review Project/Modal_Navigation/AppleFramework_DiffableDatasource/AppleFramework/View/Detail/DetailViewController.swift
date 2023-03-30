@@ -10,33 +10,31 @@ import SafariServices
 
 class DetailViewController: UIViewController {
 
-    var detail: AppleFramework = AppleFramework.init(name: "", imageName: "", urlString: "", description: "")
+    var items: AppleFramework = AppleFramework(name: "", imageName: "", urlString: "", description: "")
     
     @IBOutlet weak var thumbnailImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        update(items)
     }
     
-    private func configure(_ detail: AppleFramework) {
-        thumbnailImage.image = UIImage(named: detail.imageName)
-        nameLabel.text = detail.name
-        descriptionLabel.text = detail.description
+    private func update(_ item: AppleFramework) {
+        thumbnailImage.image = UIImage(named: item.imageName)
+        nameLabel.text = item.name
+        descriptionLabel.text = item.description
     }
     
     @IBAction func learnMoreTapped(_ sender: Any) {
-        guard let url = URL(string: detail.urlString) else {
+        // url 유효성 검사
+        guard let url = URL(string: items.urlString) else {
             return
         }
-        
-        // SFSafariViewController
+        // SFSafariViewController 연결
         let safariView = SFSafariViewController(url: url)
-        
-        // modality
+        // 모달뷰
         present(safariView, animated: true)
     }
 }

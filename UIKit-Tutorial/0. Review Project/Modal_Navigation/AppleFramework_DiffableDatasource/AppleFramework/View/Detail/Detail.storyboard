@@ -54,7 +54,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Learn More"/>
                                                 <connections>
-                                                    <action selector="learnMoreTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="E12-bD-aQB"/>
+                                                    <action selector="learnMoreTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="r8J-df-n57"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -93,9 +93,9 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="descriptionLabel" destination="wCO-Ff-WGe" id="VKh-Rh-7VQ"/>
-                        <outlet property="nameLabel" destination="nvW-i8-BD8" id="bDy-h2-Fxl"/>
-                        <outlet property="thumbnailImage" destination="szm-z7-58O" id="0VW-je-GZk"/>
+                        <outlet property="descriptionLabel" destination="wCO-Ff-WGe" id="rL3-Vh-9jM"/>
+                        <outlet property="nameLabel" destination="nvW-i8-BD8" id="fan-pO-0Rc"/>
+                        <outlet property="thumbnailImage" destination="szm-z7-58O" id="kvy-MI-LrI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
