@@ -60,3 +60,4 @@
 ### Network 방식
     - 요청(GET)시, URL + Request Method 가 필요함
     - 응답시, Status Code + Response Body (JSON) 으로 처리!
+    - 이와 같은 방식을 활용하기 위해, iOS에서 활용하는 방식이 바로 URLSession!
