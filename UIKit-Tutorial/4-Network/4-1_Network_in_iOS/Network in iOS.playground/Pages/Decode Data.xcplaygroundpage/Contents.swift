@@ -59,7 +59,6 @@ let task = session.dataTask(with: url) { data, response, error in
     } catch let error as NSError {
         print("error : \(error)")
     }
-}
 
 task.resume()
 /*

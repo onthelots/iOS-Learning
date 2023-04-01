@@ -46,13 +46,16 @@ final class NetworkService {
                 return
             }
             
+            // Response
             if let httpResponse = response as? HTTPURLResponse,
-                  !(200..<300).contains(httpResponse.statusCode) else {
+               (200..<300).contains(httpResponse.statusCode) {
                 completion(.failure(NetworkError.responseError(statusCode: httpResponse.statusCode)))
             }
             
+            // data
             guard let data = data else { return }
             
+            // decoding!
             // data -> GithubProfile (Decoding)
             // do-try-catch 구문을 활용 (Errorhandling)
             do {
