@@ -35,13 +35,17 @@ let session = URLSession(configuration: configuration)
 let url = URL(string: "https://api.github.com/users/onthelots")!
 
 let task = session.dataTask(with: url) { data, response, error in
+    
+    // 1. response
     guard let httpResponse = response as? HTTPURLResponse,
           (200..<300).contains(httpResponse.statusCode) else {
         return
     }
     
+    // 2. data
     guard let data = data else { return }
     
+    // 3. error
     // data -> GithubProfile (Decoding)
     // do-try-catch 구문을 활용 (Errorhandling)
     do {

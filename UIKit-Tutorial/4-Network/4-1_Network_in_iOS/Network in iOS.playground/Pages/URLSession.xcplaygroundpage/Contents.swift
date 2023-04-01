@@ -28,12 +28,15 @@ let url = URL(string: "https://api.github.com/users/onthelots")!
 let task = session.dataTask(with: url) { data, response, error in // 요청한 데이터 : data, 서버로부터의 응답 : response, 에러 : error
     // response부터 확인해보자면..
     // 해당 타입은 HTTPURLResponse로 타입 캐스팅하는 동시에, response의 값이 200대이며, statusCode를 담고 있다면 scpoe를 넘어가게 됨
+    
+    // 1. Response (객체로 생성한 URLSession이 유효한가?)
     guard let httpResponse = response as? HTTPURLResponse,
           (200..<300).contains(httpResponse.statusCode) else {
         print(">> Response : \(response)")
         return
     }
     
+    // 2. Data (객체의 데이터는 유효한가?)
     // data 또한 바인딩이 필요함 (옵셔널 타입이므로)
     guard let data = data else { return }
     
