@@ -59,8 +59,9 @@ let task = session.dataTask(with: url) { data, response, error in
     } catch let error as NSError {
         print("error : \(error)")
     }
-
-task.resume()
+    
+    task.resume()
+}
 /*
  // 올바르게 잘 출력됨!
  profiles: GithubProfile(login: "onthelots", avatarUrl: "https://avatars.githubusercontent.com/u/107039500?v=4", htmlUrl: "https://github.com/onthelots", followers: 14, following: 16)
