@@ -60,5 +60,7 @@
       - [프로젝트16] AppleFramework_Combine-MVVM
       - [프로젝트17] GithubUserProfile-MVVM
       - [프로젝트18] GithubUserSearch-MVVM
+    5-3. 디자인 패턴 (feat. Clean Architecture)
+      - MVVM 이외 디자인 패턴
 
 continue...
