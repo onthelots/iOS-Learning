@@ -48,9 +48,17 @@
       
 ###  4. Network
     4-1. 네트워크 이해하기 (Concurrency / Thread / Async&Sync Task / HTTP)
-    4-2. URLSession, URLSession+Combine
-    4-3. [프로젝트14] GithubUserProfile
-    4-4. [프로젝트15] GithubUserSearch
-      
+      - URLSession, URLSession+Combine
+    4-2. Network 실습
+      - [프로젝트14] GithubUserProfile (UISearchController를 기반으로 네트워크 데이터 decoding, kingfisher를 활용한 Github avatarUrl 이미지 가져오기)
+      - [프로젝트15] GithubUserSearch (URLComponents 및 URLQueryItem, URLSession의 publisher화를 통한 Combine 활용 / Network 객체 생성을 바탕으로 코드 리팩토링)
+    
+    
+###  5. MVVM
+    5-1. MVVM의 개념 (vs MVC 패턴)
+    5-2. MVVM 실습
+      - [프로젝트16] AppleFramework_Combine-MVVM
+      - [프로젝트17] GithubUserProfile-MVVM
+      - [프로젝트18] GithubUserSearch-MVVM
 
 continue...
