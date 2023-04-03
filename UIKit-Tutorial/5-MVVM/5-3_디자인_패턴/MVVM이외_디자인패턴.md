@@ -29,7 +29,7 @@
 ![ios with Clean architecture](https://user-images.githubusercontent.com/107039500/229504814-737a2e3b-ddaa-4fd5-a308-69a88b2875d0.png)
 
 ###  Layer의 역할과 기능
-- Domain : Use Case와 Model 
+- Domain : Use Case와 Model 
 - Presentation : View 혹은 ViewModel
 - Data : Repository, DataStore, Entity
 - Dependency(의존성)의 경우, Presentation과 Data layer가 ➟ Domain Layer로 흘러가는 구조
@@ -37,5 +37,5 @@
 ![layer detail](https://user-images.githubusercontent.com/107039500/229506110-6f3ff0b8-96e8-4ce8-a253-5171f97753fa.jpeg)
 
 ###  iOS with Clean Architecture
-- 클린 아키텍처를 iOS에서 구현하는 구체적인 흐름은 아래와 같음
+- 클린 아키텍처를 iOS에서 구현하는 구체적인 흐름은 아래와 같음
 ![Ios](https://user-images.githubusercontent.com/107039500/229507081-20e5f50c-db50-4f88-ac8f-144dc62872d1.png)
