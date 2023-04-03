@@ -10,26 +10,32 @@ import Combine
 
 class SearchViewController: UIViewController {
     
-    let network = NetworkService(configuration: .default)
-
+    // collectionView
     @IBOutlet weak var collectionView: UICollectionView!
     
+    // datasource
     typealias Item = SearchResult
     var datasource: UICollectionViewDiffableDataSource<Section, Item>!
     enum Section {
         case main
     }
     
-    @Published private(set) var users = [SearchResult]()
-    var subscriptions = Set<AnyCancellable>()
+    // Combine
+    var subscriptions = Set<AnyCancellable>() // subscription
+    
+    // ViewModel
+    var viewModel: SearchViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        viewModel = SearchViewModel(network: NetworkService(configuration: .default)) // viewModel의 초기값을 설정함
         embedSearchControl()
         configureCollectionView()
         bind()
     }
     
+    // searchControl setting
     private func embedSearchControl() {
         self.navigationItem.title = "Search"
         
@@ -41,6 +47,7 @@ class SearchViewController: UIViewController {
         self.navigationItem.searchController = searchController
     }
     
+    // presentation, layout
     private func configureCollectionView() {
         datasource = UICollectionViewDiffableDataSource<Section, Item>(collectionView: collectionView, cellProvider: { collectionView, indexPath, item in
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ResultCell", for: indexPath) as? ResultCell else { return nil }
@@ -52,8 +59,9 @@ class SearchViewController: UIViewController {
         collectionView.collectionViewLayout = layout()
     }
     
+    // data (combine)
     private func bind() {
-        $users
+        viewModel.users
             .receive(on: RunLoop.main)
             .sink { users in
                 var snapshot = NSDiffableDataSourceSnapshot<Section, Item>()
@@ -63,6 +71,7 @@ class SearchViewController: UIViewController {
             }.store(in: &subscriptions)
     }
     
+    // layout
     private func layout() -> UICollectionViewCompositionalLayout {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(60))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
@@ -75,31 +84,19 @@ class SearchViewController: UIViewController {
 }
 
 
+// SearchControl (ResultsUpdating)
 extension SearchViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         let keyword = searchController.searchBar.text
-        print("search: \(keyword)")
     }
 }
 
+// SearchControl -> Delegate (ButtonClicked)
 extension SearchViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        print("button clicked: \(searchBar.text)")
-        
         guard let keyword = searchBar.text, !keyword.isEmpty else { return }
-        let resource: Resource<SearchUserResponse> = Resource(
-            base: "https://api.github.com/",
-            path: "search/users",
-            params: ["q": keyword],
-            header: ["Content-Type": "application/json"]
-        )
-        
-        network.load(resource)
-            .map { $0.items }
-            .replaceError(with: [])
-            .receive(on: RunLoop.main)
-            .assign(to: \.users, on: self)
-            .store(in: &subscriptions)
+       // viewModel의 Search(Resource, Decoding 작업) 메서드를 실행
+        viewModel.search(keyword: keyword)
     }
 }
 
