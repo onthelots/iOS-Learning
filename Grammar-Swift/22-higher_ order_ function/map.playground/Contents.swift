@@ -31,7 +31,7 @@ import UIKit
 //
 //print(bArray) // [2, 4, 6, 8]
 
-// map 활용 (후행 클로저)
+// map 활용
 let aArray = [1, 2, 3, 4]
 var bArray = aArray.map { (number: Int) -> Int in
     return number * 2
