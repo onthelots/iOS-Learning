@@ -34,6 +34,44 @@
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="bBu-OG-s19">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="93"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_point" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s44-VZ-MND">
+                                                    <rect key="frame" x="24" y="21.5" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="Ezu-bL-Sws"/>
+                                                        <constraint firstAttribute="width" constant="50" id="ZhS-GM-vAg"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="내 포인트" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zSj-uh-7Wy">
+                                                    <rect key="frame" x="94" y="21.5" width="56" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="taT-z5-JEy">
+                                                    <rect key="frame" x="94" y="49.5" width="70" height="21"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" text="원" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p9n-aD-Qee">
+                                                    <rect key="frame" x="107" y="49.5" width="15" height="21"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="s44-VZ-MND" firstAttribute="centerY" secondItem="bBu-OG-s19" secondAttribute="centerY" id="2eB-kv-ZPx"/>
+                                                <constraint firstItem="taT-z5-JEy" firstAttribute="leading" secondItem="zSj-uh-7Wy" secondAttribute="leading" id="2n9-cB-IeF"/>
+                                                <constraint firstItem="zSj-uh-7Wy" firstAttribute="top" secondItem="s44-VZ-MND" secondAttribute="top" id="CNX-UD-rgl"/>
+                                                <constraint firstItem="s44-VZ-MND" firstAttribute="leading" secondItem="bBu-OG-s19" secondAttribute="leading" constant="24" id="UX5-m5-rn0"/>
+                                                <constraint firstItem="zSj-uh-7Wy" firstAttribute="leading" secondItem="s44-VZ-MND" secondAttribute="trailing" constant="20" id="X07-Ey-lI3"/>
+                                                <constraint firstItem="taT-z5-JEy" firstAttribute="leading" secondItem="p9n-aD-Qee" secondAttribute="trailing" constant="-28" id="hI0-lg-a4n"/>
+                                                <constraint firstItem="taT-z5-JEy" firstAttribute="top" secondItem="zSj-uh-7Wy" secondAttribute="bottom" constant="10" id="jwr-ls-Sjn"/>
+                                                <constraint firstItem="p9n-aD-Qee" firstAttribute="centerY" secondItem="taT-z5-JEy" secondAttribute="centerY" id="tle-Zt-o0g"/>
+                                                <constraint firstAttribute="trailing" secondItem="taT-z5-JEy" secondAttribute="trailing" constant="250" id="zNg-Rw-R08"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="414" height="93"/>
                                     </collectionViewCell>
@@ -102,6 +140,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ic_point" width="110" height="110"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
