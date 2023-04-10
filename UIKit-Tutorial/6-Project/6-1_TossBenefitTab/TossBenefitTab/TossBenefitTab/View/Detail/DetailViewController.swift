@@ -37,12 +37,15 @@ class DetailViewController: UIViewController {
             guideView.title.text = guide.guide
             return guideView
         }
-        guideViews.forEach { view in
-            self.vStackView.addArrangedSubview(view) // vStackView에 새로운 subView를 추가함
-            NSLayoutConstraint.activate([
-                view.heightAnchor.constraint(equalToConstant: 60) // View의 높이를 60으로 설정 (뷰 하나당)
-            ])
-        }
+        
+//        if benefit.type == "thisWeek" {
+            guideViews.forEach { view in
+                self.vStackView.addArrangedSubview(view) // vStackView에 새로운 subView를 추가함
+                NSLayoutConstraint.activate([
+                    view.heightAnchor.constraint(equalToConstant: 60) // View의 높이를 60으로 설정 (뷰 하나당)
+                ])
+            }
+//        }
     }
     
 }
