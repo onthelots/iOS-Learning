@@ -10,5 +10,6 @@
         <page name='Operator - map &amp; filter'/>
         <page name='Operator - combineLatest'/>
         <page name='Operator - removeDup &amp; compactMap'/>
+        <page name='Queue'/>
     </pages>
 </playground>
