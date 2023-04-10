@@ -14,7 +14,7 @@ class BenefitListViewController: UIViewController {
     
     // 둘다 Hashable 프로토콜을 따르고 있기 때문에 Item에 할당해도 될것 같지만
     // 아래 DiffableDataSource의 Item 타입은 실제 타입이 포함되어야 하기 때문에 -> AnyHashable
-    typealias Item = AnyHashable
+    typealias Item = AnyHashable // Benefit, MyPoint
     enum Section: Int {
         case today // MyPointCell, TodayBenefitCEll -> 0
         case other // otherPoint -> 1
