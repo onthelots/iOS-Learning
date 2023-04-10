@@ -121,5 +121,22 @@ extension BenefitListViewController: UICollectionViewDelegate {
         // item이 선택되었을 경우를 감지 (Snapshot으로 접근하고, IndexPath 인자값을 받아옴)
         let item = dataSource.itemIdentifier(for: indexPath)
         print("didSelected Item: \(item)") // 해당 item별 데이터가 찍히게 됨
+        
+        // 경우1 : 선택된 item이 Benefit 타입일 경우
+        if let benefit = item as? Benefit {
+            let sb = UIStoryboard(name: "Detail", bundle: nil)
+            let vc = sb.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+            vc.benefit = benefit // 여기서, today가 아닌 해당 item의 title을 넘겨줌
+            navigationController?.pushViewController(vc, animated: true)
+        
+            // 경우2 : 선택된 item이 MyPoint 타입일 경우 -> 해당 스토리보드로 네비게이션 뷰를 띄우기 위해
+        } else if let point = item as? MyPoint {
+            let sb = UIStoryboard(name: "MyPoint", bundle: nil)
+            let vc = sb.instantiateViewController(withIdentifier: "MyPointViewController") as! MyPointViewController
+            vc.points = point // 해당 viewController의 points는 여기서 선언한 item
+            navigationController?.pushViewController(vc, animated: true)
+        } else {
+            // no-op
+        }
     }
 }

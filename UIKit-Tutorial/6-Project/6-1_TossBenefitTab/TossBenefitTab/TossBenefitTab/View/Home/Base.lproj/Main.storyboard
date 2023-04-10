@@ -51,13 +51,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="taT-z5-JEy">
-                                                    <rect key="frame" x="90" y="49.5" width="74" height="20.5"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" text="원" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p9n-aD-Qee">
-                                                    <rect key="frame" x="103" y="49.5" width="15" height="20.5"/>
+                                                    <rect key="frame" x="90" y="49.5" width="124" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -69,13 +63,16 @@
                                                 <constraint firstItem="zSj-uh-7Wy" firstAttribute="top" secondItem="s44-VZ-MND" secondAttribute="top" id="CNX-UD-rgl"/>
                                                 <constraint firstItem="s44-VZ-MND" firstAttribute="leading" secondItem="bBu-OG-s19" secondAttribute="leading" constant="20" id="UX5-m5-rn0"/>
                                                 <constraint firstItem="zSj-uh-7Wy" firstAttribute="leading" secondItem="s44-VZ-MND" secondAttribute="trailing" constant="20" id="X07-Ey-lI3"/>
-                                                <constraint firstItem="taT-z5-JEy" firstAttribute="leading" secondItem="p9n-aD-Qee" secondAttribute="trailing" constant="-28" id="hI0-lg-a4n"/>
                                                 <constraint firstItem="taT-z5-JEy" firstAttribute="top" secondItem="zSj-uh-7Wy" secondAttribute="bottom" constant="10" id="jwr-ls-Sjn"/>
-                                                <constraint firstItem="p9n-aD-Qee" firstAttribute="centerY" secondItem="taT-z5-JEy" secondAttribute="centerY" id="tle-Zt-o0g"/>
-                                                <constraint firstAttribute="trailing" secondItem="taT-z5-JEy" secondAttribute="trailing" constant="250" id="zNg-Rw-R08"/>
+                                                <constraint firstAttribute="trailing" secondItem="taT-z5-JEy" secondAttribute="trailing" constant="200" id="zNg-Rw-R08"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="414" height="93"/>
+                                        <connections>
+                                            <outlet property="descripitonLabel" destination="zSj-uh-7Wy" id="R2x-RL-KWc"/>
+                                            <outlet property="iconView" destination="s44-VZ-MND" id="2K4-VE-heu"/>
+                                            <outlet property="pointLabel" destination="taT-z5-JEy" id="wbv-9z-xzB"/>
+                                        </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TodayBenefitCell" id="XUg-wV-Bp8" customClass="TodayBenefitCell" customModule="TossBenefitTab" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="103" width="414" height="250"/>
@@ -135,6 +132,11 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="414" height="250"/>
+                                        <connections>
+                                            <outlet property="ctaButton" destination="DZq-e8-Kqw" id="7PD-Xb-pTd"/>
+                                            <outlet property="titleLabel" destination="wMI-xN-vOK" id="VbF-Ui-Mb7"/>
+                                            <outlet property="todayBenefitView" destination="pNg-Fd-9hx" id="Ofe-wF-GCq"/>
+                                        </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BenefitCell" id="MqZ-jR-Abe" customClass="BenefitCell" customModule="TossBenefitTab" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="363" width="414" height="104"/>
@@ -156,7 +158,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6500원 받기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oe8-rn-uJ0">
-                                                    <rect key="frame" x="86" y="55" width="93" height="20.5"/>
+                                                    <rect key="frame" x="86" y="55" width="228" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -169,11 +171,16 @@
                                                 <constraint firstItem="S89-mo-Ndr" firstAttribute="centerY" secondItem="s1J-4e-MHx" secondAttribute="centerY" id="CnU-Ei-twr"/>
                                                 <constraint firstItem="S89-mo-Ndr" firstAttribute="leading" secondItem="s1J-4e-MHx" secondAttribute="leading" constant="20" id="OBk-EV-o6x"/>
                                                 <constraint firstItem="Ec3-uv-6WM" firstAttribute="leading" secondItem="S89-mo-Ndr" secondAttribute="trailing" constant="16" id="Uwf-nU-xp0"/>
-                                                <constraint firstAttribute="trailing" secondItem="oe8-rn-uJ0" secondAttribute="trailing" constant="235" id="bF8-XQ-rFe"/>
+                                                <constraint firstAttribute="trailing" secondItem="oe8-rn-uJ0" secondAttribute="trailing" constant="100" id="bF8-XQ-rFe"/>
                                                 <constraint firstItem="oe8-rn-uJ0" firstAttribute="top" secondItem="Ec3-uv-6WM" secondAttribute="bottom" constant="10" id="qEc-tD-IMv"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="414" height="104"/>
+                                        <connections>
+                                            <outlet property="benefitImage" destination="S89-mo-Ndr" id="ol8-oB-KNp"/>
+                                            <outlet property="descriptionLabel" destination="Ec3-uv-6WM" id="MCO-yW-SYN"/>
+                                            <outlet property="titleLabel" destination="oe8-rn-uJ0" id="7g0-SJ-FCh"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
