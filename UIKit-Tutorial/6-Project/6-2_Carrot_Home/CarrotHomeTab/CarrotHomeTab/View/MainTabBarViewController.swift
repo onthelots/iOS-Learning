@@ -14,23 +14,16 @@ class MainTabBarViewController: UITabBarController {
         delegate = self
     }
     
-    private func updateNavigationItem(vc: UIViewController) {
-        //
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // MARK: - View의 데이터 업데이트
+        // 뷰가 나타나기 전에, selectedViewController의 데이터를 업데이트 해줄 수 있음! (처음 빌드했을 때, navigationItem이 한번에 보이지 않는 문제를 해소함)
+        updateNavigationItem(vc: self.selectedViewController!)
     }
-}
-
-// 각 탭에 맞게, 네비게이션 바 아이템(Right) 구성하기
-// - 홈 : 타이틀 / 피드, 서치
-// - 동네활동 : 타이틀 / 피드
-// - 내 근처 : 타이틀 / X
-// - 채팅 : 타이틀 / 피드
-// - 나의 당근 : 타이틀 / 설정
-
-extension MainTabBarViewController: UITabBarControllerDelegate {
-    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-        print("---> Selected Tabbar: vc: \(viewController)")
-        
-        switch viewController {
+    
+    // MARK: - ViewController별로 navigationItem(UIBarButtonItem)을 Update 하는 메서드
+    private func updateNavigationItem(vc: UIViewController) {
+        switch vc {
         case is HomeViewController:
             
             // MARK: - titleConfig 받아오기 (초기값 설정)
@@ -61,6 +54,7 @@ extension MainTabBarViewController: UITabBarControllerDelegate {
             // MARK: - navigationItem UIBarButtonItem 각각(좌,우) 할당
             navigationItem.leftBarButtonItem = titleItem
             navigationItem.rightBarButtonItems = [feedItem, searchItem] // 2개 이상일 경우, rightBarButtonItems(배열)에 할당하기
+            navigationItem.backButtonDisplayMode = .minimal // backButton의 모드 설정 (.miniaml일 경우, 아이콘으로만 설정됨)
 
         case is MyTownViewController:
             
@@ -78,6 +72,7 @@ extension MainTabBarViewController: UITabBarControllerDelegate {
             
             navigationItem.leftBarButtonItem = titleItem
             navigationItem.rightBarButtonItems = [feedItem]
+            navigationItem.backButtonDisplayMode = .minimal
             
         case is NearLocationViewController:
             let titleConfig = CustomBarItemConfiguration(
@@ -87,6 +82,7 @@ extension MainTabBarViewController: UITabBarControllerDelegate {
             
             navigationItem.leftBarButtonItem = titleItem
             navigationItem.rightBarButtonItems = []
+            navigationItem.backButtonDisplayMode = .minimal
             
         case is ChatViewController:
             let titleConfig = CustomBarItemConfiguration(
@@ -103,6 +99,7 @@ extension MainTabBarViewController: UITabBarControllerDelegate {
             
             navigationItem.leftBarButtonItem = titleItem
             navigationItem.rightBarButtonItems = [feedItem]
+            navigationItem.backButtonDisplayMode = .minimal
             
         case is MyProfileViewController:
             let titleConfig = CustomBarItemConfiguration(
@@ -119,6 +116,7 @@ extension MainTabBarViewController: UITabBarControllerDelegate {
             
             navigationItem.leftBarButtonItem = titleItem
             navigationItem.rightBarButtonItems = [settingItem]
+            navigationItem.backButtonDisplayMode = .minimal
         
         default:
             let titleConfig = CustomBarItemConfiguration(
@@ -128,6 +126,16 @@ extension MainTabBarViewController: UITabBarControllerDelegate {
             
             navigationItem.leftBarButtonItem = titleItem // 할당
             navigationItem.rightBarButtonItems = []
+            navigationItem.backButtonDisplayMode = .minimal
         }
+    }
+}
+
+extension MainTabBarViewController: UITabBarControllerDelegate {
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+        print("---> Selected Tabbar: vc: \(viewController)")
+        
+        // updateNavigationItem 메서드의 매개변수로, 선택되는(didSelected) ViewController를 할당
+        updateNavigationItem(vc: viewController)
     }
 }

@@ -13,6 +13,12 @@
 		3F1FB97B29E54F4C00100356 /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1FB97A29E54F4C00100356 /* MyProfileViewController.swift */; };
 		3F1FB98029E553E300100356 /* CustomTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1FB97F29E553E300100356 /* CustomTabBarItem.swift */; };
 		3F1FB98229E5773D00100356 /* UIBarButtonItem+CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1FB98129E5773D00100356 /* UIBarButtonItem+CustomView.swift */; };
+		3F1FB98B29E5859800100356 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FB98929E5859800100356 /* Home.storyboard */; };
+		3F1FB98E29E585CA00100356 /* MyTown.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FB98C29E585CA00100356 /* MyTown.storyboard */; };
+		3F1FB99129E585DA00100356 /* NearLocation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FB98F29E585DA00100356 /* NearLocation.storyboard */; };
+		3F1FB99429E585E900100356 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FB99229E585E900100356 /* Chat.storyboard */; };
+		3F1FB99729E585F800100356 /* MyProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FB99529E585F800100356 /* MyProfile.storyboard */; };
+		3F1FB99929E5863C00100356 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1FB99829E5863C00100356 /* HomeViewModel.swift */; };
 		3F718A2E29E53F0700D9A543 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F718A2D29E53F0700D9A543 /* HomeViewController.swift */; };
 		3F718A3129E53F3A00D9A543 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F718A3029E53F3A00D9A543 /* DetailViewController.swift */; };
 		3F718A3329E53F8100D9A543 /* MainNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F718A3229E53F8100D9A543 /* MainNavigationViewController.swift */; };
@@ -56,6 +62,12 @@
 		3F1FB97A29E54F4C00100356 /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
 		3F1FB97F29E553E300100356 /* CustomTabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarItem.swift; sourceTree = "<group>"; };
 		3F1FB98129E5773D00100356 /* UIBarButtonItem+CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+CustomView.swift"; sourceTree = "<group>"; };
+		3F1FB98A29E5859800100356 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = CarrotHomeTab/View/Base.lproj/Home.storyboard; sourceTree = "<group>"; };
+		3F1FB98D29E585CA00100356 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = CarrotHomeTab/View/Base.lproj/MyTown.storyboard; sourceTree = "<group>"; };
+		3F1FB99029E585DA00100356 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = CarrotHomeTab/View/Base.lproj/NearLocation.storyboard; sourceTree = "<group>"; };
+		3F1FB99329E585E900100356 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = CarrotHomeTab/View/Base.lproj/Chat.storyboard; sourceTree = "<group>"; };
+		3F1FB99629E585F800100356 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = CarrotHomeTab/View/Base.lproj/MyProfile.storyboard; sourceTree = "<group>"; };
+		3F1FB99829E5863C00100356 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		3F718A2D29E53F0700D9A543 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3F718A3029E53F3A00D9A543 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		3F718A3229E53F8100D9A543 /* MainNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationViewController.swift; sourceTree = "<group>"; };
@@ -104,35 +116,72 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3F1FB97D29E553A500100356 /* ViewController */ = {
+		3F1FB98329E582E300100356 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				3F718A2D29E53F0700D9A543 /* HomeViewController.swift */,
-				3F1FB97429E54F2100100356 /* MyTownViewController.swift */,
-				3F1FB97629E54F3A00100356 /* NearLocationViewController.swift */,
-				3F1FB97829E54F4300100356 /* ChatViewController.swift */,
-				3F1FB97A29E54F4C00100356 /* MyProfileViewController.swift */,
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
-		3F1FB97E29E553BC00100356 /* CustomTabBarItem */ = {
-			isa = PBXGroup;
-			children = (
-				3F1FB97F29E553E300100356 /* CustomTabBarItem.swift */,
 				3F1FB98129E5773D00100356 /* UIBarButtonItem+CustomView.swift */,
 			);
-			path = CustomTabBarItem;
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3F1FB98429E5834200100356 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				94A38E57286830EA000691E1 /* Main.storyboard */,
+				3F718A2F29E53F1900D9A543 /* Home */,
+				3F1FB98529E5835500100356 /* MyTown */,
+				3F1FB98629E5835900100356 /* NearLocation */,
+				3F1FB98729E5836000100356 /* Chat */,
+				3F1FB98829E5836A00100356 /* MyProfile */,
+				3F718A3229E53F8100D9A543 /* MainNavigationViewController.swift */,
+				3F718A3429E53F9300D9A543 /* MainTabBarViewController.swift */,
+				3F1FB97F29E553E300100356 /* CustomTabBarItem.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3F1FB98529E5835500100356 /* MyTown */ = {
+			isa = PBXGroup;
+			children = (
+				3F1FB98C29E585CA00100356 /* MyTown.storyboard */,
+				3F1FB97429E54F2100100356 /* MyTownViewController.swift */,
+			);
+			path = MyTown;
+			sourceTree = "<group>";
+		};
+		3F1FB98629E5835900100356 /* NearLocation */ = {
+			isa = PBXGroup;
+			children = (
+				3F1FB98F29E585DA00100356 /* NearLocation.storyboard */,
+				3F1FB97629E54F3A00100356 /* NearLocationViewController.swift */,
+			);
+			path = NearLocation;
+			sourceTree = "<group>";
+		};
+		3F1FB98729E5836000100356 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				3F1FB99229E585E900100356 /* Chat.storyboard */,
+				3F1FB97829E54F4300100356 /* ChatViewController.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		3F1FB98829E5836A00100356 /* MyProfile */ = {
+			isa = PBXGroup;
+			children = (
+				3F1FB99529E585F800100356 /* MyProfile.storyboard */,
+				3F1FB97A29E54F4C00100356 /* MyProfileViewController.swift */,
+			);
+			path = MyProfile;
 			sourceTree = "<group>";
 		};
 		3F718A2F29E53F1900D9A543 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				3F1FB97E29E553BC00100356 /* CustomTabBarItem */,
-				94A38E57286830EA000691E1 /* Main.storyboard */,
-				3F718A3229E53F8100D9A543 /* MainNavigationViewController.swift */,
-				3F718A3429E53F9300D9A543 /* MainTabBarViewController.swift */,
-				3F1FB97D29E553A500100356 /* ViewController */,
+				3F1FB98929E5859800100356 /* Home.storyboard */,
+				3F1FB99829E5863C00100356 /* HomeViewModel.swift */,
+				3F718A2D29E53F0700D9A543 /* HomeViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -196,11 +245,12 @@
 			children = (
 				94BB227D28669A15004FC34D /* AppDelegate.swift */,
 				94BB227F28669A15004FC34D /* SceneDelegate.swift */,
-				3F718A2F29E53F1900D9A543 /* Home */,
+				3F1FB98429E5834200100356 /* View */,
 				3F718A3829E5404800D9A543 /* Detail */,
 				9402EE1528673FB100D33FDD /* Utils */,
 				9402EE0E28673D9C00D33FDD /* Network */,
 				94A38E4B2868307C000691E1 /* Model */,
+				3F1FB98329E582E300100356 /* Extensions */,
 				94BB228628669A16004FC34D /* Assets.xcassets */,
 				94BB228828669A16004FC34D /* LaunchScreen.storyboard */,
 				94BB228B28669A16004FC34D /* Info.plist */,
@@ -334,8 +384,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				94BB228A28669A16004FC34D /* LaunchScreen.storyboard in Resources */,
+				3F1FB98B29E5859800100356 /* Home.storyboard in Resources */,
+				3F1FB99729E585F800100356 /* MyProfile.storyboard in Resources */,
+				3F1FB98E29E585CA00100356 /* MyTown.storyboard in Resources */,
 				94A38E5C286830EA000691E1 /* Main.storyboard in Resources */,
 				94BB228728669A16004FC34D /* Assets.xcassets in Resources */,
+				3F1FB99129E585DA00100356 /* NearLocation.storyboard in Resources */,
+				3F1FB99429E585E900100356 /* Chat.storyboard in Resources */,
 				3F718A3729E5403D00D9A543 /* Detail.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -361,6 +416,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F1FB99929E5863C00100356 /* HomeViewModel.swift in Sources */,
 				94BB227E28669A15004FC34D /* AppDelegate.swift in Sources */,
 				3F718A3329E53F8100D9A543 /* MainNavigationViewController.swift in Sources */,
 				3F1FB97B29E54F4C00100356 /* MyProfileViewController.swift in Sources */,
@@ -413,6 +469,46 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		3F1FB98929E5859800100356 /* Home.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3F1FB98A29E5859800100356 /* Base */,
+			);
+			name = Home.storyboard;
+			sourceTree = "<group>";
+		};
+		3F1FB98C29E585CA00100356 /* MyTown.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3F1FB98D29E585CA00100356 /* Base */,
+			);
+			name = MyTown.storyboard;
+			sourceTree = "<group>";
+		};
+		3F1FB98F29E585DA00100356 /* NearLocation.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3F1FB99029E585DA00100356 /* Base */,
+			);
+			name = NearLocation.storyboard;
+			sourceTree = "<group>";
+		};
+		3F1FB99229E585E900100356 /* Chat.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3F1FB99329E585E900100356 /* Base */,
+			);
+			name = Chat.storyboard;
+			sourceTree = "<group>";
+		};
+		3F1FB99529E585F800100356 /* MyProfile.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3F1FB99629E585F800100356 /* Base */,
+			);
+			name = MyProfile.storyboard;
+			sourceTree = "<group>";
+		};
 		94A38E57286830EA000691E1 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
