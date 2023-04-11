@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F1FB97529E54F2100100356 /* MyTownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1FB97429E54F2100100356 /* MyTownViewController.swift */; };
+		3F1FB97729E54F3A00100356 /* NearLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1FB97629E54F3A00100356 /* NearLocationViewController.swift */; };
+		3F1FB97929E54F4300100356 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1FB97829E54F4300100356 /* ChatViewController.swift */; };
+		3F1FB97B29E54F4C00100356 /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1FB97A29E54F4C00100356 /* MyProfileViewController.swift */; };
+		3F1FB98029E553E300100356 /* CustomTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1FB97F29E553E300100356 /* CustomTabBarItem.swift */; };
+		3F1FB98229E5773D00100356 /* UIBarButtonItem+CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1FB98129E5773D00100356 /* UIBarButtonItem+CustomView.swift */; };
 		3F718A2E29E53F0700D9A543 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F718A2D29E53F0700D9A543 /* HomeViewController.swift */; };
 		3F718A3129E53F3A00D9A543 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F718A3029E53F3A00D9A543 /* DetailViewController.swift */; };
 		3F718A3329E53F8100D9A543 /* MainNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F718A3229E53F8100D9A543 /* MainNavigationViewController.swift */; };
@@ -44,6 +50,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F1FB97429E54F2100100356 /* MyTownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTownViewController.swift; sourceTree = "<group>"; };
+		3F1FB97629E54F3A00100356 /* NearLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearLocationViewController.swift; sourceTree = "<group>"; };
+		3F1FB97829E54F4300100356 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		3F1FB97A29E54F4C00100356 /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
+		3F1FB97F29E553E300100356 /* CustomTabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarItem.swift; sourceTree = "<group>"; };
+		3F1FB98129E5773D00100356 /* UIBarButtonItem+CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+CustomView.swift"; sourceTree = "<group>"; };
 		3F718A2D29E53F0700D9A543 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3F718A3029E53F3A00D9A543 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		3F718A3229E53F8100D9A543 /* MainNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationViewController.swift; sourceTree = "<group>"; };
@@ -92,13 +104,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F1FB97D29E553A500100356 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3F718A2D29E53F0700D9A543 /* HomeViewController.swift */,
+				3F1FB97429E54F2100100356 /* MyTownViewController.swift */,
+				3F1FB97629E54F3A00100356 /* NearLocationViewController.swift */,
+				3F1FB97829E54F4300100356 /* ChatViewController.swift */,
+				3F1FB97A29E54F4C00100356 /* MyProfileViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		3F1FB97E29E553BC00100356 /* CustomTabBarItem */ = {
+			isa = PBXGroup;
+			children = (
+				3F1FB97F29E553E300100356 /* CustomTabBarItem.swift */,
+				3F1FB98129E5773D00100356 /* UIBarButtonItem+CustomView.swift */,
+			);
+			path = CustomTabBarItem;
+			sourceTree = "<group>";
+		};
 		3F718A2F29E53F1900D9A543 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				3F1FB97E29E553BC00100356 /* CustomTabBarItem */,
 				94A38E57286830EA000691E1 /* Main.storyboard */,
 				3F718A3229E53F8100D9A543 /* MainNavigationViewController.swift */,
 				3F718A3429E53F9300D9A543 /* MainTabBarViewController.swift */,
-				3F718A2D29E53F0700D9A543 /* HomeViewController.swift */,
+				3F1FB97D29E553A500100356 /* ViewController */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -329,13 +363,19 @@
 			files = (
 				94BB227E28669A15004FC34D /* AppDelegate.swift in Sources */,
 				3F718A3329E53F8100D9A543 /* MainNavigationViewController.swift in Sources */,
+				3F1FB97B29E54F4C00100356 /* MyProfileViewController.swift in Sources */,
 				94A38E512868307C000691E1 /* ItemInfo.swift in Sources */,
+				3F1FB98229E5773D00100356 /* UIBarButtonItem+CustomView.swift in Sources */,
 				94BB228028669A15004FC34D /* SceneDelegate.swift in Sources */,
 				9402EE1728673FB100D33FDD /* Publisher+Utils.swift in Sources */,
 				3F718A3529E53F9300D9A543 /* MainTabBarViewController.swift in Sources */,
 				9402EE1128673D9C00D33FDD /* NetworkService.swift in Sources */,
 				3F718A2E29E53F0700D9A543 /* HomeViewController.swift in Sources */,
+				3F1FB97529E54F2100100356 /* MyTownViewController.swift in Sources */,
+				3F1FB98029E553E300100356 /* CustomTabBarItem.swift in Sources */,
+				3F1FB97929E54F4300100356 /* ChatViewController.swift in Sources */,
 				9402EE1228673D9C00D33FDD /* Resource.swift in Sources */,
+				3F1FB97729E54F3A00100356 /* NearLocationViewController.swift in Sources */,
 				3F718A3129E53F3A00D9A543 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
