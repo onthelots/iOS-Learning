@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F057DD729E836C000F9302B /* HomeListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F057DD629E836C000F9302B /* HomeListCell.swift */; };
+		3F057DDA29E83CD500F9302B /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 3F057DD929E83CD500F9302B /* Kingfisher */; };
 		3F1FB97529E54F2100100356 /* MyTownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1FB97429E54F2100100356 /* MyTownViewController.swift */; };
 		3F1FB97729E54F3A00100356 /* NearLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1FB97629E54F3A00100356 /* NearLocationViewController.swift */; };
 		3F1FB97929E54F4300100356 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1FB97829E54F4300100356 /* ChatViewController.swift */; };
@@ -56,6 +58,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F057DD629E836C000F9302B /* HomeListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListCell.swift; sourceTree = "<group>"; };
 		3F1FB97429E54F2100100356 /* MyTownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTownViewController.swift; sourceTree = "<group>"; };
 		3F1FB97629E54F3A00100356 /* NearLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearLocationViewController.swift; sourceTree = "<group>"; };
 		3F1FB97829E54F4300100356 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F057DDA29E83CD500F9302B /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,6 +186,7 @@
 				3F1FB98929E5859800100356 /* Home.storyboard */,
 				3F1FB99829E5863C00100356 /* HomeViewModel.swift */,
 				3F718A2D29E53F0700D9A543 /* HomeViewController.swift */,
+				3F057DD629E836C000F9302B /* HomeListCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -292,6 +297,7 @@
 			);
 			name = CarrotHomeTab;
 			packageProductDependencies = (
+				3F057DD929E83CD500F9302B /* Kingfisher */,
 			);
 			productName = CarrotHomeTab;
 			productReference = 94BB227A28669A15004FC34D /* CarrotHomeTab.app */;
@@ -366,6 +372,7 @@
 			);
 			mainGroup = 94BB227128669A15004FC34D;
 			packageReferences = (
+				3F057DD829E83CD500F9302B /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 94BB227B28669A15004FC34D /* Products */;
 			projectDirPath = "";
@@ -418,6 +425,7 @@
 			files = (
 				3F1FB99929E5863C00100356 /* HomeViewModel.swift in Sources */,
 				94BB227E28669A15004FC34D /* AppDelegate.swift in Sources */,
+				3F057DD729E836C000F9302B /* HomeListCell.swift in Sources */,
 				3F718A3329E53F8100D9A543 /* MainNavigationViewController.swift in Sources */,
 				3F1FB97B29E54F4C00100356 /* MyProfileViewController.swift in Sources */,
 				94A38E512868307C000691E1 /* ItemInfo.swift in Sources */,
@@ -649,7 +657,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = C98APEMDUR;
+				DEVELOPMENT_TEAM = V7TH2GUA8U;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CarrotHomeTab/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -677,7 +685,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = C98APEMDUR;
+				DEVELOPMENT_TEAM = V7TH2GUA8U;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CarrotHomeTab/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -814,6 +822,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3F057DD829E83CD500F9302B /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = exactVersion;
+				version = 7.6.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3F057DD929E83CD500F9302B /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3F057DD829E83CD500F9302B /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 94BB227228669A15004FC34D /* Project object */;
 }
