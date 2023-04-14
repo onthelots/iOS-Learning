@@ -6,24 +6,42 @@
 //
 
 import UIKit
+import Combine
+import Kingfisher
 
 class DetailViewController: UIViewController {
 
+    var viewModel: DetailViewModel!
+    var subscripiton = Set<AnyCancellable>()
+    
+    
+    // description
+    
+    @IBOutlet weak var thumbnailImage: UIImageView!
+    @IBOutlet weak var nicknameLabel: UILabel!
+    @IBOutlet weak var locationLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        bind()
+        viewModel.fetch()
+        setupUI()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func setupUI() {
+        thumbnailImage.layer.masksToBounds = true
+        thumbnailImage.layer.cornerRadius = 40
     }
-    */
 
+    
+    private func bind() {
+        viewModel.$itemInfoDeatils
+            .compactMap { $0 }
+            .receive(on: RunLoop.main)
+            .sink { details in
+                self.thumbnailImage.kf.setImage(with: URL(string: details.user.thumnail))
+                self.nicknameLabel.text = details.user.name
+                self.locationLabel.text = details.user.location
+            }.store(in: &subscripiton)
+    }
 }

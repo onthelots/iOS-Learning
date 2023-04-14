@@ -29,7 +29,6 @@ final class HomeViewModel {
     
     // MARK: - fetch (Input 퍼블리셔에 데이터 할당하기)
     func fetch() {
-        
         // network에 할당될 resource 정의
         // resource의 타입은 ItemInfo의 배열 형태 타입
         let resource: Resource<[ItemInfo]> = Resource(

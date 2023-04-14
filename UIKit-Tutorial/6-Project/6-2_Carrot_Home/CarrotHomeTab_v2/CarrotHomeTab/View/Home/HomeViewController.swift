@@ -26,12 +26,11 @@ class HomeViewController: UIViewController {
         viewModel.fetch() // ViewModel에서 선언한 fetch 함수를 실행
         bind()
         configuration()
-        
-        collectionView.delegate = self
     }
     
-    // presentation
+    // dataSource, data, layout, delegate
     private func configuration() {
+        // Presentation
         dataSource = UICollectionViewDiffableDataSource<Section, Item>(collectionView: collectionView, cellProvider: { collectionView, indexPath, item in
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeListCell", for: indexPath) as? HomeListCell else {
                 return nil
@@ -40,7 +39,24 @@ class HomeViewController: UIViewController {
             return cell
         })
         
+        // data
+        var snapshot = NSDiffableDataSourceSnapshot<Section, Item>()
+        snapshot.appendSections([.main])
+        snapshot.appendItems([], toSection: .main)
+        self.dataSource.apply(snapshot)
+        
+        // layout
         collectionView.collectionViewLayout = layout()
+        
+        // delegate
+        collectionView.delegate = self
+    }
+    
+    //
+    private func applyItem (_ item: [ItemInfo]) {
+        var snapshot = dataSource.snapshot()
+        snapshot.appendItems(item, toSection: .main)
+        self.dataSource.apply(snapshot)
     }
     
     private func layout() -> UICollectionViewCompositionalLayout {
@@ -59,13 +75,7 @@ class HomeViewController: UIViewController {
         viewModel.$items
             .receive(on: RunLoop.main)
             .sink { items in
-                print("--> update CollectionView \(items)")
-                
-                // data
-                var snapshot = NSDiffableDataSourceSnapshot<Section, Item>()
-                snapshot.appendSections([.main])
-                snapshot.appendItems(items, toSection: .main)
-                self.dataSource.apply(snapshot)
+                self.applyItem(items)
             }.store(in: &subscription)
         
         // Output - 사용자 인터렉션 실행하기
@@ -80,7 +90,10 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let items = dataSource.itemIdentifier(for: indexPath)
+        // viewModel.item(빈 배열)-> indexPath의 아이템 값
+        let items = viewModel.items[indexPath.item]
         print("--- didSelected Item: \(items)")
+        viewModel.itemTapped.send(items)
+        
     }
 }
