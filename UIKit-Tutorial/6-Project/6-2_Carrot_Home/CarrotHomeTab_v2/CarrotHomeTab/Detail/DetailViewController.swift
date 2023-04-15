@@ -35,7 +35,7 @@ class DetailViewController: UIViewController {
 
     
     private func bind() {
-        viewModel.$itemInfoDeatils
+        viewModel.$itemInfoDetails
             .compactMap { $0 }
             .receive(on: RunLoop.main)
             .sink { details in
