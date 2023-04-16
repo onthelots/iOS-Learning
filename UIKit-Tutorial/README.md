@@ -63,4 +63,16 @@
     5-3. 디자인 패턴 (feat. Clean Architecture)
       - MVVM 이외 디자인 패턴
 
+
+###  6. Project
+    6-1. TossBenefitTab (토스 혜택앱)
+      - [프로젝트19-1] TossBenefitTab (Combine, NetworkService 생생, MVVM 패턴 구조 완성)
+      - [프로젝트19-2] TossBenefitTab (포인트 별 Detail View 생성 및 Navigation 연결, AutoLayout 설정)
+    6-2. CarrotHomeTab (당근마켓 클론앱)
+      - [프로젝트20-1] CarrotHomeTab (Combine, NetworkService 생생, Custom UITabBarItem 활용, NavigationBar 만들기)
+      - [프로젝트20-2] CarrotHomeTab (AutoLayout 설정, UIScrollView 활용, 프로젝트 완성)
+    6-3. EmotionDiary (감정일기)
+      - 진행중...
+      
+      
 continue...
