@@ -15,17 +15,27 @@ class HomeListCell: UICollectionViewCell {
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     
+    @IBOutlet weak var numOfLikeLabel: UILabel!
+    @IBOutlet weak var numOfChatsLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        thumbnailImage.layer.cornerRadius = 5
-        // priceLabel
+        thumbnailImage.layer.cornerRadius = 10
+        thumbnailImage.layer.masksToBounds = true
+        thumbnailImage.tintColor = .systemGray
     }
     
     func configure(item: ItemInfo) {
-        self.thumbnailImage.kf.setImage(with: URL(string: item.thumbnailURL))
+        
+        // kingfisher -> placeholder 추가
+        self.thumbnailImage.kf.setImage(with: URL(string: item.thumbnailURL)!,
+                                        placeholder: UIImage(systemName: "hands.sparkles.fill"))
         self.titleLabel.text = item.title
         self.locationLabel.text = item.location 
         self.priceLabel.text = "\(convertToString(price: item.price))원"
+        
+        self.numOfLikeLabel.text = "\(item.numOfLikes)"
+        self.numOfChatsLabel.text = "\(item.numOfChats)"
     }
     
     // convert to formatting -> Comma 끊어서 작성하기
