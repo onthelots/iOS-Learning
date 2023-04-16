@@ -9,6 +9,8 @@ import Foundation
 import UIKit
 
 extension UIBarButtonItem {
+    // 매개변수인 config는 CustomBarItemConfiguration 타입의 값을 받고(이미지, hanlder)
+    // width는 해당 바 버튼의 default값을 설정함
     static func generate(with config: CustomBarItemConfiguration, width: CGFloat? = nil) -> UIBarButtonItem {
         
         // 1. customView -> TabBarItem의 데이터를 할당

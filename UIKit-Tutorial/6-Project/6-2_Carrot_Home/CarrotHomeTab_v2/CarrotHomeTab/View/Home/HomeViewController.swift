@@ -85,6 +85,8 @@ class HomeViewController: UIViewController {
             .sink { item in
                 let sb = UIStoryboard(name: "Detail", bundle: nil)
                 let vc = sb.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+                // vc(DetailViewController)의 viewModel에 해당 item의 값을 넘겨줘야 함 (network)
+                vc.viewModel = DetailViewModel(network: NetworkService(configuration: .default), itemInfo: item)
                 self.navigationController?.pushViewController(vc, animated: true)
             }.store(in: &subscription)
     }
