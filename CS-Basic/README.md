@@ -11,5 +11,8 @@
       - Heap과 Stack
       - ARC
 
+###  3. 비동기 프로그래밍
+      - 스레드의 작업처리방식 (Sync/Async)
+      - Queue의 종류와 작업 분산방식
 
 continue...
