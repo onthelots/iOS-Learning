@@ -1,26 +1,25 @@
-# 🧑🏻‍💻 Swift_Grammar
+# Wanted Pre-Onboarding Challenge
 
-### 목차 
-1. Hello, Swift!
-2. 변수와 상수(Variable, Constant)
-3. Type Annotations
-4. Basic Data Type
-5. Optional_1
-6. Expressions, Operators
-7. Condition Flow Control
-8. Looping Control
-9. Collection Type
-10. Tuple
-11. Type
-12. Enumeration
-13. Function
-14. Closure
-15. Class
-16. Property
-17. Struct
-18. Protocol
-19. Generic
-20. mutating
+## MyCreditManager (성적관리 프로그램)
 
+### 사용 언어 / 환경
+- Swift
+- Xcode 기본 템플릿 중 [macOS - Command Line Tool]
 
-continue ...
+### 프로그램의 메뉴
+- 1.학생추가 / 2.학생삭제 / 3.성적추가(변경) / 4.성적삭제 / 5.평점보기 / 6.종료
+
+### 프로그램 동작조건
+- 사용자가 종료 메뉴를 선택하기 전까지는 계속해서 사용자의 입력을 받습니다
+- 메뉴선택을 포함한 모든 입력은 숫자 또는 영문으로 받습니다
+
+### 성적별 점수
+- A+ (4.5점) / A (4점)
+- B+ (3.5점) / B (3점)
+- C+ (2.5점) / C (2점)
+- D+ (1.5점) / D (1점)
+- F (0점)
+
+### 평점
+- 각 과목의 점수 총 합 / 과목 수
+- 최대 소수점 2번째 자리까지 출력
