@@ -7,8 +7,6 @@
 
 import Foundation
 
-let input = readLine()
-
-print(type(of: input))
-
-
+/*
+ [ ] 프로그램 메뉴 출력하기
+ */
