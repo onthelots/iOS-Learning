@@ -13,7 +13,7 @@ struct Student {
     var name: String = ""
     
     // subject & Credit
-    var sc: [String: Int] = [:]
+    var sc: [String: String] = [:]
     
     // Credit Average -> 평점만 나타내는 함수? -> 연산
     // name, sc 매개변수로 받아서,
@@ -27,39 +27,15 @@ struct Student {
 }
 
 
-enum Credit: Double {
-    case ap = 4.5,
-         a = 4.0,
-         bp = 3.5,
-         b = 3.0,
-         cp = 2.5,
-         c = 2.0,
-         dp = 1.5,
-         d = 1.0,
-         f = 0.0
-    
-    init?(credit: String) {
-        switch credit {
-        case "A+" :
-            self = .ap
-        case "A" :
-            self = .a
-        case "B+" :
-            self = .bp
-        case "B" :
-            self = .b
-        case "C+" :
-            self = .cp
-        case "C" :
-            self = .c
-        case "D+" :
-            self = .dp
-        case "D" :
-            self = .d
-        case "F" :
-            self = .f
-        default :
-            return nil
-        }
-    }
-}
+let creditValue: [String: Float] = [
+    "A+" : 4.5,
+    "A"  : 4.0,
+    "B+" : 3.5,
+    "B"  : 3.0,
+    "C+" : 2.5,
+    "C"  : 2.0,
+    "D+" : 1.5,
+    "D"  : 1.0,
+    "F"  : 0.0
+]
+
