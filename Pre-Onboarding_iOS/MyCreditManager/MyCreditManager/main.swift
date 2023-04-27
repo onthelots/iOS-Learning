@@ -54,6 +54,7 @@ func addStudent() {
         }
     } else {
         print(errorMessage)
+        print(students)
     }
     startCreditManager()
 }
@@ -69,6 +70,7 @@ func deleteStudent() {
         // remove(at:)을 통해 해당 값(인덱스) 삭제
         students.remove(at: index)
         print("\(input ?? "") 학생을 삭제하였습니다.")
+        print(students)
     } else {
         print(errorMessage)
     }
@@ -93,7 +95,6 @@ func addCredit() {
         return
     }
     
-    
     if inputArr.count == 3, // 갯수
        (students.contains(where: {$0.name == name})), // 학생이 존재할 경우
        !inputArr.isEmpty, // 입력값이 비어있지 않은 경우
@@ -101,10 +102,11 @@ func addCredit() {
         
         let subject = inputArr[1] // subject
         let sc = [subject:credit] // sc(dictionary 생성)
-        students.append(Student(name: name, sc: sc)) // 배열 내부값에 할당
-        
-        print("\(name) 학생의 \(subject) 과목이 \(credit)로 추가(변경)되었습니다.")
-        print(inputArr)
+        if let index = students.firstIndex(where: {$0.name == name}) {
+            students[index].sc = sc
+            print("\(name) 학생의 \(subject) 과목이 \(credit)로 추가(변경)되었습니다.")
+            print(students)
+        }
     } else {
         print(errorMessage)
     }
@@ -119,24 +121,26 @@ func deleteCredit() {
     // [ ] 이름 일치여부, 과목(key)값을 활용한 데이터 삭제
     let input = readLine()
     
-    guard let inputArr = input?.components(separatedBy: "") else {
+    guard let inputArr = input?.components(separatedBy: " ") else {
         return
     }
     
     guard let name = inputArr.first, let subject = inputArr.last else {
         return
     }
-    
+
     if students.contains(where: {$0.name == name}),
        inputArr.count == 2,
        !inputArr.isEmpty {
         
-        if let index = students.firstIndex(where: {$0.sc.keys == subject}) {
-            students.remove(at: index)
+        // TODO: - 코드 리팩토링 필요! (등록된 학생의 성적이 Empty 값일 경우도 4번-성적삭제 가 가능함)
+        if let index = students.firstIndex(where: {$0.name == name}) {
+            students[index].sc.removeValue(forKey: subject)
+            print("\(name) 학생의 \(subject) 과목의 성적이 삭제되었습니다.")
+            print(students)
         }
     } else {
         print(errorMessage)
-        print(inputArr)
     }
     startCreditManager()
 }

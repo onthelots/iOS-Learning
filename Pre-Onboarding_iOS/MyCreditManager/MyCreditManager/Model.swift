@@ -15,15 +15,13 @@ struct Student {
     // subject & Credit
     var sc: [String: String] = [:]
     
-    // Credit Average -> 평점만 나타내는 함수? -> 연산
-    // name, sc 매개변수로 받아서,
-    // 해당 name에 해당하는 
-//    func
-    
     // Count check
     func checkTheStudents(student: [Student]) {
         print("학생 수 : \(student.count)")
     }
+    
+    // Average
+    // 평균값~
 }
 
 
