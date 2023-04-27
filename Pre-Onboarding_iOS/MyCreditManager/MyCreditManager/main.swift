@@ -28,6 +28,8 @@ func startCreditManager() {
         deleteStudent()
     case "3" :
         addCredit()
+    case "4" :
+        deleteCredit()
     case "X" :
         print("프로그램을 종료합니다...")
         break
@@ -81,25 +83,60 @@ func addCredit() {
     
     let input = readLine()
     
-    // 이름 V 과목 V 평점(String)
-    // 조건1. input이 비어있지 않아야 하며, ""(split) 문자열로 3개 이상 변환할 시, 3개의 문자열이 배열에 포함되어야 함
-    // 조건2. 해당 학생의 이름이 반드시 존재해야 함
-    // 조건3. 작성된 평점 또한 Credit에 포함되어야 함
+    // inputArr
     guard let inputArr = input?.components(separatedBy: " ") else {
         return
     }
     
-    let name = inputArr.first // 이름
-    let subject = inputArr[1] // 과목
-    let credit = inputArr.last // 점수
+    // name, credit
+    guard let name = inputArr.first, let credit = inputArr.last else {
+        return
+    }
     
-    let sc = [subject:credit]
- 
-    if inputArr.count == 3, (students.contains(where: {$0.name == name})) {
-        students.append(Student(name: name ?? "", sc: sc))
+    
+    if inputArr.count == 3, // 갯수
+       (students.contains(where: {$0.name == name})), // 학생이 존재할 경우
+       !inputArr.isEmpty, // 입력값이 비어있지 않은 경우
+       creditValue.contains(where: {$0.key == credit}) { // 입력된 평점이 creditValue의 key값과 일치하는 경우
+        
+        let subject = inputArr[1] // subject
+        let sc = [subject:credit] // sc(dictionary 생성)
+        students.append(Student(name: name, sc: sc)) // 배열 내부값에 할당
+        
         print("\(name) 학생의 \(subject) 과목이 \(credit)로 추가(변경)되었습니다.")
+        print(inputArr)
     } else {
         print(errorMessage)
+    }
+    startCreditManager()
+}
+
+// MARK: - 성적 삭제
+func deleteCredit() {
+    print("성적을 삭제할 학생의 이름, 과목 이름을 띄어쓰기로 구분하여 차례로 작성해주세요.")
+    print("입력예) Mickey Swift")
+    
+    // [ ] 이름 일치여부, 과목(key)값을 활용한 데이터 삭제
+    let input = readLine()
+    
+    guard let inputArr = input?.components(separatedBy: "") else {
+        return
+    }
+    
+    guard let name = inputArr.first, let subject = inputArr.last else {
+        return
+    }
+    
+    if students.contains(where: {$0.name == name}),
+       inputArr.count == 2,
+       !inputArr.isEmpty {
+        
+        if let index = students.firstIndex(where: {$0.sc.keys == subject}) {
+            students.remove(at: index)
+        }
+    } else {
+        print(errorMessage)
+        print(inputArr)
     }
     startCreditManager()
 }
