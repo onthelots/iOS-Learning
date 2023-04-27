@@ -14,14 +14,31 @@ struct Student {
     
     // subject & Credit
     var sc: [String: String] = [:]
-    
+
+
     // Count check
     func checkTheStudents(student: [Student]) {
         print("학생 수 : \(student.count)")
     }
     
     // Average
-    // 평균값~
+    func checkCreditAverage() {
+
+        for subject in sc {
+            print("\(subject.key): \(subject.value)")
+        }
+        
+        let average = sc.compactMap {
+            creditValue[$0.value]}.reduce(0, +) / Float(sc.count)
+        
+        let numberformatter = NumberFormatter()
+        numberformatter.roundingMode = .floor
+        numberformatter.maximumFractionDigits = 2
+        
+        let creditAverage = numberformatter.string(for: average) ?? ""
+        
+        print("평점 : \(creditAverage)")
+    }
 }
 
 

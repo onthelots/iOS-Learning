@@ -30,6 +30,8 @@ func startCreditManager() {
         addCredit()
     case "4" :
         deleteCredit()
+    case "5" :
+        checkAverage()
     case "X" :
         print("프로그램을 종료합니다...")
         break
@@ -103,7 +105,8 @@ func addCredit() {
         let subject = inputArr[1] // subject
         let sc = [subject:credit] // sc(dictionary 생성)
         if let index = students.firstIndex(where: {$0.name == name}) {
-            students[index].sc = sc
+            
+            students[index].sc[subject] = String(credit) // Key, Value값을 할당함
             print("\(name) 학생의 \(subject) 과목이 \(credit)로 추가(변경)되었습니다.")
             print(students)
         }
@@ -128,19 +131,50 @@ func deleteCredit() {
     guard let name = inputArr.first, let subject = inputArr.last else {
         return
     }
-
+    
+    // 조건1. 해당 학생의 이름이 존재하고, 이름과 과목명이 작성된 경우
     if students.contains(where: {$0.name == name}),
        inputArr.count == 2,
        !inputArr.isEmpty {
         
-        // TODO: - 코드 리팩토링 필요! (등록된 학생의 성적이 Empty 값일 경우도 4번-성적삭제 가 가능함)
+        // 조건2. 해당 학생의 index 값의
         if let index = students.firstIndex(where: {$0.name == name}) {
-            students[index].sc.removeValue(forKey: subject)
-            print("\(name) 학생의 \(subject) 과목의 성적이 삭제되었습니다.")
-            print(students)
+            // sc(과목 및 성적)이 비어있지 않은 경우
+            if students[index].sc.isEmpty == false {
+                
+                // 조건3. 삭제하고자 하는 해당 학생의 과목이 반드시 등록된 경우
+                if students[index].sc.contains(where: {$0.key == subject}) {
+                    students[index].sc.removeValue(forKey: subject) // 과목 삭제
+                    print("\(name) 학생의 \(subject) 과목의 성적이 삭제되었습니다.")
+                    print(students)
+                } else {
+                    print("\(name) 학생의 등록된 성적 중, 해당 과목이 존재하지 않습니다.")
+                }
+            } else {
+                print("\(name) 학생의 등록된 성적이 없습니다.")
+            }
+        } else {
+            print("\(name) 학생을 찾지 못했습니다.")
         }
     } else {
         print(errorMessage)
+    }
+    startCreditManager()
+}
+
+// MARK: - 평점확인
+func checkAverage() {
+    print("평점을 알고싶은 학생의 이름을 입력해주세요.")
+    let input = readLine()
+
+    guard let input = input else {
+        return
+    }
+
+    if let input = students.first(where: {$0.name == input}) {
+        input.checkCreditAverage()
+    } else {
+        print("\(input) 학생을 찾지 못했습니다.")
     }
     startCreditManager()
 }
