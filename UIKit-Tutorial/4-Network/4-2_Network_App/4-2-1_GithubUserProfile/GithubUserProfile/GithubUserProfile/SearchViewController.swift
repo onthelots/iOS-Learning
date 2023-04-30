@@ -14,10 +14,13 @@ class UserProfileViewController: UIViewController {
     // NetworkService
     let networkService = NetworkService(configuration: .default)
     
-    
+    // Publisher
     @Published private var user: UserProfile?
+    
+    // Subscription
     var subscripiton = Set<AnyCancellable>()
 
+    // Components
     @IBOutlet weak var thumbnail: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var loginLabel: UILabel!
@@ -26,9 +29,9 @@ class UserProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
-        bind()
-        embedSearchControl()
+        setupUI() // UI
+        bind() // Data Binding
+        embedSearchControl() // searchControl
     }
     
     // setupUI
@@ -36,6 +39,7 @@ class UserProfileViewController: UIViewController {
         thumbnail.layer.cornerRadius = 80
     }
     
+    // SearchControl
     private func embedSearchControl() {
         self.navigationItem.title = "Search"
         
@@ -49,16 +53,7 @@ class UserProfileViewController: UIViewController {
         self.navigationItem.searchController = searchController
     }
     
-    // bind -> updataUI
-    private func bind() {
-        $user
-            .receive(on: RunLoop.main)
-            .sink { [unowned self] result in
-                self.update(result) // update (데이터 넣어주기)
-            }.store(in: &subscripiton)
-    }
-    
-    // update -> sink
+    // ① update : 생성된 Components를 UserProfiles 타입의 user 값에 할당하기
     private func update(_ user: UserProfile?) {
         guard let user = user else {
             self.nameLabel.text = "n/a" //nil
@@ -77,6 +72,15 @@ class UserProfileViewController: UIViewController {
         self.thumbnail.kf.setImage(with: user.avatarUrl)
     }
     
+    // ② bind : user 퍼블리셔에 스레드, 사용자가 입력하는 데이터(components)를 update 하는 메서드를 sink하고, 구독하기 (subscription)
+    private func bind() {
+        // Publisher (Model)
+        $user
+            .receive(on: RunLoop.main)
+            .sink { [unowned self] result in
+                self.update(result) // update (데이터 넣어주기)
+            }.store(in: &subscripiton)
+    }
 }
 
 // SearchResultUpdating
@@ -129,6 +133,7 @@ extension UserProfileViewController: UISearchBarDelegate {
 //            request.addValue(value, forHTTPHeaderField: key)
 //        }
         
+        // Network Resource 할당
         let resource = Resource<UserProfile>(base: "https://api.github.com/",
                                              path: "users/\(keyword)",
                                              params: [:],
