@@ -255,7 +255,7 @@ final class NetworkService {
     
     // fetch function
     func fetchFeed(limit: Int) -> AnyPublisher<Feed, Error> {
-        let urlString: String = "https://itunes.apple.com/kr/rss/topfreeapplications/limit=\(limit)/json"
+        let urlString: String = "https://itunes.apple.com/kr/rss/topfreeapplications/limit=1/json"
         let url = URL(string: urlString)! // 강제 바인딩
         
         return session
