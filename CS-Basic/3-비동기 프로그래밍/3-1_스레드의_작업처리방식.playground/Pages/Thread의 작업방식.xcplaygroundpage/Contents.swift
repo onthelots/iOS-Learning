@@ -6,7 +6,7 @@ import Foundation
 
 
 // 가장 간편하게 알아보는 비동기 Thread 방식
-//sleep(3)
+sleep(3)
 print("Say Hello")
 
 
