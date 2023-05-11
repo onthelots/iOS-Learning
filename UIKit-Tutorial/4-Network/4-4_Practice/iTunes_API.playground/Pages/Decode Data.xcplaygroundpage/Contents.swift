@@ -13,6 +13,15 @@ import Combine
 
 // MARK: - Model
 // App은, 아래 Result 구조체를 map 함수로 변환하여 새로운 container로 변환하는 구조네.
+//struct App: Decodable {
+//    let name: String
+//    let category: String
+//    let description: String
+//    let appIcon60: String
+//    let appIcon100: String
+//    let appIcon512: String
+//}
+
 struct App {
     let name: String
     let category: String
@@ -22,7 +31,7 @@ struct App {
     let appIcon512: String
 }
 
-struct Response: Decodable {
+struct Results: Decodable {
     let results: [Result]
 }
 
@@ -51,7 +60,7 @@ let configuration = URLSessionConfiguration.default
 
 // 2. URL: API 정보를 받아올 URL 주소(되도록, URL 타입으로 가져오장)
 // URL 자체에 대한 에러 핸들링은 추후 진행할 예정이므로, 여기선 강제 옵셔널 해제를 해주자.
-let url = URL(string: "https://itunes.apple.com/search?media=software&entity=software&term=Books&country=kr&lang=ko_kr&limit=1")!
+let url = URL(string: "https://itunes.apple.com/search?media=software&entity=software&term=Books&country=kr&lang=ko_kr&limit=3")!
 
 // 3.URLSession : 받아온 데이터를 활용할 객체
 let session = URLSession(configuration: configuration)
@@ -73,8 +82,33 @@ let task = session.dataTask(with: url) { data, response, error in
     }
     
     // 4-2. Data (객체의 데이터는 유효한가?)
+    guard let data = data else { return }
+    
+    
+    // 4-3. Error
+    // 4-3-1. do-try-catch 구문
+    do {
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .iso8601 // 날짜 타입 설정
+        let results = try decoder.decode(Results.self, from: data)
+        let apps = results.results.map { app in
+            App(name: app.trackName,
+                category: app.primaryGenreName,
+                description: app.description,
+                appIcon60: app.artworkUrl60,
+                appIcon100: app.artworkUrl100,
+                appIcon512: app.artworkUrl512)
+        }
+        for app in apps {
+            print(app.name)
+        }
+    } catch let error as NSError {
+        print("Error : \(error)")
+    }
 }
-
 task.resume()
 
+        
+        
+    
 //: [Next](@next)
