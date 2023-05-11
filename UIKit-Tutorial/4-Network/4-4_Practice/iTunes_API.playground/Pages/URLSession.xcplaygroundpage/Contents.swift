@@ -28,27 +28,27 @@ import Combine
 
 // MARK: - Model
 // App은, 아래 Result 구조체를 map 함수로 변환하여 새로운 container로 변환하는 구조네.
-struct App {
-    let name: String
-    let category: String
-    let description: String
-    let appIcon60: String
-    let appIcon100: String
-    let appIcon512: String
-}
+//struct App {
+//    let name: String
+//    let category: String
+//    let description: String
+//    let appIcon60: String
+//    let appIcon100: String
+//    let appIcon512: String
+//}
 
 struct Response: Decodable {
-    let results: [Result]
+    let results: [Results]
 }
 
-struct Result: Decodable {
+struct Results: Decodable {
     let trackName: String
     let primaryGenreName: String
     let description: String
     let artworkUrl60, artworkUrl512, artworkUrl100: String
 }
 
-// MARK: - Model
+// MARK: - NetworkService
 let urlString = "https://itunes.apple.com/search?media=software&entity=software&term=Books&country=kr&lang=ko_kr&limit=3"
 
 if let url = URL(string: urlString) {
@@ -56,15 +56,6 @@ if let url = URL(string: urlString) {
         if let data = data {
             do {
                 let response = try JSONDecoder().decode(Response.self, from: data)
-                let apps = response.results.map { appInfo in
-                    App(name: appInfo.trackName,
-                        category: appInfo.primaryGenreName,
-                        description: appInfo.description,
-                        appIcon60: appInfo.artworkUrl60,
-                        appIcon100: appInfo.artworkUrl100,
-                        appIcon512: appInfo.artworkUrl512)
-                }
-                print(apps)
             } catch let error {
                 print(error)
             }

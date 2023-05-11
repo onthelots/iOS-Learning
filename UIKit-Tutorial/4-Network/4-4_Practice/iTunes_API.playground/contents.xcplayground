@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <playground version='6.0' target-platform='ios' buildActiveScheme='true' importAppTypes='true'>
     <pages>
-        <page name='URLSession_v1'/>
-        <page name='URLSession_v2'/>
+        <page name='URLSession'/>
+        <page name='Decode Data'/>
+        <page name='Fetch Method'/>
     </pages>
 </playground>

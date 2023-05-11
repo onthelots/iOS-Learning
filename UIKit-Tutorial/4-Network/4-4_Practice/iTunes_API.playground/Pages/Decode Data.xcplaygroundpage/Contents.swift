@@ -22,20 +22,20 @@ import Combine
 //    let appIcon512: String
 //}
 
-struct App {
-    let name: String
-    let category: String
-    let description: String
-    let appIcon60: String
-    let appIcon100: String
-    let appIcon512: String
-}
+//struct App {
+//    let name: String
+//    let category: String
+//    let description: String
+//    let appIcon60: String
+//    let appIcon100: String
+//    let appIcon512: String
+//}
 
-struct Results: Decodable {
+struct Results: Codable {
     let results: [Result]
 }
 
-struct Result: Decodable {
+struct Result: Codable {
     let trackName: String
     let primaryGenreName: String
     let description: String
@@ -90,17 +90,22 @@ let task = session.dataTask(with: url) { data, response, error in
     do {
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .iso8601 // 날짜 타입 설정
-        let results = try decoder.decode(Results.self, from: data)
-        let apps = results.results.map { app in
-            App(name: app.trackName,
-                category: app.primaryGenreName,
-                description: app.description,
-                appIcon60: app.artworkUrl60,
-                appIcon100: app.artworkUrl100,
-                appIcon512: app.artworkUrl512)
-        }
-        for app in apps {
-            print(app.name)
+        let result = try decoder.decode(Results.self, from: data)
+//        let apps = results.results.map { app in
+//            App(name: app.trackName,
+//                category: app.primaryGenreName,
+//                description: app.description,
+//                appIcon60: app.artworkUrl60,
+//                appIcon100: app.artworkUrl100,
+//                appIcon512: app.artworkUrl512)
+//        }
+//        for app in result {
+//            print(app.name)
+//        }
+        let results = result.results
+        
+        for app in results {
+            print(app.trackName)
         }
     } catch let error as NSError {
         print("Error : \(error)")

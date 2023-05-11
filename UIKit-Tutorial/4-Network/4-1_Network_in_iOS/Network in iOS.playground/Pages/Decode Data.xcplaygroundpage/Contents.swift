@@ -221,7 +221,7 @@ let task = session.dataTask(with: url) { data, response, error in
         // 실제 Model의 데이터로 가져오기 위해 'try'함
         // decode(Model 데이터, from: 서버 데이터)
         let appstore = try decorder.decode(AppStore.self, from: data)
-        print("AppInfo: \(appstore.feed.entry.category.attributes.label)")
+//        print("AppInfo: \(appstore.feed.entry.category.attributes.label)")
     } catch let error as NSError {
         print("error : \(error)")
     }
