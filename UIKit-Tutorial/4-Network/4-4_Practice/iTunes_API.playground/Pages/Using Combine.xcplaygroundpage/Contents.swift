@@ -45,11 +45,57 @@ final class NetworkService {
         let url = URL(string: "https://itunes.apple.com/search?media=software&entity=software&term=\(category)&country=kr&lang=ko_kr&limit=\(limit)")!
         
         let task = session.dataTask(with: url) { data, response, error in
-            <#code#>
+            
+            // error + completion
+            if let error = error {
+                completion(.failure(NetworkError.transportError(error)))
+                return
+            }
+            
+            // response + completion(error)
+            if let httpResponse = response as? HTTPURLResponse,
+                  !(200..<300).contains(httpResponse.statusCode) {
+                completion(.failure(NetworkError.responseError(statusCode: httpResponse.statusCode)))
+                return
+            }
+            
+            // data
+            guard let data = data else {
+                completion(.failure(NetworkError.noData))
+                return
+            }
+            
+            // decoding
+            do {
+                let decoder = JSONDecoder()
+                decoder.dateDecodingStrategy = .iso8601
+                decoder.keyDecodingStrategy = .convertFromSnakeCase
+                let apps = try decoder.decode(Apps.self, from: data)
+                completion(.success(apps))
+            } catch let error {
+                completion(.failure(NetworkError.decodingError(error)))
+            }
         }
+        task.resume()
     }
 }
 
+var appsName: [String] = []
+let firstAppName: String = ""
 
+let networkService: NetworkService = NetworkService(configure: .default)
+
+networkService.fetchAppStore(category: "Books", limit: 3) { result in
+    switch result {
+    case .success(let apps) :
+        appsName = apps.apps.map({ name in
+            name.trackName
+        })
+        print("Apps Infomation : \(appsName)")
+        
+    case .failure(let error) :
+        print("Failure : \(error)")
+    }
+}
 
 //: [Next](@next)
