@@ -1,6 +1,7 @@
 //: [Previous](@previous)
 
 import Foundation
+import Combine
 
 
 // MARK: - Model
@@ -28,6 +29,12 @@ enum NetworkError: Error {
   case decodingError(Error)
 }
 
+// MARK: - Publisher, Subscription
+// Publisher는 이미 NetworkService 내부의 session이 담당하고 있음
+// Subscription만 별도로 생성 후, 데이터를 구독시키자
+
+var subscripiton = Set<AnyCancellable>()
+
 // MARK: - URLSession
 
 final class NetworkService {
@@ -40,62 +47,40 @@ final class NetworkService {
         self.session = URLSession(configuration: configure)
     }
     
-    func fetchAppStore(category: String, limit: Int, completion: @escaping (Result<Apps, Error>) -> Void) {
+    func fetchAppStore(category: String, limit: Int) -> AnyPublisher<Apps, Error> {
         
         let url = URL(string: "https://itunes.apple.com/search?media=software&entity=software&term=\(category)&country=kr&lang=ko_kr&limit=\(limit)")!
         
-        let task = session.dataTask(with: url) { data, response, error in
-            
-            // error + completion
-            if let error = error {
-                completion(.failure(NetworkError.transportError(error)))
-                return
+        // return 타입이 Publisher 이므로, .dataTaskPublisher를 활용, URLSession을 Publisher로 생성하고 데이터를 할당과 에러 핸들ㄹ이을 실시
+        return session
+            .dataTaskPublisher(for: url)
+        // tryMap 메서드를 활용, result란 response, data를 배출함으로서 session에게 올바른 데이터를 할당함
+            .tryMap { result -> Data in
+                guard let response = result.response as? HTTPURLResponse,
+                      (200..<300).contains(response.statusCode) else {
+                    let response = result.response as? HTTPURLResponse
+                    let statusCode = response?.statusCode ?? -1
+                    
+                    throw NetworkError.responseError(statusCode: statusCode)
+                }
+                return result.data
             }
-            
-            // response + completion(error)
-            if let httpResponse = response as? HTTPURLResponse,
-                  !(200..<300).contains(httpResponse.statusCode) {
-                completion(.failure(NetworkError.responseError(statusCode: httpResponse.statusCode)))
-                return
-            }
-            
-            // data
-            guard let data = data else {
-                completion(.failure(NetworkError.noData))
-                return
-            }
-            
-            // decoding
-            do {
-                let decoder = JSONDecoder()
-                decoder.dateDecodingStrategy = .iso8601
-                decoder.keyDecodingStrategy = .convertFromSnakeCase
-                let apps = try decoder.decode(Apps.self, from: data)
-                completion(.success(apps))
-            } catch let error {
-                completion(.failure(NetworkError.decodingError(error)))
-            }
-        }
-        task.resume()
+            .decode(type: Apps.self, decoder: JSONDecoder())
+            .eraseToAnyPublisher()
     }
 }
 
-var appsName: [String] = []
-let firstAppName: String = ""
-
-let networkService: NetworkService = NetworkService(configure: .default)
-
-networkService.fetchAppStore(category: "Books", limit: 3) { result in
-    switch result {
-    case .success(let apps) :
-        appsName = apps.apps.map({ name in
-            name.trackName
-        })
-        print("Apps Infomation : \(appsName)")
-        
-    case .failure(let error) :
-        print("Failure : \(error)")
+var appNames: [String] = []
+let networkService = NetworkService(configure: .default)
+let subscription = networkService
+    .fetchAppStore(category: "Books", limit: 3)
+    .receive(on: RunLoop.main)
+    .sink { error in
+        print("Error : \(error)")
+    } receiveValue: { items in
+        print("Items : \(items)")
     }
-}
+
+
 
 //: [Next](@next)
