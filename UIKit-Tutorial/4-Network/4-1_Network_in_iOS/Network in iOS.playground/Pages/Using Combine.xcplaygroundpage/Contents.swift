@@ -278,6 +278,7 @@ final class NetworkService {
 }
 
 let networkService = NetworkService(configure: .default)
+    
 let subscription = networkService
     .fetchFeed(limit: 10)
     .receive(on: RunLoop.main)
