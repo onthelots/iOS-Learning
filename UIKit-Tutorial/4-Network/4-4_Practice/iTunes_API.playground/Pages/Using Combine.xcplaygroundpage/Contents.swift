@@ -70,7 +70,6 @@ final class NetworkService {
     }
 }
 
-var appNames: [String] = []
 let networkService = NetworkService(configure: .default)
 let subscription = networkService
     .fetchAppStore(category: "Books", limit: 3)
