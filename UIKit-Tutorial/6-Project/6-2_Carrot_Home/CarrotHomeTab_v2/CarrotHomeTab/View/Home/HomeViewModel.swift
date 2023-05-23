@@ -51,6 +51,7 @@ final class HomeViewModel {
                 }
             } receiveValue: { items in // item 퍼블리셔에 받아온 items 값 할당하기
                 self.items = items
+                print("Items : \(items)")
             }.store(in: &subscriptions) // 구독
     }
 }
