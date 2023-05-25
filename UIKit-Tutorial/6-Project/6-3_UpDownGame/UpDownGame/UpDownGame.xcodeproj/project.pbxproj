@@ -16,6 +16,7 @@
 		3F70FC582A1F92C40081813B /* UpDownGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F70FC572A1F92C40081813B /* UpDownGameTests.swift */; };
 		3F70FC622A1F92C40081813B /* UpDownGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F70FC612A1F92C40081813B /* UpDownGameUITests.swift */; };
 		3F70FC642A1F92C40081813B /* UpDownGameUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F70FC632A1F92C40081813B /* UpDownGameUITestsLaunchTests.swift */; };
+		3F70FC712A1F9B440081813B /* HeaderStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F70FC702A1F9B440081813B /* HeaderStackView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		3F70FC5D2A1F92C40081813B /* UpDownGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UpDownGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F70FC612A1F92C40081813B /* UpDownGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpDownGameUITests.swift; sourceTree = "<group>"; };
 		3F70FC632A1F92C40081813B /* UpDownGameUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpDownGameUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3F70FC702A1F9B440081813B /* HeaderStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderStackView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +103,9 @@
 			children = (
 				3F70FC402A1F92C40081813B /* AppDelegate.swift */,
 				3F70FC422A1F92C40081813B /* SceneDelegate.swift */,
-				3F70FC442A1F92C40081813B /* ViewController.swift */,
 				3F70FC462A1F92C40081813B /* Main.storyboard */,
+				3F70FC702A1F9B440081813B /* HeaderStackView.swift */,
+				3F70FC442A1F92C40081813B /* ViewController.swift */,
 				3F70FC492A1F92C40081813B /* Assets.xcassets */,
 				3F70FC4B2A1F92C40081813B /* LaunchScreen.storyboard */,
 				3F70FC4E2A1F92C40081813B /* Info.plist */,
@@ -260,6 +263,7 @@
 			files = (
 				3F70FC452A1F92C40081813B /* ViewController.swift in Sources */,
 				3F70FC412A1F92C40081813B /* AppDelegate.swift in Sources */,
+				3F70FC712A1F9B440081813B /* HeaderStackView.swift in Sources */,
 				3F70FC432A1F92C40081813B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
