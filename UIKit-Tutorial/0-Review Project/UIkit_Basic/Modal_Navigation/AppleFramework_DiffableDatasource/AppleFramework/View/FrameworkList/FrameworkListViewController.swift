@@ -78,6 +78,7 @@ extension FrameworkListViewController: UICollectionViewDelegate {
         // 3. data 업데이트
         vc.items = framework
         // 4. 모달창 present
+        vc.modalPresentationStyle = .automatic
         present(vc, animated: true)
         
     }
