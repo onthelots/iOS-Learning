@@ -101,7 +101,7 @@
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x3O-fM-fH2">
                                                                         <rect key="frame" x="0.0" y="56.666666666666657" width="614" height="46.666666666666657"/>
                                                                         <subviews>
-                                                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1.5" minValue="1" maxValue="6" translatesAutoresizingMaskIntoConstraints="NO" id="HhH-ht-eCK">
+                                                                            <slider opaque="NO" contentMode="scaleToFill" restorationIdentifier="UpDownGameSlider" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1.5" minValue="1" maxValue="6" translatesAutoresizingMaskIntoConstraints="NO" id="HhH-ht-eCK" customClass="UpDownGameSlider" customModule="UpDownGame" customModuleProvider="target">
                                                                                 <rect key="frame" x="-2" y="0.0" width="618" height="47.666666666666664"/>
                                                                             </slider>
                                                                         </subviews>
@@ -221,9 +221,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="Zyb-Z2-AjO"/>
                     <connections>
+                        <outlet property="checkImage" destination="hE8-kM-lZf" id="xcu-vo-bRh"/>
                         <outlet property="gameInfoTappedButton" destination="Wiw-cR-Xdn" id="yOJ-Wn-rpq"/>
                         <outlet property="gameResetTappedButton" destination="fd2-OG-VM7" id="1sP-h3-ehg"/>
-                        <outlet property="slider" destination="HhH-ht-eCK" id="hTY-3O-dGy"/>
+                        <outlet property="numOfGame" destination="Fwv-PI-ZP0" id="YvZ-Ay-GgD"/>
+                        <outlet property="selectedNumber" destination="izJ-B7-BSE" id="dKr-bo-4qd"/>
+                        <outlet property="slider" destination="HhH-ht-eCK" id="zsZ-68-AJD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
