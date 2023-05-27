@@ -71,8 +71,11 @@
     6-2. CarrotHomeTab (당근마켓 클론앱)
       - [프로젝트20-1] CarrotHomeTab (Combine, NetworkService 생생, Custom UITabBarItem 활용, NavigationBar 만들기)
       - [프로젝트20-2] CarrotHomeTab (AutoLayout 설정, UIScrollView 활용, 프로젝트 완성)
-    6-3. EmotionDiary (감정일기)
-      - 진행중...
-      
+    6-3. UpDownGame (숫자 맞추기)
+      - [프로젝트21] UpDownGame (UISlider를 활용한 랜덤 숫자맞추기)
+
+
+###  7. AutoLayout (by Yagom)
+    7-1. 작성중      
       
 continue...
