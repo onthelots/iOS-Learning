@@ -223,6 +223,7 @@
                     <connections>
                         <outlet property="gameInfoTappedButton" destination="Wiw-cR-Xdn" id="yOJ-Wn-rpq"/>
                         <outlet property="gameResetTappedButton" destination="fd2-OG-VM7" id="1sP-h3-ehg"/>
+                        <outlet property="slider" destination="HhH-ht-eCK" id="hTY-3O-dGy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
