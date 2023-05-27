@@ -23,7 +23,6 @@ class MainViewController: UIViewController {
     // 중앙 - Slider 및 Label, Check UIImage
     @IBOutlet weak var selectedNumber: UILabel!
     @IBOutlet weak var slider: UISlider!
-    @IBOutlet weak var checkImage: UIImageView!
     
     // 하단 - Game 횟수
     @IBOutlet weak var numOfGame: UILabel!
@@ -31,9 +30,10 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setSlider(slider, value: 3.0, minimumValue: 1.0, maximumVAlue: 6.0)
+        setSlider(slider, value: 15.0, minimumValue: 0.0, maximumVAlue: 30.0)
     }
     
+    // MARK: - ChangeView Button (GameInfoView)
     @IBAction func ChangeViewButtonDidTapped(_ sender: Any) {
         
         let gameInfoStoryboard = UIStoryboard(name: "GameInfo", bundle: nil)
@@ -41,13 +41,22 @@ class MainViewController: UIViewController {
         
         // Navigation
         navigationController?.pushViewController(vc, animated: true)
-        
-        // Modality
-        present(vc, animated: true)
     }
     
+    // MARK: - Slider Change Value (changeValue action)
+    @IBAction func sliderValueChanged(_ sender: UISlider) {
+        print("현재 위치값 : \(sender.value)")
+    }
+    
+    // MARK: - Touch Hit Button
+    @IBAction func touchUpHitButton(_ sender: UIButton) {
+        print("현재 위치값 : \(slider.value)")
+    }
+    
+    // Slider Setting
     private func setSlider(_ slider: UISlider, value: Float, minimumValue: Float, maximumVAlue: Float) {
         slider.value = value
+        print(slider.value)
         slider.minimumValue = minimumValue
         slider.maximumValue = maximumVAlue
     }

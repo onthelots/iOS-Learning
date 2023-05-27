@@ -19,6 +19,7 @@
 		3F529CA82A20A47900FD5F56 /* GameInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F529CA72A20A47900FD5F56 /* GameInfo.storyboard */; };
 		3F529CAA2A20A48800FD5F56 /* GameInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F529CA92A20A48800FD5F56 /* GameInfoViewController.swift */; };
 		3FDA3C552A21EB8100A096F9 /* UpDownGameSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDA3C542A21EB8100A096F9 /* UpDownGameSlider.swift */; };
+		3FDA3C572A22228600A096F9 /* RandomNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDA3C562A22228600A096F9 /* RandomNumber.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		3F529CA72A20A47900FD5F56 /* GameInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GameInfo.storyboard; sourceTree = "<group>"; };
 		3F529CA92A20A48800FD5F56 /* GameInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameInfoViewController.swift; sourceTree = "<group>"; };
 		3FDA3C542A21EB8100A096F9 /* UpDownGameSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpDownGameSlider.swift; sourceTree = "<group>"; };
+		3FDA3C562A22228600A096F9 /* RandomNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomNumber.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				3F529C7D2A20A2E100FD5F56 /* Assets.xcassets */,
 				3F529C7F2A20A2E100FD5F56 /* LaunchScreen.storyboard */,
 				3F529C822A20A2E100FD5F56 /* Info.plist */,
+				3FDA3C562A22228600A096F9 /* RandomNumber.swift */,
 			);
 			path = UpDownGame;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 				3F529C752A20A2E000FD5F56 /* AppDelegate.swift in Sources */,
 				3FDA3C552A21EB8100A096F9 /* UpDownGameSlider.swift in Sources */,
 				3F529C772A20A2E000FD5F56 /* SceneDelegate.swift in Sources */,
+				3FDA3C572A22228600A096F9 /* RandomNumber.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
