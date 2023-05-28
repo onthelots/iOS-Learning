@@ -38,6 +38,9 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // game Reset
+        reset()
+        
         // seletedNumber init
         selectedNumber.text = "0"
         
@@ -60,11 +63,11 @@ class MainViewController: UIViewController {
     
     // MARK: - Slider Change Value (changeValue action)
     @IBAction func sliderValueChanged(_ sender: UISlider) {
-        let value = sender.value
+        let value = Int(sender.value)
         print("현재 위치값 : \(value)")
         
-        selectedNumber.text = String(Int(value))
-        print("선택한 넘버 : \(String(describing: selectedNumber))")
+        selectedNumber.text = String(value)
+        print(">> 선택한 값 : \(selectedNumber.text ?? "")")
     }
     
     // MARK: - Touch Hit Button
@@ -92,17 +95,23 @@ class MainViewController: UIViewController {
             return
         }
         
-        if randomNumberArrToCountGame.last == Int(seletedNumber){
-            hitButton.titleLabel?.text = "Hit"
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                self.hitButton.titleLabel?.text = ""
-            }
+        if randomNumberArrToCountGame.last == Int(seletedNumber) {
+            print("Correct!")
+            hitButton.tintColor = UIColor.blue
+        } else {
+            hitButton.tintColor = UIColor.red
+            print("Failure!")
         }
     }
     
     // MARK: - Game Reset Button
     @IBAction func gameReset(_ sender: UIButton) {
         slider.value = 0.0
+        reset()
+    }
+    
+    private func reset() {
+        print("reset!")
     }
 
 }
