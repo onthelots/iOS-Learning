@@ -16,6 +16,12 @@ import UIKit
 
 class MainViewController: UIViewController {
     
+    // randomGameSetting Struct
+    var randomGameSetting: RandomNumberGameSetting = RandomNumberGameSetting()
+    
+    // RandomNumber Array
+    var randomRandomNumberArr: Array<Int> = []
+    
     // 상단 - Button 및 Title
     @IBOutlet weak var gameInfoTappedButton: UIButton!
     @IBOutlet weak var gameResetTappedButton: UIButton!
@@ -27,10 +33,15 @@ class MainViewController: UIViewController {
     // 하단 - Game 횟수
     @IBOutlet weak var numOfGame: UILabel!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setSlider(slider, value: 15.0, minimumValue: 0.0, maximumVAlue: 30.0)
+        // seletedNumber init
+        selectedNumber.text = "0"
+        
+        // slider 기본세팅
+        randomGameSetting.setSlider(slider, value: 0.0, minimumValue: 0.0, maximumVAlue: 6.0)
     }
     
     // MARK: - ChangeView Button (GameInfoView)
@@ -46,6 +57,7 @@ class MainViewController: UIViewController {
     // MARK: - Slider Change Value (changeValue action)
     @IBAction func sliderValueChanged(_ sender: UISlider) {
         print("현재 위치값 : \(sender.value)")
+        selectedNumber.text = String(sender.value)
     }
     
     // MARK: - Touch Hit Button
@@ -53,11 +65,9 @@ class MainViewController: UIViewController {
         print("현재 위치값 : \(slider.value)")
     }
     
-    // Slider Setting
-    private func setSlider(_ slider: UISlider, value: Float, minimumValue: Float, maximumVAlue: Float) {
-        slider.value = value
-        print(slider.value)
-        slider.minimumValue = minimumValue
-        slider.maximumValue = maximumVAlue
+    // MARK: - Game Reset Button
+    @IBAction func gameReset(_ sender: UIButton) {
+        slider.value = 0.0
     }
+
 }

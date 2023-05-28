@@ -43,6 +43,9 @@
                                                         <rect key="frame" x="664.33333333333337" y="0.0" width="49.666666666666629" height="70"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" image="repeat.1.circle.hi" catalog="system"/>
+                                                        <connections>
+                                                            <action selector="gameReset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xwj-3b-oI6"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -63,8 +66,8 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C2W-KT-xNT">
                                                         <rect key="frame" x="0.0" y="0.0" width="45" height="160"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nV2-f3-Ea5">
-                                                                <rect key="frame" x="17.333333333333329" y="70" width="10.666666666666664" height="20.333333333333329"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nV2-f3-Ea5">
+                                                                <rect key="frame" x="17.333333333333329" y="70" width="10.333333333333336" height="20.333333333333329"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -101,7 +104,7 @@
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x3O-fM-fH2">
                                                                         <rect key="frame" x="0.0" y="56.666666666666657" width="614" height="46.666666666666657"/>
                                                                         <subviews>
-                                                                            <slider opaque="NO" contentMode="scaleToFill" restorationIdentifier="UpDownGameSlider" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1.5" minValue="1" maxValue="6" translatesAutoresizingMaskIntoConstraints="NO" id="HhH-ht-eCK" customClass="UpDownGameSlider" customModule="UpDownGame" customModuleProvider="target">
+                                                                            <slider opaque="NO" contentMode="scaleToFill" restorationIdentifier="UpDownGameSlider" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="6" translatesAutoresizingMaskIntoConstraints="NO" id="HhH-ht-eCK" customClass="UpDownGameSlider" customModule="UpDownGame" customModuleProvider="target">
                                                                                 <rect key="frame" x="-2" y="0.0" width="618" height="47.666666666666664"/>
                                                                                 <connections>
                                                                                     <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="b0e-hZ-xxl"/>
