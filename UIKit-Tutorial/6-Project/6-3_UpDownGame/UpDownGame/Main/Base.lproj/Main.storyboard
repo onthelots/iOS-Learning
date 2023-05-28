@@ -118,7 +118,7 @@
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x3O-fM-fH2">
                                                                         <rect key="frame" x="0.0" y="56.666666666666657" width="614" height="46.666666666666657"/>
                                                                         <subviews>
-                                                                            <slider opaque="NO" contentMode="scaleToFill" restorationIdentifier="UpDownGameSlider" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="HhH-ht-eCK" customClass="UpDownGameSlider" customModule="UpDownGame" customModuleProvider="target">
+                                                                            <slider opaque="NO" contentMode="scaleToFill" restorationIdentifier="UpDownGameSlider" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="15" minValue="0.0" maxValue="30" translatesAutoresizingMaskIntoConstraints="NO" id="HhH-ht-eCK" customClass="UpDownGameSlider" customModule="UpDownGame" customModuleProvider="target">
                                                                                 <rect key="frame" x="-2" y="0.0" width="618" height="47.666666666666664"/>
                                                                                 <color key="minimumTrackTintColor" systemColor="systemGray6Color"/>
                                                                                 <color key="maximumTrackTintColor" systemColor="systemGray2Color"/>
@@ -170,8 +170,8 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AYl-sD-QLK">
                                                         <rect key="frame" x="669" y="0.0" width="45" height="160"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L1D-tG-qPF">
-                                                                <rect key="frame" x="17.333333333333371" y="70" width="10.666666666666664" height="20.333333333333329"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L1D-tG-qPF">
+                                                                <rect key="frame" x="12.333333333333373" y="70" width="20.666666666666671" height="20.333333333333329"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>

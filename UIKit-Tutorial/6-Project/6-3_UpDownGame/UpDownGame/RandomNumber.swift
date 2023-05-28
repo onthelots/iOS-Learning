@@ -14,7 +14,7 @@ struct SettingRandomGame {
     static let settingRandomGame = SettingRandomGame()
     
     // Slider Setting
-    func setSlider(_ slider: UISlider, value: SliderValueCoordinate, minimumValue: Float, maximumValue: Float) {
+    func setSlider(slider: UISlider, value: SliderValueCoordinate, minimumValue: Float, maximumValue: Float) {
         
         // Slider Default value
         slider.minimumValue = minimumValue
@@ -25,7 +25,7 @@ struct SettingRandomGame {
         case .leftmost :
             slider.value = minimumValue
         case .center :
-            slider.value = maximumValue/minimumValue
+            slider.value = ((maximumValue + minimumValue) / 2)
         case .rightmost :
             slider.value = maximumValue
         }
@@ -35,14 +35,14 @@ struct SettingRandomGame {
     }
     
     // 랜덤숫자 만들기
-    func createRandomNumber(_ min: String, _ max: String, randomNum: inout Int) {
-        
-        let intMin = Int(min) ?? 0
-        let intMax = Int(max) ?? 0
+    func createRandomNumber(_ min: Float, _ max: Float, randomNum: inout Int) {
         
         var createToRandomNumArr: Array<Int> = []
         
-        for i in intMin...intMax {
+        let min = Int(min)
+        let max = Int(max)
+        
+        for i in min...max {
             createToRandomNumArr.append(i)
         }
         
