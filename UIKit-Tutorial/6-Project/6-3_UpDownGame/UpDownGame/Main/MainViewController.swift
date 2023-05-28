@@ -17,38 +17,48 @@ import UIKit
 class MainViewController: UIViewController {
     
     // randomGameSetting Struct
-    var randomGameSetting: SettingRandomGame = SettingRandomGame()
+    var settingRandomGame = SettingRandomGame.settingRandomGame
+    
+    // RandomNumber
+    var randomNumber: Int = 0
     
     // RandomNumber Array
-    var randomNumberArrToCountGame: Array<Int> = []
+    var randomArr: Array<Int> = []
     
     // 상단 - Button 및 Title
     @IBOutlet weak var gameInfoTappedButton: UIButton!
     @IBOutlet weak var gameResetTappedButton: UIButton!
     
-    // 중앙 - Slider 및 Label, Check UIImage
-    @IBOutlet weak var selectedNumber: UILabel!
+    // 중앙 - Slider 및 SliderValue, 최소 및 최대값 (변동)
+    @IBOutlet weak var sliderValueLabel: UILabel!
     @IBOutlet weak var slider: UISlider!
+    
+    @IBOutlet weak var minimumValue: UILabel!
+    @IBOutlet weak var maximumValue: UILabel!
+    
+    // 중앙 - Hit Button
     @IBOutlet weak var hitButton: UIButton!
     
     // 하단 - Game 횟수
-    @IBOutlet weak var numOfGame: UILabel!
+    @IBOutlet weak var tryCountLabel: UILabel!
     
-    
+    // viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // game Reset
+        // game Reset (init)
         reset()
         
-        // seletedNumber init
-        selectedNumber.text = "0"
-        
         // numOfgame init
-        numOfGame.text = "1"
+        tryCountLabel.text = "1"
         
-        // slider 기본세팅
-        randomGameSetting.setSlider(slider, value: 0.0, minimumValue: 0.0, maximumValue: 6.0)
+        // slider 기본세팅 (min&maxValue)
+        settingRandomGame.setSlider(slider, value: .center, minimumValue: 0, maximumValue: 30)
+        settingRandomGame.createRandomNumber(minimumValue.text ?? "", maximumValue.text ?? "", randomNum: &randomNumber)
+        
+        // 빈 랜덤숫자 배열 내 요소 할당
+        randomArr.append(randomNumber)
+        print("초기에 할당된 배열 : \(randomArr)")
     }
     
     // MARK: - ChangeView Button (GameInfoView)
@@ -64,54 +74,35 @@ class MainViewController: UIViewController {
     // MARK: - Slider Change Value (changeValue action)
     @IBAction func sliderValueChanged(_ sender: UISlider) {
         let value = Int(sender.value)
-        print("현재 위치값 : \(value)")
-        
-        selectedNumber.text = String(value)
-        print(">> 선택한 값 : \(selectedNumber.text ?? "")")
+        sliderValueLabel.text = String(value)
     }
     
     // MARK: - Touch Hit Button
     @IBAction func touchUpHitButton(_ sender: UIButton) {
         
-        // 랜덤 넘버 생성
-        randomGameSetting.createRandomNumber(0, 6)
         
-        // randomNumber Count 배열에 할당
-        randomNumberArrToCountGame.append(randomGameSetting.randomNumber)
-        
-        print("RandomNumber 배열은? : \(randomNumberArrToCountGame)")
-        
-        // 게임 숫자 증가 + 1
-        numOfGame.text = String((Int(numOfGame.text ?? "1") ?? 1) + 1)
-        
-        // 5번 진행했을 경우
-        if randomNumberArrToCountGame.count == 5 {
-            randomNumberArrToCountGame = [] // 배열 초기화
-            numOfGame.text = "1" // 게임 횟수 초기화
-        }
-        
-        // 값 비교 vs
-        guard let seletedNumber = selectedNumber.text else {
-            return
-        }
-        
-        if randomNumberArrToCountGame.last == Int(seletedNumber) {
+        // 조건1. RandomNumber와 사용자가 선택한 숫자가 일치할 경우와 5번 횟수를 모두 넘긴 경우
+        if randomNumber == Int(sliderValueLabel.text ?? ""), randomArr.count == 5 {
+            reset()
             print("Correct!")
-            hitButton.tintColor = UIColor.blue
         } else {
-            hitButton.tintColor = UIColor.red
-            print("Failure!")
+            // 조건2. RandomNumber와 사용자가 선택한 숫자가 일치하지 않을 경우
+            randomArr.append(randomNumber)
+            print("현재 배열 : \(randomArr)")
+            print("현재 랜덤게임의 횟수는 : \(randomArr.count)")
+            // 게임 숫자 증가 + 1
+            tryCountLabel.text = String((Int(tryCountLabel.text ?? "1") ?? 1) + 1)
         }
     }
     
     // MARK: - Game Reset Button
     @IBAction func gameReset(_ sender: UIButton) {
-        slider.value = 0.0
         reset()
     }
     
+    // Game Reset function
     private func reset() {
-        print("reset!")
+        randomArr = [] // 배열 초기화
+        tryCountLabel.text = "1" // 게임 횟수 초기화
     }
-
 }

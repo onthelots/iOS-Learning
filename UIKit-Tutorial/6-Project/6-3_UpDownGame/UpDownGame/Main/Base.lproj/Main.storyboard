@@ -118,7 +118,7 @@
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x3O-fM-fH2">
                                                                         <rect key="frame" x="0.0" y="56.666666666666657" width="614" height="46.666666666666657"/>
                                                                         <subviews>
-                                                                            <slider opaque="NO" contentMode="scaleToFill" restorationIdentifier="UpDownGameSlider" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="6" translatesAutoresizingMaskIntoConstraints="NO" id="HhH-ht-eCK" customClass="UpDownGameSlider" customModule="UpDownGame" customModuleProvider="target">
+                                                                            <slider opaque="NO" contentMode="scaleToFill" restorationIdentifier="UpDownGameSlider" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="HhH-ht-eCK" customClass="UpDownGameSlider" customModule="UpDownGame" customModuleProvider="target">
                                                                                 <rect key="frame" x="-2" y="0.0" width="618" height="47.666666666666664"/>
                                                                                 <color key="minimumTrackTintColor" systemColor="systemGray6Color"/>
                                                                                 <color key="maximumTrackTintColor" systemColor="systemGray2Color"/>
@@ -253,9 +253,11 @@
                         <outlet property="gameInfoTappedButton" destination="Wiw-cR-Xdn" id="yOJ-Wn-rpq"/>
                         <outlet property="gameResetTappedButton" destination="fd2-OG-VM7" id="1sP-h3-ehg"/>
                         <outlet property="hitButton" destination="rGf-mU-y08" id="nii-Gp-xPs"/>
-                        <outlet property="numOfGame" destination="Fwv-PI-ZP0" id="YvZ-Ay-GgD"/>
-                        <outlet property="selectedNumber" destination="izJ-B7-BSE" id="dKr-bo-4qd"/>
+                        <outlet property="maximumValue" destination="L1D-tG-qPF" id="Fq7-2U-IaZ"/>
+                        <outlet property="minimumValue" destination="nV2-f3-Ea5" id="HU0-gh-1Hn"/>
                         <outlet property="slider" destination="HhH-ht-eCK" id="zsZ-68-AJD"/>
+                        <outlet property="sliderValueLabel" destination="izJ-B7-BSE" id="dKr-bo-4qd"/>
+                        <outlet property="tryCountLabel" destination="Fwv-PI-ZP0" id="YvZ-Ay-GgD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
