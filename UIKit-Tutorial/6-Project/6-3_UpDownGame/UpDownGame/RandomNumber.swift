@@ -8,27 +8,30 @@
 import Foundation
 import UIKit
 
-struct RandomNumberGameSetting {
+struct SettingRandomGame {
     
-    var seletedRandomNumber: Int = 0
+    var randomNumber: Int = 0
     
-    mutating func randomNumber(_ min: Int, _ max: Int) {
+    mutating func createRandomNumber(_ min: Int, _ max: Int) {
         
         var randomNumberArr: Array<Int> = []
         
         for i in min...max {
             randomNumberArr.append(i)
         }
-        seletedRandomNumber = randomNumberArr.randomElement() ?? 0
+        randomNumber = randomNumberArr.randomElement() ?? 0
         
-        print("seletedNumber : \(seletedRandomNumber)")
+        print("랜덤 넘버 : \(randomNumber)")
     }
     
     // Slider Setting
-    func setSlider(_ slider: UISlider, value: Float, minimumValue: Float, maximumVAlue: Float) {
+    func setSlider(_ slider: UISlider, value: Float, minimumValue: Float, maximumValue: Float) {
         slider.value = value
         print(slider.value)
         slider.minimumValue = minimumValue
-        slider.maximumValue = maximumVAlue
+        slider.maximumValue = maximumValue
+        
+        // ThumbImage
+        slider.setThumbImage(UIImage(named: "slider_thumb"), for: .normal)
     }
 }

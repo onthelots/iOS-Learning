@@ -6,10 +6,10 @@
 //
 
 /*
- [ ] Slider의 현재 위치값 확인, Slider 중앙 상단의 Label값 변동시키기
- [ ] 체크(V) 버튼을 통해 랜덤값(1~6까지) 생성 및 현재 Slider와의 일치여부 확인
- [ ] 총 횟수가 5번 이므로, 한번 진행할 때 마다 1씩 증가할 수 있도록 함
- [ ] Reset은?
+ [V] Slider의 현재 위치값 확인, Slider 중앙 상단의 Label값 변동시키기
+ [V] 체크(V) 버튼을 통해 랜덤값(1~6까지) 생성 및 현재 Slider와의 일치여부 확인
+ [V] 총 횟수가 5번 이므로, 한번 진행할 때 마다 1씩 증가할 수 있도록 함
+ [V] Reset은?
  */
 
 import UIKit
@@ -17,10 +17,10 @@ import UIKit
 class MainViewController: UIViewController {
     
     // randomGameSetting Struct
-    var randomGameSetting: RandomNumberGameSetting = RandomNumberGameSetting()
+    var randomGameSetting: SettingRandomGame = SettingRandomGame()
     
     // RandomNumber Array
-    var randomRandomNumberArr: Array<Int> = []
+    var randomNumberArrToCountGame: Array<Int> = []
     
     // 상단 - Button 및 Title
     @IBOutlet weak var gameInfoTappedButton: UIButton!
@@ -29,6 +29,7 @@ class MainViewController: UIViewController {
     // 중앙 - Slider 및 Label, Check UIImage
     @IBOutlet weak var selectedNumber: UILabel!
     @IBOutlet weak var slider: UISlider!
+    @IBOutlet weak var hitButton: UIButton!
     
     // 하단 - Game 횟수
     @IBOutlet weak var numOfGame: UILabel!
@@ -40,8 +41,11 @@ class MainViewController: UIViewController {
         // seletedNumber init
         selectedNumber.text = "0"
         
+        // numOfgame init
+        numOfGame.text = "1"
+        
         // slider 기본세팅
-        randomGameSetting.setSlider(slider, value: 0.0, minimumValue: 0.0, maximumVAlue: 6.0)
+        randomGameSetting.setSlider(slider, value: 0.0, minimumValue: 0.0, maximumValue: 6.0)
     }
     
     // MARK: - ChangeView Button (GameInfoView)
@@ -56,13 +60,44 @@ class MainViewController: UIViewController {
     
     // MARK: - Slider Change Value (changeValue action)
     @IBAction func sliderValueChanged(_ sender: UISlider) {
-        print("현재 위치값 : \(sender.value)")
-        selectedNumber.text = String(sender.value)
+        let value = sender.value
+        print("현재 위치값 : \(value)")
+        
+        selectedNumber.text = String(Int(value))
+        print("선택한 넘버 : \(String(describing: selectedNumber))")
     }
     
     // MARK: - Touch Hit Button
     @IBAction func touchUpHitButton(_ sender: UIButton) {
-        print("현재 위치값 : \(slider.value)")
+        
+        // 랜덤 넘버 생성
+        randomGameSetting.createRandomNumber(0, 6)
+        
+        // randomNumber Count 배열에 할당
+        randomNumberArrToCountGame.append(randomGameSetting.randomNumber)
+        
+        print("RandomNumber 배열은? : \(randomNumberArrToCountGame)")
+        
+        // 게임 숫자 증가 + 1
+        numOfGame.text = String((Int(numOfGame.text ?? "1") ?? 1) + 1)
+        
+        // 5번 진행했을 경우
+        if randomNumberArrToCountGame.count == 5 {
+            randomNumberArrToCountGame = [] // 배열 초기화
+            numOfGame.text = "1" // 게임 횟수 초기화
+        }
+        
+        // 값 비교 vs
+        guard let seletedNumber = selectedNumber.text else {
+            return
+        }
+        
+        if randomNumberArrToCountGame.last == Int(seletedNumber){
+            hitButton.titleLabel?.text = "Hit"
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self.hitButton.titleLabel?.text = ""
+            }
+        }
     }
     
     // MARK: - Game Reset Button
