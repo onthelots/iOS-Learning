@@ -48,7 +48,6 @@ class MainViewController: UIViewController {
     // viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         reset()
     }
     
@@ -73,7 +72,7 @@ class MainViewController: UIViewController {
     @IBAction func touchUpHitButton(_ sender: UIButton) {
         
         // 조건1. RandomNumber와 사용자가 선택한 숫자가 일치할 경우와 5번 횟수를 모두 넘긴 경우
-        if randomNumber == Int(sliderValueLabel.text ?? "") || randomNumberCount == 5 {
+        if randomNumber == Int(sliderValueLabel.text ?? "") || tryCountLabel.text == "5" {
             print("Correct or Over Count!")
             reset()
             
@@ -90,7 +89,8 @@ class MainViewController: UIViewController {
                                             maximumValue: slider.value)
                 
                 self.minimumValue.text = String(Int(slider.minimumValue))
-                self.maximumValue.text = String(Int(slider.value))
+                self.maximumValue.text = sliderValueLabel.text
+                self.sliderValueLabel.text = String(Int(slider.value))
                 
                 randomNumberCount += 1
                 print("현재 랜덤게임의 횟수는 : \(randomNumberCount)")
@@ -103,8 +103,9 @@ class MainViewController: UIViewController {
                                             minimumValue: slider.value,
                                             maximumValue: slider.maximumValue)
                 
-                self.minimumValue.text = String(Int(slider.value))
+                self.minimumValue.text = sliderValueLabel.text
                 self.maximumValue.text = String(Int(slider.maximumValue))
+                self.sliderValueLabel.text = String(Int(slider.value))
             
                 randomNumberCount += 1
                 print("현재 랜덤게임의 횟수는 : \(randomNumberCount)")
@@ -135,7 +136,7 @@ class MainViewController: UIViewController {
         createRandomNumber()
         
         // 게임횟수 초기화
-        tryCountLabel.text = "1"
+        tryCountLabel.text = String(randomNumberCount + 1)
         
         // 로그 확인
         print("랜덤숫자 : \(randomNumber)")
