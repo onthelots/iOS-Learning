@@ -75,13 +75,10 @@ class MainViewController: UIViewController {
         if randomNumber == Int(sliderValueLabel.text ?? "") || tryCountLabel.text == "5" {
             print("Correct or Over Count!")
             reset()
-            
         } else {
             // 조건2. RandomNumber와 사용자가 선택한 숫자가 일치하지 않을 경우
             
-            // 조건3. RandomNumber가 사용자가 선택한 숫자보다 낮을경우 -> slider.maximum은 사용자가 선택한 숫자가 되며
-            // RandomNumber가 사용자가 선택한 숫자보다 높을 경우 -> slider.minimum은 사용자가 선택한 숫자가 됨
-            
+            // 조건2-1. RandomNumber가 사용자가 선택한 숫자보다 낮을경우 -> slider.maximum은 사용자가 선택한 숫자가 됨
             if randomNumber < Int(sliderValueLabel.text ?? "") ?? 0 {
                 settingRandomGame.setSlider(slider: slider,
                                             value: .center,
@@ -97,6 +94,8 @@ class MainViewController: UIViewController {
                 
                 // 게임 숫자 증가 + 1
                 tryCountLabel.text = String((Int(tryCountLabel.text ?? "1") ?? 1) + 1)
+                
+                // 조건2-2. RandomNumber가 사용자가 선택한 숫자보다 높을 경우 -> slider.minimum은 사용자가 선택한 숫자가 됨
             } else if randomNumber > Int(sliderValueLabel.text ?? "") ?? 0 {
                 settingRandomGame.setSlider(slider: slider,
                                             value: .center,
