@@ -37,6 +37,9 @@
                                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                                             </preferredSymbolConfiguration>
                                                         </state>
+                                                        <connections>
+                                                            <segue destination="HPg-AS-PwI" kind="presentation" modalTransitionStyle="crossDissolve" id="EKc-M2-EDX"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guess the Random Number!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nop-dH-Faq">
                                                         <rect key="frame" x="235.33333333333331" y="0.0" width="240.66666666666669" height="70"/>
@@ -262,12 +265,12 @@
             <point key="canvasLocation" x="795.07042253521126" y="-28.244274809160306"/>
         </scene>
         <!--GameInfoViewController-->
-        <scene sceneID="GYZ-dd-xJY">
+        <scene sceneID="4hu-tT-CAZ">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="GameInfo" storyboardName="GameInfo" referencedIdentifier="GameInfoViewController" id="eCQ-MM-m5Y" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="k3f-3I-afZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardIdentifier="GameInfoViewController" storyboardName="GameInfo" referencedIdentifier="GameInfoViewController" id="HPg-AS-PwI" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TB2-qg-Owb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="552" y="-537"/>
+            <point key="canvasLocation" x="1276" y="-29"/>
         </scene>
     </scenes>
     <resources>

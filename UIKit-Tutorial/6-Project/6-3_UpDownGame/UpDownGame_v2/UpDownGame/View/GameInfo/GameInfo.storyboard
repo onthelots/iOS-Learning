@@ -33,6 +33,9 @@
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                                     </preferredSymbolConfiguration>
                                                 </state>
+                                                <connections>
+                                                    <action selector="dismissButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="uze-p3-LsD"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -100,6 +103,10 @@
                             <constraint firstItem="aYm-7w-MgK" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" constant="10" id="wCQ-oz-EXD"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="dismissButton" destination="vtb-ur-Y38" id="uxw-P4-Y8w"/>
+                        <outlet property="gameInfoTextView" destination="OF0-lO-XUl" id="Lhb-Ja-thA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
