@@ -145,14 +145,4 @@ class MainViewController: UIViewController {
                 animated: true,
                 completion: nil)
     }
-    
-    // InfoView Tapped
-    @IBAction func InfoViewTapped(_ sender: Any) {
-        
-        let gameInfoStoryboard = UIStoryboard(name: "GameInfo", bundle: nil)
-        let vc = gameInfoStoryboard.instantiateViewController(identifier: "GameInfoViewController") as! GameInfoViewController
-        
-        // Navigation
-        navigationController?.pushViewController(vc, animated: true)
-    }
 }
