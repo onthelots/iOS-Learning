@@ -65,11 +65,11 @@ class MainViewController: UIViewController {
         
         // Hit!
         if randomNumber == hitValue {
-            showAlert(message: "You Hit")
+            showAlert(message: "You Hit!")
             reset()
             // Lose...
         } else if randomNumberCount >= 5 {
-            showAlert(message: "You Lose")
+            showAlert(message: "You Lose...")
             reset()
         } else if randomNumber < hitValue {
             settingUpDownGame.setSlider(slider: customSlider,
