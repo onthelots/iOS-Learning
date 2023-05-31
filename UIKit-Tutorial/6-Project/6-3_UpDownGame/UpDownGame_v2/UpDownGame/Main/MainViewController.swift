@@ -45,14 +45,14 @@ class MainViewController: UIViewController {
     }
     
     // MARK: - IBActions
-    
+
     // Slider Value Changed
     @IBAction func sliderValueChanged(_ sender: UISlider) {
         print(sender.value)
         let integerValue = Int(sender.value)
         sliderValueLabel.text = String(integerValue)
     }
-    
+        
     // MARK: - Touch Hit Button
     @IBAction func hitButtonTapped(_ sender: UIButton) {
         print(customSlider.value)
@@ -91,9 +91,10 @@ class MainViewController: UIViewController {
             self.minimumValueLabel.text = sliderValueLabel.text
             self.maximumValueLabel.text = String(Int(customSlider.maximumValue))
             self.sliderValueLabel.text = String(Int(customSlider.value))
+            
         }
     }
-    
+        
     // MARK: - Game Reset Button
     @IBAction func resetButtonTapped(_ sender: UIButton) {
         reset()
@@ -128,7 +129,7 @@ class MainViewController: UIViewController {
     }
     
     // MARK: - Alert
-    func showAlert(message: String) {
+    private func showAlert(message: String) {
         let alert = UIAlertController(title: nil,
                                       message: message,
                                       preferredStyle: .alert)
