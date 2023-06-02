@@ -16,7 +16,9 @@ https://developer.apple.com/library/archive/documentation/UserExperience/Concept
 
 ## ✂️ AutoLayout의 필요성
 - 과거엔 절대적인 수치, 즉 Frame-Based Layout이라는 좌표계 시스템을 활용하여 레이아웃을 진행함
-- 하지만, 다양한 Device가 등장함에 따라 좀 더 유동적인 레이아웃을 구성하는 방식이 필요함
+- 하지만, 다양한 Device가 등장함에 따라 좀 더 유동적인 레이아웃을 구성하는 방식이 필요해짐
+- 결론적으로, 동적으로 화면을 구성하기 위해 유동적인 레이아웃 방식인 'AutoLayout'이 등장하게 됨
 
+![Frame 1](https://github.com/onthelots/iOS-Learning/assets/107039500/2e672d7b-5e27-4da9-aa43-b596b07546a6)
 
 
