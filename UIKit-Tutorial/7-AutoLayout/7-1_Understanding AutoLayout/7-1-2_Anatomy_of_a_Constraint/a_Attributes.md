@@ -1,4 +1,4 @@
-# Attributes (속성)
+# Attributes(속성)과 Constraint(제약)
 
 ## 수식과 함께 예시로 살펴보는 Constraint
 - 여기서 Layout을 잡아주고자 하는 뷰는 'RedView'임
@@ -22,5 +22,55 @@
 
 <br>
 
-- Baseline이란?
+### Baseline이란?
     - '글자'의 맨 아랫, 끝나는 지점 (HIG에서 자세하게 살펴볼 수 있음)
+    
+### 🥸 Attributes의 종류 (Basic type of attributes)
+    - Size(크기) Attributes : Width, Height
+    - Location(위치) Attributes : Top, Bottom, Left, Right, Center Y, Center X 
+    
+### 👆🏻 Attributes의 필요성
+    - 결과적으로, 제약(Constraint)을 설정하기 위한 일종의 요소임
+
+### 🔍 Attributes의 규칙
+    - 1️⃣ [Size attributes]와 [location attributes]는 함께 사용할 수 없다.
+    - 2️⃣ [location attributes]는 상수값(constant)으로 설정할 수 없다.
+        (즉, 기준이 되는 View가 반드시 존재하고 이에 따른 위치값이 설정이 되어야 한다)
+    - 3️⃣ [location attributes]는 [multiplier]로 1.0 이외의 값을 사용할 수 없다.
+    - 4️⃣ [vertical attributes]와 [horizontal attributes]는 서로에게 제약(Constraint)을 할 수 없다.
+    - 5️⃣ [Leading]을 다른 뷰의 [왼쪽(Left)속성]에, [Trailing]을 다른 뷰의 [오른쪽(Right) 속성]에 제약할 수 없다. 
+
+### ✅ Sample equations for a variety of common constraints.
+
+```
+// Setting a constant height
+// height는 단순한 Size attributes 이므로, Attributes를 설정하지 않아서 multiplier는 0.0.
+View.height = 0.0 * NotAnAttribute + 40.0
+ 
+// Setting a fixed distance between two buttons
+// Button_2는, Button_1의 오른쪽(trailing)에서 8 point 만큼 떨어져 있다.
+Button_2.leading = 1.0 * Button_1.trailing + 8.0
+ 
+// Aligning the leading edge of two buttons
+// Button_1의 왼쪽(leading)은, Button_2의 왼쪽(leading)과 정렬(Alignment)되어 있다.
+Button_1.leading = 1.0 * Button_2.leading + 0.0
+ 
+// Give two buttons the same width
+// Button_1과 Button_2의 너비(width)는 동일하다.
+Button_1.width = 1.0 * Button_2.width + 0.0
+ 
+// Center a view in its superview
+// 하위 뷰(View)의 centerX 값은, 상위 뷰(Superview)의 centerX값과 동일하므로, 한 가운데 위치한다.
+View.centerX = 1.0 * Superview.centerX + 0.0
+View.centerY = 1.0 * Superview.centerY + 0.0
+ 
+// Give a view a constant aspect ratio
+// 특정 View의 높이(height)는, 해당 View의 너비(width)보다 2배 크다.
+View.height = 2.0 * View.width + 0.0
+
+```
+
+### ⁉️ Equality, Not Assignment!
+    - 일반적으로 할당 연산자(=)는 오른쪽의 값을 왼쪽에 할당하는 것으로 사용해옴
+    - 하지만! AutoLayout은 동등성, 즉 오른쪽 값과 왼쪽 값이 동일한 값이어야 함
+    - 그렇지 않을 경우, 발생하는 것이 바로 [빨간색]으로 표시되는 AutoLayout 오류임.
