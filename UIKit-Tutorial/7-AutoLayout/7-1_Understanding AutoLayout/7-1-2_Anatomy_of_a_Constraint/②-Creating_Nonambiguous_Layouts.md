@@ -10,7 +10,9 @@
 - 이는 크게 [3가지] 방식으로 제약을 설정할 수 있으며, 모호하지 않은 레이아웃을 만들기 위해 다음과 같은 명령을 내릴 수 있음
 
 <br>
-// 사진 1
+
+![Frame 2](https://github.com/onthelots/iOS-Learning/assets/107039500/9a6c7915-20b6-4c1f-b7eb-b8b24777b8bd)
+
 <br>
 
 `Size & Location`
