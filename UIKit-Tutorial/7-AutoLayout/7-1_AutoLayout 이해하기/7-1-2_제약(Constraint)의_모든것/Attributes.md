@@ -6,7 +6,8 @@
     - RedView는 BlueView의 오른쪽(trailing) 방향에서부터 8 point가 떨어저야 한다는 것을 직관적으로 이해할 수 있음
     - 그렇다면, 각각의 Attributes(속성)은 어떤 의미를 가지고 있을지 이해할 필요가 있음
     
-    // 그림
+<img width="684" alt="스크린샷 2023-06-06 오후 4 54 27" src="https://github.com/onthelots/Projects/assets/107039500/f6523b86-4e85-42af-8ec6-2f25693ed979">
+
 
 
 ## AutoLayout의 Attributes
@@ -16,8 +17,10 @@
     - 미국에서는 왼쪽에서 오른쪽으로 글을 읽고 있음(왼쪽이 '선행'하며, 오른쪽이 '후행'하는 것으로 인식함)
     - 따라서, 여기서도 왼쪽의 명칭을 Left가 아닌 'Leading'으로 사용함, 오른쪽은 자연스레 'Trailing'으로 사용함
     - ⁉️ 만약, Apple이 중동지역에 위치한 나라의 회사였다면? : 왼쪽을 'Trailing'으로 사용했을 것임
-    
-    // 그림
+   
+<img width="680" alt="스크린샷 2023-06-06 오후 4 55 06" src="https://github.com/onthelots/Projects/assets/107039500/fc07d70f-66e9-48e6-8202-6497d67e5509">
+
+<br>
 
 - Baseline이란?
     - '글자'의 맨 아랫, 끝나는 지점 (HIG에서 자세하게 살펴볼 수 있음)
