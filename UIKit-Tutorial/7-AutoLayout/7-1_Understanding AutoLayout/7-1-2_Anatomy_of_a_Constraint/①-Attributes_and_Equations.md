@@ -1,4 +1,4 @@
-# Attributes(속성)과 Constraint(제약)
+# Attributes(속성)과 Equations(방정식)
 
 ## 수식과 함께 예시로 살펴보는 Constraint
 - 여기서 Layout을 잡아주고자 하는 뷰는 'RedView'임
