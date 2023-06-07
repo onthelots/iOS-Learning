@@ -1,71 +1,52 @@
-# Constraint_Priorities
+# Constraint Inequalities
+`선택적인 제약조건을 바탕으로, 모든 제약조건을 만족시키는 Layout을 구성`
+> 현재까지 학습한 예제는, 모두 제약조건을 등식(=)으로 표현했지만, 부등식(⁉️)으로도 나태낼 수 있음
+
+## Inequalities (부등식)
+- 부등식 제약조건은 등호(=)와 함께 이상(크거나 같음), 이하(작거나 같음)를 사용할 수 있음
+- 일종의 [가능한 값의 범위]를 제한하고 있으며, 추가적인 제약 조건이 필요할 수 있음
+
+<br>
+
+`최소, 최대의 크기 제약이 설정된 View`
+> 2개의 부등식을 활용하여 View의 폭(width)의 값을 제약하고 있음
+
+```
+// 최소 폭 설정
+View.width >= 0.0 * NotAnAttribute + 40.0 // ✅ View의 너비는, 40.0보다 크구나!
+
+// 최대 폭 설정
+View.width <= 0.0 * NotAnAttribute + 280.0 // ✅ View의 너비는, 40.0보다 크구나!
+```
+
+<br>
+
+
+# Constraint Priorities (제약 우선순위)
 `우선도에 따른 제약 설정`
 > 제약과의 경쟁 관계를 설정함으로서 유동적인 Layouts을 만들 수 있다?!
 
-## Constraint Inequalities
-`각각 Red, Blue 색상의 View가 위치하고 있는데..`
-> 상위 뷰(SuperView), 그리고 View간의 간격은 모두 동일하게 20 points
-
-
-
-## Constraint Priorities
-`각각 Red, Blue 색상의 View가 위치하고 있는데..`
-> 상위 뷰(SuperView), 그리고 View간의 간격은 모두 동일하게 20 points
-
-
-
-### 1️⃣ 상위 뷰(SuperView)와의 제약 설정
-- 각각의 View는 상위 뷰와의 간격 조정을 통해 위치, 크기를 설정함
-- 또한, View의 너비(Width)는 동일(equal)하게 제약을 설정함
+## Priorities (우선순위)
+- 앞서 부등식, 즉 [범위값]에 대한 제약을 통해 우리는 [선택적인 제약]을 설정할 수 있음
+- 범위값 이외, 우선순위(Priorities)에 따라 유동적인 Layouts을 구성할 수도 있음
 
 <br>
 
-![Frame 4](https://github.com/onthelots/iOS-Learning/assets/107039500/e23d6161-bde0-476d-85b7-30bbeb84e275)
+`RedView와 YellowView의 간격에 대한 2가지 제약이 발생할 경우`
+> 아래와 같이 2개의 View간의 간격을 20p, 100p 로 중복하여 설정할 경우?
+> Conflicting Constraints (제약 충돌) 문제가 발생하게 됨
+
+// 그림 1
 
 <br>
 
-`View의 Top, Bottom을 상위 뷰(Superview)와 일정한 간격으로 떨어지도록 설정`
-> 해당 경우는 아래와 같은 방정식이 생성됨
+`제약의 우선순위를 설정해보면 어떨까?`
+> 이를 해소하기 위해, 각각의 제약 간의 우선순위를 설정하게 된다면 오류가 발생하지 않음
+> 아래의 경우, [100p 간격 재약]에 낮은 우선순위(Priority 250)를 설정한 경우임
 
-```
-// Vertical Constraints
-// RedView, BlueView 모두 상위 뷰(Superview)와의 제약을 통해 top, bottom layout을 설정
-Red.top = 1.0 * Superview.top + 20.0
-Superview.bottom = 1.0 * Red.bottom + 20.0
-Blue.top = 1.0 * Superview.top + 20.0 // ✅
-Superview.bottom = 1.0 * Blue.bottom + 20.0 // ✅
- 
-// Horizontal Constraints
-Red.leading = 1.0 * Superview.leading + 20.0
-Blue.leading = 1.0 * Red.trailing + 8.0
-Superview.trailing = 1.0 * Blue.trailing + 20.0
-Red.width = 1.0 * Blue.width + 0.0
+// 그림 2
 
-```
 
-### 2️⃣ 인접 뷰(neighborhood)와의 정렬을 통한 제약 설정
-- RedView의 Top, Bottom layout을 기반으로 BlueView의 Top, Bottom을 설정
 
-<br>
 
-![Frame 5](https://github.com/onthelots/iOS-Learning/assets/107039500/0c32d19b-d1df-4fb6-898b-bfffac48faff)
 
-<br>
-
-`Top, Bottom Alignment을 통해 인접 뷰간의 관계 생성, 크기 설정`
-> 해당 경우는 아래와 같은 방정식이 생성됨
-
-```
-// Vertical Constraints
-// RedView의 Top, Bottom 위치를 기반(정렬 방식)으로 BlueView 크기 설정
-Red.top = 1.0 * Superview.top + 20.0
-Superview.bottom = 1.0 * Red.bottom + 20.0
-Red.top = 1.0 * Blue.top + 0.0 // ✅ 
-Red.bottom = 1.0 * Blue.bottom + 0.0 // ✅
- 
-//Horizontal Constraints
-Red.leading = 1.0 * Superview.leading + 20.0
-Blue.leading = 1.0 * Red.trailing + 8.0
-Superview.trailing = 1.0 * Blue.trailing + 20.0
-Red.width = 1.0 * Blue.width + 0.0
-```

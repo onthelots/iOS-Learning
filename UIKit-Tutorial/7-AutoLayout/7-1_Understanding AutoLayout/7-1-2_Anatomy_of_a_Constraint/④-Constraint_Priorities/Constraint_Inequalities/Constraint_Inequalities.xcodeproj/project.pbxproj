@@ -1,0 +1,607 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3FEDB02B2A304E570005AD04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEDB02A2A304E570005AD04 /* AppDelegate.swift */; };
+		3FEDB02D2A304E570005AD04 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEDB02C2A304E570005AD04 /* SceneDelegate.swift */; };
+		3FEDB02F2A304E570005AD04 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEDB02E2A304E570005AD04 /* ViewController.swift */; };
+		3FEDB0322A304E570005AD04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FEDB0302A304E570005AD04 /* Main.storyboard */; };
+		3FEDB0342A304E580005AD04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FEDB0332A304E580005AD04 /* Assets.xcassets */; };
+		3FEDB0372A304E580005AD04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FEDB0352A304E580005AD04 /* LaunchScreen.storyboard */; };
+		3FEDB0422A304E580005AD04 /* Constraint_InequalitiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEDB0412A304E580005AD04 /* Constraint_InequalitiesTests.swift */; };
+		3FEDB04C2A304E580005AD04 /* Constraint_InequalitiesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEDB04B2A304E580005AD04 /* Constraint_InequalitiesUITests.swift */; };
+		3FEDB04E2A304E580005AD04 /* Constraint_InequalitiesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEDB04D2A304E580005AD04 /* Constraint_InequalitiesUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3FEDB03E2A304E580005AD04 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3FEDB01F2A304E570005AD04 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3FEDB0262A304E570005AD04;
+			remoteInfo = Constraint_Inequalities;
+		};
+		3FEDB0482A304E580005AD04 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3FEDB01F2A304E570005AD04 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3FEDB0262A304E570005AD04;
+			remoteInfo = Constraint_Inequalities;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3FEDB0272A304E570005AD04 /* Constraint_Inequalities.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Constraint_Inequalities.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FEDB02A2A304E570005AD04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3FEDB02C2A304E570005AD04 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		3FEDB02E2A304E570005AD04 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3FEDB0312A304E570005AD04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3FEDB0332A304E580005AD04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3FEDB0362A304E580005AD04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3FEDB0382A304E580005AD04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FEDB03D2A304E580005AD04 /* Constraint_InequalitiesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Constraint_InequalitiesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FEDB0412A304E580005AD04 /* Constraint_InequalitiesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constraint_InequalitiesTests.swift; sourceTree = "<group>"; };
+		3FEDB0472A304E580005AD04 /* Constraint_InequalitiesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Constraint_InequalitiesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FEDB04B2A304E580005AD04 /* Constraint_InequalitiesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constraint_InequalitiesUITests.swift; sourceTree = "<group>"; };
+		3FEDB04D2A304E580005AD04 /* Constraint_InequalitiesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constraint_InequalitiesUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3FEDB0242A304E570005AD04 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FEDB03A2A304E580005AD04 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FEDB0442A304E580005AD04 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3FEDB01E2A304E570005AD04 = {
+			isa = PBXGroup;
+			children = (
+				3FEDB0292A304E570005AD04 /* Constraint_Inequalities */,
+				3FEDB0402A304E580005AD04 /* Constraint_InequalitiesTests */,
+				3FEDB04A2A304E580005AD04 /* Constraint_InequalitiesUITests */,
+				3FEDB0282A304E570005AD04 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3FEDB0282A304E570005AD04 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3FEDB0272A304E570005AD04 /* Constraint_Inequalities.app */,
+				3FEDB03D2A304E580005AD04 /* Constraint_InequalitiesTests.xctest */,
+				3FEDB0472A304E580005AD04 /* Constraint_InequalitiesUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3FEDB0292A304E570005AD04 /* Constraint_Inequalities */ = {
+			isa = PBXGroup;
+			children = (
+				3FEDB02A2A304E570005AD04 /* AppDelegate.swift */,
+				3FEDB02C2A304E570005AD04 /* SceneDelegate.swift */,
+				3FEDB02E2A304E570005AD04 /* ViewController.swift */,
+				3FEDB0302A304E570005AD04 /* Main.storyboard */,
+				3FEDB0332A304E580005AD04 /* Assets.xcassets */,
+				3FEDB0352A304E580005AD04 /* LaunchScreen.storyboard */,
+				3FEDB0382A304E580005AD04 /* Info.plist */,
+			);
+			path = Constraint_Inequalities;
+			sourceTree = "<group>";
+		};
+		3FEDB0402A304E580005AD04 /* Constraint_InequalitiesTests */ = {
+			isa = PBXGroup;
+			children = (
+				3FEDB0412A304E580005AD04 /* Constraint_InequalitiesTests.swift */,
+			);
+			path = Constraint_InequalitiesTests;
+			sourceTree = "<group>";
+		};
+		3FEDB04A2A304E580005AD04 /* Constraint_InequalitiesUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3FEDB04B2A304E580005AD04 /* Constraint_InequalitiesUITests.swift */,
+				3FEDB04D2A304E580005AD04 /* Constraint_InequalitiesUITestsLaunchTests.swift */,
+			);
+			path = Constraint_InequalitiesUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3FEDB0262A304E570005AD04 /* Constraint_Inequalities */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FEDB0512A304E580005AD04 /* Build configuration list for PBXNativeTarget "Constraint_Inequalities" */;
+			buildPhases = (
+				3FEDB0232A304E570005AD04 /* Sources */,
+				3FEDB0242A304E570005AD04 /* Frameworks */,
+				3FEDB0252A304E570005AD04 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Constraint_Inequalities;
+			productName = Constraint_Inequalities;
+			productReference = 3FEDB0272A304E570005AD04 /* Constraint_Inequalities.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3FEDB03C2A304E580005AD04 /* Constraint_InequalitiesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FEDB0542A304E580005AD04 /* Build configuration list for PBXNativeTarget "Constraint_InequalitiesTests" */;
+			buildPhases = (
+				3FEDB0392A304E580005AD04 /* Sources */,
+				3FEDB03A2A304E580005AD04 /* Frameworks */,
+				3FEDB03B2A304E580005AD04 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3FEDB03F2A304E580005AD04 /* PBXTargetDependency */,
+			);
+			name = Constraint_InequalitiesTests;
+			productName = Constraint_InequalitiesTests;
+			productReference = 3FEDB03D2A304E580005AD04 /* Constraint_InequalitiesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3FEDB0462A304E580005AD04 /* Constraint_InequalitiesUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FEDB0572A304E580005AD04 /* Build configuration list for PBXNativeTarget "Constraint_InequalitiesUITests" */;
+			buildPhases = (
+				3FEDB0432A304E580005AD04 /* Sources */,
+				3FEDB0442A304E580005AD04 /* Frameworks */,
+				3FEDB0452A304E580005AD04 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3FEDB0492A304E580005AD04 /* PBXTargetDependency */,
+			);
+			name = Constraint_InequalitiesUITests;
+			productName = Constraint_InequalitiesUITests;
+			productReference = 3FEDB0472A304E580005AD04 /* Constraint_InequalitiesUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3FEDB01F2A304E570005AD04 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					3FEDB0262A304E570005AD04 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					3FEDB03C2A304E580005AD04 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 3FEDB0262A304E570005AD04;
+					};
+					3FEDB0462A304E580005AD04 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 3FEDB0262A304E570005AD04;
+					};
+				};
+			};
+			buildConfigurationList = 3FEDB0222A304E570005AD04 /* Build configuration list for PBXProject "Constraint_Inequalities" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3FEDB01E2A304E570005AD04;
+			productRefGroup = 3FEDB0282A304E570005AD04 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3FEDB0262A304E570005AD04 /* Constraint_Inequalities */,
+				3FEDB03C2A304E580005AD04 /* Constraint_InequalitiesTests */,
+				3FEDB0462A304E580005AD04 /* Constraint_InequalitiesUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3FEDB0252A304E570005AD04 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FEDB0372A304E580005AD04 /* LaunchScreen.storyboard in Resources */,
+				3FEDB0342A304E580005AD04 /* Assets.xcassets in Resources */,
+				3FEDB0322A304E570005AD04 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FEDB03B2A304E580005AD04 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FEDB0452A304E580005AD04 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3FEDB0232A304E570005AD04 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FEDB02F2A304E570005AD04 /* ViewController.swift in Sources */,
+				3FEDB02B2A304E570005AD04 /* AppDelegate.swift in Sources */,
+				3FEDB02D2A304E570005AD04 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FEDB0392A304E580005AD04 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FEDB0422A304E580005AD04 /* Constraint_InequalitiesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FEDB0432A304E580005AD04 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FEDB04E2A304E580005AD04 /* Constraint_InequalitiesUITestsLaunchTests.swift in Sources */,
+				3FEDB04C2A304E580005AD04 /* Constraint_InequalitiesUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3FEDB03F2A304E580005AD04 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3FEDB0262A304E570005AD04 /* Constraint_Inequalities */;
+			targetProxy = 3FEDB03E2A304E580005AD04 /* PBXContainerItemProxy */;
+		};
+		3FEDB0492A304E580005AD04 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3FEDB0262A304E570005AD04 /* Constraint_Inequalities */;
+			targetProxy = 3FEDB0482A304E580005AD04 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3FEDB0302A304E570005AD04 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3FEDB0312A304E570005AD04 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3FEDB0352A304E580005AD04 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3FEDB0362A304E580005AD04 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3FEDB04F2A304E580005AD04 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3FEDB0502A304E580005AD04 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3FEDB0522A304E580005AD04 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V7TH2GUA8U;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Constraint_Inequalities/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Lime.Constraint-Inequalities";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3FEDB0532A304E580005AD04 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V7TH2GUA8U;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Constraint_Inequalities/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Lime.Constraint-Inequalities";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3FEDB0552A304E580005AD04 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V7TH2GUA8U;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Lime.Constraint-InequalitiesTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Constraint_Inequalities.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Constraint_Inequalities";
+			};
+			name = Debug;
+		};
+		3FEDB0562A304E580005AD04 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V7TH2GUA8U;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Lime.Constraint-InequalitiesTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Constraint_Inequalities.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Constraint_Inequalities";
+			};
+			name = Release;
+		};
+		3FEDB0582A304E580005AD04 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V7TH2GUA8U;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Lime.Constraint-InequalitiesUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Constraint_Inequalities;
+			};
+			name = Debug;
+		};
+		3FEDB0592A304E580005AD04 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V7TH2GUA8U;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Lime.Constraint-InequalitiesUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Constraint_Inequalities;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3FEDB0222A304E570005AD04 /* Build configuration list for PBXProject "Constraint_Inequalities" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FEDB04F2A304E580005AD04 /* Debug */,
+				3FEDB0502A304E580005AD04 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3FEDB0512A304E580005AD04 /* Build configuration list for PBXNativeTarget "Constraint_Inequalities" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FEDB0522A304E580005AD04 /* Debug */,
+				3FEDB0532A304E580005AD04 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3FEDB0542A304E580005AD04 /* Build configuration list for PBXNativeTarget "Constraint_InequalitiesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FEDB0552A304E580005AD04 /* Debug */,
+				3FEDB0562A304E580005AD04 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3FEDB0572A304E580005AD04 /* Build configuration list for PBXNativeTarget "Constraint_InequalitiesUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FEDB0582A304E580005AD04 /* Debug */,
+				3FEDB0592A304E580005AD04 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3FEDB01F2A304E570005AD04 /* Project object */;
+}

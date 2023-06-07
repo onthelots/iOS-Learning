@@ -16,11 +16,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d2I-TN-Tp8">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d2I-TN-Tp8" userLabel="RedView">
                                 <rect key="frame" x="20" y="79" width="166.66666666666666" height="719"/>
                                 <color key="backgroundColor" systemColor="systemPinkColor"/>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="On7-He-iHi">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="On7-He-iHi" userLabel="YellowView">
                                 <rect key="frame" x="206.66666666666663" y="79" width="166.33333333333337" height="719"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                             </view>
@@ -28,10 +28,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="On7-He-iHi" firstAttribute="leading" secondItem="d2I-TN-Tp8" secondAttribute="trailing" priority="250" constant="100" id="6i0-r0-NI5"/>
                             <constraint firstItem="d2I-TN-Tp8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="AdW-yO-GLF"/>
                             <constraint firstItem="d2I-TN-Tp8" firstAttribute="width" secondItem="On7-He-iHi" secondAttribute="width" id="Qn6-QL-khH"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="On7-He-iHi" secondAttribute="trailing" constant="20" id="eae-hy-4hm"/>
-                            <constraint firstItem="On7-He-iHi" firstAttribute="leading" relation="lessThanOrEqual" secondItem="d2I-TN-Tp8" secondAttribute="trailing" constant="100" id="fGO-2l-dok"/>
                             <constraint firstItem="d2I-TN-Tp8" firstAttribute="top" secondItem="On7-He-iHi" secondAttribute="top" id="igw-l7-hvn"/>
                             <constraint firstItem="On7-He-iHi" firstAttribute="leading" secondItem="d2I-TN-Tp8" secondAttribute="trailing" constant="20" id="nm6-Gn-fSf"/>
                             <constraint firstItem="d2I-TN-Tp8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="ouK-Pq-lGb"/>
