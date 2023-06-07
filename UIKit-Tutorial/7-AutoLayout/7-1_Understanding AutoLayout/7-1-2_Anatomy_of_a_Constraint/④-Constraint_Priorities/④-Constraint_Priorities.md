@@ -36,7 +36,8 @@ View.width <= 0.0 * NotAnAttribute + 280.0 // ✅ View의 너비는, 40.0보다 
 > 아래와 같이 2개의 View간의 간격을 20p, 100p 로 중복하여 설정할 경우?
 > Conflicting Constraints (제약 충돌) 문제가 발생하게 됨
 
-// 그림 1
+![Frame 6](https://github.com/onthelots/iOS-Learning/assets/107039500/1074b634-0c40-44d3-90f1-49e0a0bb2455)
+
 
 <br>
 
@@ -44,9 +45,7 @@ View.width <= 0.0 * NotAnAttribute + 280.0 // ✅ View의 너비는, 40.0보다 
 > 이를 해소하기 위해, 각각의 제약 간의 우선순위를 설정하게 된다면 오류가 발생하지 않음
 > 아래의 경우, [100p 간격 재약]에 낮은 우선순위(Priority 250)를 설정한 경우임
 
-// 그림 2
-
-
+![Frame 7](https://github.com/onthelots/iOS-Learning/assets/107039500/eaa7990e-95c8-467c-82d0-ccf8a88ddbbd)
 
 
 
