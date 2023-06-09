@@ -75,7 +75,18 @@
       - [프로젝트21] UpDownGame (UISlider, 단순 Segue를 활용한 Modality 구현 외)
 
 
-###  7. AutoLayout (by Yagom)
-    7-1. Constraint (제약)
-      
+###  7. AutoLayout
+    7-1. Understanding AutoLayout
+        - AutoLayout의 필요성, Attributes(속성) & Equations(방정식)
+        - Creating Nonambiguous Layout, Variety Solutions(실습)
+        - Constraint Inequalities(부등식을 활용한 선택적 제약조건)
+        - Constraint Priorities (제약 우선순위)
+        - Intrinsic Content Size(고유한 컨텐츠의 크기)
+        - CHCR (Compression-Hugging과 Compression-Resistance)
+    7-2. StackView
+        - Understanding StackView (StackView Elements)
+    7-3. Debugging AutoLayout  
+        - Types of Errors (Unsatisfiable Layouts, Ambiguous Layouts, Logical Errors)
+        - Debugging Tricks and Tips, Adding Identifiers to the Logs
+       
 continue...
