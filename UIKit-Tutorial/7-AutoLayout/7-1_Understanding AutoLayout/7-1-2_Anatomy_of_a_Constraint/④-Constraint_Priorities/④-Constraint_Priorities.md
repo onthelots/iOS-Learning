@@ -16,7 +16,7 @@
 View.width >= 0.0 * NotAnAttribute + 40.0 // ✅ View의 너비는, 40.0보다 크구나!
 
 // 최대 폭 설정
-View.width <= 0.0 * NotAnAttribute + 280.0 // ✅ View의 너비는, 40.0보다 크구나!
+View.width <= 0.0 * NotAnAttribute + 280.0 // ✅ View의 너비는, 280.0보다 크구나!
 ```
 
 <br>
