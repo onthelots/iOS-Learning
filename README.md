@@ -5,7 +5,7 @@
 
 ---
 
-### Repository.
+### Repositorys.
 - CS-Basic : 프로그래밍 패러다임, 메모리구조, 비동기 프로그래밍 등 기초 Computer Science
 - Grammar-Swift : Swift 프로그래밍 언어 개념 및 실습(playground)
 - UIKit-Tutorial : UIKit 개발 프레임워크 학습 리스트 (야곰, FastCampus 외)
