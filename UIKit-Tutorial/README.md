@@ -76,17 +76,36 @@
 
 
 ###  7. AutoLayout
-    7-1. Understanding AutoLayout
+    7-1. Understanding AutoLayout (오토레이아웃이란?)
         - AutoLayout의 필요성, Attributes(속성) & Equations(방정식)
         - Creating Nonambiguous Layout, Variety Solutions(실습)
         - Constraint Inequalities(부등식을 활용한 선택적 제약조건)
         - Constraint Priorities (제약 우선순위)
         - Intrinsic Content Size(고유한 컨텐츠의 크기)
         - CHCR (Compression-Hugging과 Compression-Resistance)
-    7-2. StackView
-        - Understanding StackView (StackView Elements)
-    7-3. Debugging AutoLayout  
+        
+    7-2. StackView (Stackview Basis)
+        - Understanding StackView (StackView의 속성과 요소들)
+        
+    7-3. Debugging AutoLayout (오토레이아웃 디버깅)
         - Types of Errors (Unsatisfiable Layouts, Ambiguous Layouts, Logical Errors)
         - Debugging Tricks and Tips, Adding Identifiers to the Logs
-       
+        
+    7-4. Constraints with Code (코드로 제약 설정하기)  
+        - Layout Anchors (제약이 필요한 item의 Anchors property 접근방식)
+        - NSLayoutConstraint (constraint instance를 활용, 두 UI간의 관계 설정방식)
+        
+    7-5. Dynamic Stack View (Stackview advance)  
+        - addArrangeView (Stack내 View 추가), @Objc func 및 addTarget을 활용한 Target Action 활용
+        
+    7-6. Size Classes (크기가 다른 디바이스 별, 동일한 Storyboard 사용방법)
+        - Compact & Regular
+        - Size Class가 사용되는 경우
+        
+    7-7. Scroll View (스크롤뷰)
+        - The basis ()
+        - Dynamic Scroll View ()
+    
+    
+    
 continue...
