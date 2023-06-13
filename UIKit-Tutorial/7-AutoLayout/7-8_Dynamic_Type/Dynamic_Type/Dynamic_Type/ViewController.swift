@@ -9,16 +9,36 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    // stackView
     @IBOutlet weak var stackView: UIStackView!
+    
+    // buttons
+    @IBOutlet var buttons: [UIButton]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(adjustButtonDynamicType),
+                                               name: UIContentSizeCategory.didChangeNotification,
+                                               object: nil)
     }
+    
+    // Button에 Dynamic Type 적용하기
+    @objc func adjustButtonDynamicType() {
+        buttons.forEach { (button) in
+            // adjustsFontForContentSizeCategory 적용
+            button.titleLabel?.adjustsFontForContentSizeCategory = true
+        }
+    }
+    
+    
     
     
     @IBAction func addLabel(_ sender: Any) {
         let label = UILabel()
         
+        label.adjustsFontForContentSizeCategory = true
         label.font = UIFont.preferredFont(forTextStyle: .largeTitle)
         label.numberOfLines = 0
         label.text = """

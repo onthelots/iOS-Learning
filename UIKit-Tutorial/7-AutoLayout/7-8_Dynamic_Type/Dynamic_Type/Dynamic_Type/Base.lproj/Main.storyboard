@@ -21,11 +21,11 @@
                                 <rect key="frame" x="0.0" y="59" width="393" height="719"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="0Ft-BF-6AP">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="719"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="20.333333333333332"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="et4-hR-yqH">
-                                                <rect key="frame" x="0.0" y="0.0" width="393" height="719"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W0z-tw-c44">
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -34,7 +34,7 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="0Ft-BF-6AP" secondAttribute="trailing" id="0bt-zS-zP1"/>
-                                    <constraint firstItem="0Ft-BF-6AP" firstAttribute="height" secondItem="adO-yt-Wg8" secondAttribute="height" id="8dd-vL-S3y"/>
+                                    <constraint firstItem="0Ft-BF-6AP" firstAttribute="height" secondItem="adO-yt-Wg8" secondAttribute="height" priority="250" id="8dd-vL-S3y"/>
                                     <constraint firstItem="0Ft-BF-6AP" firstAttribute="top" secondItem="FfY-rf-CIr" secondAttribute="top" id="9bT-7z-Bkd"/>
                                     <constraint firstItem="0Ft-BF-6AP" firstAttribute="width" secondItem="FfY-rf-CIr" secondAttribute="width" id="YMP-CU-GDV"/>
                                     <constraint firstAttribute="bottom" secondItem="0Ft-BF-6AP" secondAttribute="bottom" id="i7M-SJ-l6b"/>
@@ -84,6 +84,8 @@
                     </view>
                     <connections>
                         <outlet property="stackView" destination="0Ft-BF-6AP" id="7Wg-7t-iOB"/>
+                        <outletCollection property="buttons" destination="l7v-VT-rQL" collectionClass="NSMutableArray" id="rVI-WO-reK"/>
+                        <outletCollection property="buttons" destination="IZx-vJ-p7X" collectionClass="NSMutableArray" id="XpF-jE-Hze"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
