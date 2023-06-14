@@ -4,6 +4,7 @@
     - 앱의 동작원리(LifeCycle)
     - View의 역할과 Drawing 방식
 
+<br>
 
 ##  2. UIKit을 활용한 Basic App 만들기
   ### 2-1. UIKit 기초
@@ -34,7 +35,8 @@
       - Navigation & Modal 개요
       - [프로젝트11] AppleFramework Modal (Modality 구현을 위한 새로운 Storyboard 생성, 기존 ViewController 내 Delegate 선언과 Present 수정자를 통한 modal 띄우기)
       - [프로젝트12] HeadSpaceFocus Navigation(2개 이상의 Section 생성 및 활용, NavigationController, pushViewController메서드를 통한 Navigation 기능구현)
-      
+ 
+<br>
 
 ##  3. Combine
 ### 3-1. Combine 기초
@@ -44,7 +46,8 @@
       
 ### 3-2. Combine 실습
       - [프로젝트13] AppleFramwork_Combine (Combine을 활용한 코드 리팩토링)
-      
+
+<br>
       
 ##  4. Network
 ### 4-1. 네트워크 이해하기 (Concurrency / Thread / Async&Sync Task / HTTP)
@@ -52,7 +55,8 @@
 ### 4-2. Network_app
       - [프로젝트14] GithubUserProfile (UISearchController를 기반으로 네트워크 데이터 decoding, kingfisher를 활용한 Github avatarUrl 이미지 가져오기)
       - [프로젝트15] GithubUserSearch (URLComponents 및 URLQueryItem, URLSession의 publisher화를 통한 Combine 활용 / Network 객체 생성을 바탕으로 코드 리팩토링)
-    
+ 
+<br>
     
 ##  5. MVVM
 ### 5-1. MVVM의 개념 (vs MVC 패턴)
@@ -63,6 +67,7 @@
 ### 5-3. 디자인 패턴 (feat. Clean Architecture)
       - MVVM 이외 디자인 패턴
 
+<br>
 
 ##  6. Project
 ### 6-1. TossBenefitTab (토스 혜택앱)
@@ -74,6 +79,7 @@
 ### 6-3. UpDownGame (숫자 맞추기)
       - [프로젝트21] UpDownGame (UISlider, 단순 Segue를 활용한 Modality 구현 외)
 
+<br>
 
 ##  7. AutoLayout
 ### 7-1. Understanding AutoLayout (오토레이아웃이란?)
