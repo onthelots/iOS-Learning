@@ -1,0 +1,19 @@
+//
+//  ViewController.swift
+//  Social_Media_With_Table_View
+//
+//  Created by Jae hyuk Yim on 2023/06/14.
+//
+
+import UIKit
+
+class ViewController: UIViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+    }
+
+
+}
+
