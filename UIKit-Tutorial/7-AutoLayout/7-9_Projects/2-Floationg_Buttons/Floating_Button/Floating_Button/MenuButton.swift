@@ -64,7 +64,7 @@ extension MenuButton {
 //            }
 //        }
         
-        // Damping 애니메이션 효과 
+        // Damping 애니메이션 효과
         UIView.animate(withDuration: 0.3,
                        delay: 0,
                        usingSpringWithDamping: 0.5,
