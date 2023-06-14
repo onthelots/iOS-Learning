@@ -4,12 +4,7 @@
 //
 //  Created by Jae hyuk Yim on 2023/06/14.
 //
-/*
- // To-Do List
- [✅] JSON Data Decoding
- [✅ ] Table Cell 만들기 + Configuration(Data) 메서드
- [ ] NavigationBar 생성 및 Table Datasource 구조 완성하기
- */
+
 
 import UIKit
 
@@ -23,6 +18,13 @@ class ViewController: UIViewController {
         configuareNavigationBar()
         addTable()
         configureTable()
+        
+        NotificationCenter.default.addObserver(forName: NSNotification.Name("NeededUpdateLayout"),
+                                               object: nil,
+                                               queue: nil) { [self] (notification) in
+            tableView.beginUpdates()
+            tableView.endUpdates()
+        }
     }
     
     // Add TableView
