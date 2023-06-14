@@ -16,6 +16,7 @@
 		3F61D4C32A397E4600337516 /* Floating_ButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F61D4C22A397E4600337516 /* Floating_ButtonTests.swift */; };
 		3F61D4CD2A397E4600337516 /* Floating_ButtonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F61D4CC2A397E4600337516 /* Floating_ButtonUITests.swift */; };
 		3F61D4CF2A397E4600337516 /* Floating_ButtonUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F61D4CE2A397E4600337516 /* Floating_ButtonUITestsLaunchTests.swift */; };
+		3F61D4DC2A397E9C00337516 /* MenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F61D4DB2A397E9C00337516 /* MenuButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		3F61D4C82A397E4600337516 /* Floating_ButtonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Floating_ButtonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F61D4CC2A397E4600337516 /* Floating_ButtonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Floating_ButtonUITests.swift; sourceTree = "<group>"; };
 		3F61D4CE2A397E4600337516 /* Floating_ButtonUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Floating_ButtonUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3F61D4DB2A397E9C00337516 /* MenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			children = (
 				3F61D4AB2A397E4400337516 /* AppDelegate.swift */,
 				3F61D4AD2A397E4400337516 /* SceneDelegate.swift */,
+				3F61D4DB2A397E9C00337516 /* MenuButton.swift */,
 				3F61D4AF2A397E4400337516 /* ViewController.swift */,
 				3F61D4B12A397E4400337516 /* Main.storyboard */,
 				3F61D4B42A397E4500337516 /* Assets.xcassets */,
@@ -258,6 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F61D4DC2A397E9C00337516 /* MenuButton.swift in Sources */,
 				3F61D4B02A397E4400337516 /* ViewController.swift in Sources */,
 				3F61D4AC2A397E4400337516 /* AppDelegate.swift in Sources */,
 				3F61D4AE2A397E4400337516 /* SceneDelegate.swift in Sources */,
