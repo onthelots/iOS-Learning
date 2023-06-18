@@ -1,8 +1,8 @@
 # 🔵 UIKit-Tutorial
 
 ## 1. iOS 앱 개요
-    - 앱의 동작원리(LifeCycle)
-    - View의 역할과 Drawing 방식
+      - 앱의 동작원리(LifeCycle)
+      - View의 역할과 Drawing 방식
 
 <br>
 
