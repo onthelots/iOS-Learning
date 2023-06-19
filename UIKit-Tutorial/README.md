@@ -119,5 +119,8 @@
 ### 7-9. Projects
         - LoginView (UIScrollView, UIStackView를 활용한 로그인 창 구현, Dynamic Type 및 AutoLayout 적용)
         - Floationg Buttons (커스텀 UIButton 생성, Damping 애니메이션을 활용한 Floationg 기능 구현)
+        - Social_Media_Table (Code-Base UITable Layout 작성, NotificationCenter 및 Model(Assets Data)을 활용한 피드화면 기능 구현)
+        - Messaging_Table (2개의 UITableCell을 활용한 '채팅창' 구현. UIResponsder를 통한 유연한 채팅작성(TextField) 및 키보드 Show&Hidfe 기능 구현)
+        - Bar_Graph (하나의 화면에서 각각의 UIStackView, UIScrollView를 활용, Horizontal 형식의 Bar 그래프 구현 - Code + AutoLayout)
+        - Social_Media_Profile (UIScrollView를 활용한 Dynamic Image View 효과 구현, SNS 프로필 화면 구상)
         
-continue...
