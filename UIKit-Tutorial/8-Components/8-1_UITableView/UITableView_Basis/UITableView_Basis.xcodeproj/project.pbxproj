@@ -16,7 +16,6 @@
 		3FC15E132A42B5C500E8F82F /* UITableView_BasisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC15E122A42B5C500E8F82F /* UITableView_BasisTests.swift */; };
 		3FC15E1D2A42B5C500E8F82F /* UITableView_BasisUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC15E1C2A42B5C500E8F82F /* UITableView_BasisUITests.swift */; };
 		3FC15E1F2A42B5C500E8F82F /* UITableView_BasisUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC15E1E2A42B5C500E8F82F /* UITableView_BasisUITestsLaunchTests.swift */; };
-		3FC15E2C2A42B61F00E8F82F /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC15E2B2A42B61F00E8F82F /* CustomTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +49,6 @@
 		3FC15E182A42B5C500E8F82F /* UITableView_BasisUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UITableView_BasisUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FC15E1C2A42B5C500E8F82F /* UITableView_BasisUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView_BasisUITests.swift; sourceTree = "<group>"; };
 		3FC15E1E2A42B5C500E8F82F /* UITableView_BasisUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView_BasisUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		3FC15E2B2A42B61F00E8F82F /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +103,6 @@
 				3FC15DFD2A42B5C400E8F82F /* SceneDelegate.swift */,
 				3FC15DFF2A42B5C400E8F82F /* ViewController.swift */,
 				3FC15E012A42B5C400E8F82F /* Main.storyboard */,
-				3FC15E2B2A42B61F00E8F82F /* CustomTableViewCell.swift */,
 				3FC15E042A42B5C500E8F82F /* Assets.xcassets */,
 				3FC15E062A42B5C500E8F82F /* LaunchScreen.storyboard */,
 				3FC15E092A42B5C500E8F82F /* Info.plist */,
@@ -263,7 +260,6 @@
 			files = (
 				3FC15E002A42B5C400E8F82F /* ViewController.swift in Sources */,
 				3FC15DFC2A42B5C400E8F82F /* AppDelegate.swift in Sources */,
-				3FC15E2C2A42B61F00E8F82F /* CustomTableViewCell.swift in Sources */,
 				3FC15DFE2A42B5C400E8F82F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
