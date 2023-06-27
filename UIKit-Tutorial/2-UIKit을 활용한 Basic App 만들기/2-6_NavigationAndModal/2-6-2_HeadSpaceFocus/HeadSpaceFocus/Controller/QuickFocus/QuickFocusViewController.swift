@@ -19,7 +19,7 @@ class QuickFocusViewController: UIViewController {
     typealias Item = QuickFocus
     
     // MARK: - CaseIterable 프로토콜 채택 (Section의 모든 Case를 가져올 수 있음)
-    enum Section: CaseIterable {
+    enum Section: CaseIterable, Hashable {
         case breathe
         case walking
         

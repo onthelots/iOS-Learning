@@ -70,7 +70,7 @@ class PaywallViewController: UIViewController {
         // MARK: - Section이 잘릴 때, horizontal이 강제로 vertical이 되는 경우를 해소하는 방법
         // groupPagingCentered로 수정자를 선언하면, 가운데로 위치하게 됨
         section.orthogonalScrollingBehavior = .groupPagingCentered
-        section.interGroupSpacing = 20
+//        section.interGroupSpacing = 20
         
         // MARK: - visibleItemsInvalidationHandler
         // 레이아웃이 변경사항이 있을 때 마다, 속성을 확인할 수 있는 일종의 Handler
