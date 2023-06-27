@@ -11,11 +11,11 @@ class ViewController: UIViewController {
     
     private var tableView: UITableView!
     
-    let data = [["content1-1", "content1-2", "content1-3", "content1-4"],
-                ["content2-1", "content2-2", "content2-3", "content2-4"],
-                ["content3-1", "content3-2", "content3-3", "content3-4"]]
+    let data = [["content1-1", "content1-2", "content1-3"],
+                ["content2-1", "content2-2", "content2-3"],
+                ["content3-1", "content3-2", "content3-3"]]
     
-    let header = ["Section1", "Section2", "Section3"]
+    let header = ["Header1", "Header2", "Header1"]
     
     
     
@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     }
     
     private func drawTableView() {
-        tableView = UITableView()
+        tableView = UITableView(frame: .zero, style: .insetGrouped)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.automaticallyAdjustsScrollIndicatorInsets = true
         
@@ -45,7 +45,6 @@ class ViewController: UIViewController {
         ])
         
         // TableViewCell
-        
         self.tableView.register(UITableViewCell.self,
                                 forCellReuseIdentifier: "TableViewCell")
     }
