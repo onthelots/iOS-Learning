@@ -32,7 +32,7 @@ let task = session.dataTask(with: url) { data, response, error in // 요청한 �
     // 1. Response (객체로 생성한 URLSession이 유효한가?)
     guard let httpResponse = response as? HTTPURLResponse,
           (200..<300).contains(httpResponse.statusCode) else {
-        print(">> Response : \(response)")
+        print(">> Response : \(String(describing: response))")
         return
     }
 
