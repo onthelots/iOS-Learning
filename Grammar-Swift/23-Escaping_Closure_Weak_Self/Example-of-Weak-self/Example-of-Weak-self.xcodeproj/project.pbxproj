@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		3FD69AA72A661A1C00F7EE14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD69AA62A661A1C00F7EE14 /* AppDelegate.swift */; };
 		3FD69AA92A661A1C00F7EE14 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD69AA82A661A1C00F7EE14 /* SceneDelegate.swift */; };
-		3FD69AAB2A661A1C00F7EE14 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD69AAA2A661A1C00F7EE14 /* ViewController.swift */; };
-		3FD69AAE2A661A1C00F7EE14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FD69AAC2A661A1C00F7EE14 /* Main.storyboard */; };
 		3FD69AB02A661A1C00F7EE14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FD69AAF2A661A1C00F7EE14 /* Assets.xcassets */; };
 		3FD69AB32A661A1C00F7EE14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FD69AB12A661A1C00F7EE14 /* LaunchScreen.storyboard */; };
 		3FD69ABE2A661A1C00F7EE14 /* Example_of_Weak_selfTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD69ABD2A661A1C00F7EE14 /* Example_of_Weak_selfTests.swift */; };
 		3FD69AC82A661A1C00F7EE14 /* Example_of_Weak_selfUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD69AC72A661A1C00F7EE14 /* Example_of_Weak_selfUITests.swift */; };
 		3FD69ACA2A661A1C00F7EE14 /* Example_of_Weak_selfUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD69AC92A661A1C00F7EE14 /* Example_of_Weak_selfUITestsLaunchTests.swift */; };
+		3FD69AD72A661ADD00F7EE14 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD69AD62A661ADD00F7EE14 /* MainViewController.swift */; };
+		3FD69AD92A66205A00F7EE14 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD69AD82A66205A00F7EE14 /* TimerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +39,6 @@
 		3FD69AA32A661A1C00F7EE14 /* Example-of-Weak-self.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Example-of-Weak-self.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FD69AA62A661A1C00F7EE14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FD69AA82A661A1C00F7EE14 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3FD69AAA2A661A1C00F7EE14 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3FD69AAD2A661A1C00F7EE14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3FD69AAF2A661A1C00F7EE14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3FD69AB22A661A1C00F7EE14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3FD69AB42A661A1C00F7EE14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +47,8 @@
 		3FD69AC32A661A1C00F7EE14 /* Example-of-Weak-selfUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Example-of-Weak-selfUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FD69AC72A661A1C00F7EE14 /* Example_of_Weak_selfUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example_of_Weak_selfUITests.swift; sourceTree = "<group>"; };
 		3FD69AC92A661A1C00F7EE14 /* Example_of_Weak_selfUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example_of_Weak_selfUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3FD69AD62A661ADD00F7EE14 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		3FD69AD82A66205A00F7EE14 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +101,8 @@
 			children = (
 				3FD69AA62A661A1C00F7EE14 /* AppDelegate.swift */,
 				3FD69AA82A661A1C00F7EE14 /* SceneDelegate.swift */,
-				3FD69AAA2A661A1C00F7EE14 /* ViewController.swift */,
-				3FD69AAC2A661A1C00F7EE14 /* Main.storyboard */,
+				3FD69AD62A661ADD00F7EE14 /* MainViewController.swift */,
+				3FD69AD82A66205A00F7EE14 /* TimerViewController.swift */,
 				3FD69AAF2A661A1C00F7EE14 /* Assets.xcassets */,
 				3FD69AB12A661A1C00F7EE14 /* LaunchScreen.storyboard */,
 				3FD69AB42A661A1C00F7EE14 /* Info.plist */,
@@ -233,7 +233,6 @@
 			files = (
 				3FD69AB32A661A1C00F7EE14 /* LaunchScreen.storyboard in Resources */,
 				3FD69AB02A661A1C00F7EE14 /* Assets.xcassets in Resources */,
-				3FD69AAE2A661A1C00F7EE14 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,7 +257,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FD69AAB2A661A1C00F7EE14 /* ViewController.swift in Sources */,
+				3FD69AD92A66205A00F7EE14 /* TimerViewController.swift in Sources */,
+				3FD69AD72A661ADD00F7EE14 /* MainViewController.swift in Sources */,
 				3FD69AA72A661A1C00F7EE14 /* AppDelegate.swift in Sources */,
 				3FD69AA92A661A1C00F7EE14 /* SceneDelegate.swift in Sources */,
 			);
@@ -297,14 +297,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		3FD69AAC2A661A1C00F7EE14 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3FD69AAD2A661A1C00F7EE14 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3FD69AB12A661A1C00F7EE14 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -442,7 +434,6 @@
 				INFOPLIST_FILE = "Example-of-Weak-self/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -470,7 +461,6 @@
 				INFOPLIST_FILE = "Example-of-Weak-self/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
