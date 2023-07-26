@@ -18,14 +18,14 @@ import UIKit
 //var output: [Int] = Array<Int>()
 //
 //
-//for number in input {
-//    // 배열의 요소를 2로 나누었을 경우, 나머지가 0일 경우에만 새로운 컨테이너 output에 담아냄
-//    if number % 2 == 0 {
-//        output.append(number)
-//    }
-//}
-//
-//print(output) // [4, 8, 12]
+for number in input {
+    // 배열의 요소를 2로 나누었을 경우, 나머지가 0일 경우에만 새로운 컨테이너 output에 담아냄
+    if number % 2 == 0 {
+        output.append(number)
+    }
+}
+
+print(output) // [4, 8, 12]
 
 
 // filter 활용
