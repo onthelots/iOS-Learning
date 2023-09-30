@@ -1,14 +1,14 @@
 //
-//  Example_of_Weak_selfTests.swift
-//  Example-of-Weak-selfTests
+//  weak_self_exampleTests.swift
+//  weak_self_exampleTests
 //
-//  Created by Jae hyuk Yim on 2023/07/18.
+//  Created by Jae hyuk Yim on 2023/09/30.
 //
 
 import XCTest
-@testable import Example_of_Weak_self
+@testable import weak_self_example
 
-final class Example_of_Weak_selfTests: XCTestCase {
+final class weak_self_exampleTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

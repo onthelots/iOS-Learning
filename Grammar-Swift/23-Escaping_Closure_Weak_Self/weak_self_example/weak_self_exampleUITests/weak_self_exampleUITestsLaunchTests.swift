@@ -1,13 +1,13 @@
 //
-//  Example_of_Weak_selfUITestsLaunchTests.swift
-//  Example-of-Weak-selfUITests
+//  weak_self_exampleUITestsLaunchTests.swift
+//  weak_self_exampleUITests
 //
-//  Created by Jae hyuk Yim on 2023/07/18.
+//  Created by Jae hyuk Yim on 2023/09/30.
 //
 
 import XCTest
 
-final class Example_of_Weak_selfUITestsLaunchTests: XCTestCase {
+final class weak_self_exampleUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
